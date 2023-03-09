@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AW-Todo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="/assets/images/logo4.png" alt="" />
+      </div>
+    </div>
+    <div class="content">
+      <nav>
+        <a href="vehicles" class="btn btn-primary">
+          O. S.
+        </a>
+        <a href="#" class="btn btn-primary">
+          Mecânico
+        </a>
+        <a href="#" class="btn btn-primary">
+          Clientes
+        </a>
+        <a href="#" class="btn btn-primary">
+          Endereços
+        </a>
+        <a href="#" class="btn btn-primary">
+          Produtos
+        </a>
+        <a href="#" class="btn btn-primary">
+          Veículos
+        </a>
+      </nav>
+
+      <section class="list">  
+        <div class="list_header">
+          <div class="date">
+            2023-02-02
+          </div>          
+          <div class="select">
+            <select class="list_header-select">
+              <option value="1">Todos os veículos</option>
+            </select>
+          </div>          
+        </div>
+
+        <div class="page_list">
+          <div class="page-title">
+            <div class="plate">
+              <p>Placa</p>              
+            </div>
+            <div class="brand">
+              <p>Marca</p>              
+            </div>
+            <div class="model">
+              <p>Modelo</p>             
+            </div>
+            <div class="color">
+              <p>Cor</p>              
+            </div>
+            <div class="year">
+              <p>Ano</p>              
+            </div>
+            <div class="km">
+              <p>Km</p>
+            </div>
+            <div class="actions">
+              <p class="action-right"> Ações </p>              
+            </div>
+          </div>
+
+          <div class="data_page">
+            <div class="plate">
+              Placa              
+            </div>
+            <div class="brand">
+              Marca              
+            </div>
+            <div class="model">
+              Modelo             
+            </div>
+            <div class="color">
+              Cor              
+            </div>
+            <div class="year">
+              Ano              
+            </div>
+            <div class="km">
+              Km
+            </div>
+            <div class="actions">
+              <a href="#">
+                <img src="/assets/images/icon-edit.png"/>
+              </a>
+              <a href="#">
+                <img src="/assets/images/icon-delete.png"/>
+              </a>
+            </div>
+          </div>
+                    
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

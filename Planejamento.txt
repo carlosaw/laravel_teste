@@ -1,0 +1,62 @@
+Entidades e Relacionamentos
+-- Clientes
+-- Cliente X Veículos
+--- Um Cliente pode ter vários Veículos
+
+-- Cliente X Endereço
+--- Um Cliente pode ter vários Endereços
+
+
+-- Veículos
+-- Veículo X Cliente
+--- Um Veículo SEMPRE vai pertencer a um Cliente
+
+-- Veículo X Produtos
+--- Um Veiculo pode ter vários Produtos
+
+
+-- Produtos
+-- Produtos X Veículos
+--- Um Produto pode ESTAR em vários Veículos
+
+
+
+-- Detalhamento das Migrations
+- Usuários: (users)
+- Padrão do laravel
+
+- Clientes: (clients)
+- id
+- name
+- cpf
+- fone
+- email
+
+- Endereços: (addresses)
+- id
+- cep
+- street_num
+- district
+- city
+- state
+- client_id
+
+- Veículos: (vehicles)
+- id
+- plate
+- brand
+- model
+- color
+- year
+- km
+- product_id
+- client_id
+
+- Produtos: (products)
+- id
+- name
+- value
+- quantity
+- discount
+- total
+- vehicle_id
