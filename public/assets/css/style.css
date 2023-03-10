@@ -2,9 +2,9 @@
   --background-light: #F0F2FA;
   --background-white: #FFFFFF;
   --text-dark: #0A0040;
-  --color-primary: #6143FF;
-  --color-secundary: #c6bcf8;
-  --color-selected: #8269fc;
+  --color-primary: #0000FF;
+  --color-secundary: #7fd9f7;
+  --color-selected: #413ef5;
 }
 
 * {
@@ -72,6 +72,7 @@ a.btn {
 .btn-selected {
   background-color: var(--color-selected);
   color: #F0F2FA;
+  transform: scale(1.05);
 }
 
 .frase {
@@ -104,7 +105,10 @@ a.btn {
 }
 
 .btnNew {
-  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
   background-color: forestgreen;
   padding: 10px 12px;
   border-radius: 8px;

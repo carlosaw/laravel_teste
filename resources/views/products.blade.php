@@ -1,4 +1,6 @@
 <x-layout page="Aw2web | Produtos">
+
+  <x-subMenu />
     
     Tela de PRODUTOS
    

@@ -1,5 +1,7 @@
 <x-layout page="Aw2web | Mecânicos">
-    
+  
+  <x-subMenu />
+  
     Tela de MECÂNICOS
    
     

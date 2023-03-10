@@ -1,4 +1,6 @@
 <x-layout page="Aw2web | Endereços">
+
+  <x-subMenu />
     
     Tela de ENDEREÇOS
    

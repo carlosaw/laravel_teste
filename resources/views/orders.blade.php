@@ -1,4 +1,6 @@
 <x-layout page="Aw2web | Serviços">
+
+  <x-subMenu />
     
     Tela de ORDEM DE SERVIÇOS
    
