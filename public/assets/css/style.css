@@ -79,13 +79,19 @@ a.btn {
   margin-right: 30px;
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .list_header {
   display: flex;
-  background-color: var(--background-light);
+  /* background-color: var(--background-light); */
   align-items: baseline;
-  width: calc(100vw - 100px);
-  justify-content: end;
   margin-top: 30px;
+  justify-content: space-between;
+  width: 90%;
 }
 
 .list_header-select {
@@ -94,14 +100,11 @@ a.btn {
   outline: none;
   font-weight: medium;
   font-size: 18px;
-  margin: 0 100px;
 }
 
 .date {
   font-weight: medium;
   font-size: 18px;
-  flex: auto;
-  margin-left: 20px;
 }
 
 .btnNew {
@@ -112,7 +115,7 @@ a.btn {
   background-color: forestgreen;
   padding: 10px 12px;
   border-radius: 8px;
-  margin-right: 20px;
+  margin-right: 0px;
 }
 
 .btnNew a {
@@ -123,10 +126,10 @@ a.btn {
 
 .actions {
   display: flex;
-  width: 90px;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  padding: 0 10px;
 }
 
 .actions a {
@@ -135,6 +138,7 @@ a.btn {
 }
 
 .actions>a:hover {
+  cursor: pointer;
   transform: scale(1.30);
 }
 
@@ -144,8 +148,22 @@ a.btn {
 } 
 
 .table {
+  display: flex;
+  justify-content: center;
   width: 100%;
+}
+
+.table-striped{
   margin-top: 30px;
+  width: 90%;
+  text-align: center;
+}
+
+tbody tr:hover {
+  border-radius: 7px;
+  transform: scale(1.01);
+  overflow: hidden;
+  background-color: #c4e9ff;
 }
 
 th {
@@ -154,9 +172,16 @@ th {
   color: var(--background-white);
 }
 
-td {
-  text-align: center;
+.title {
+  height: 40px;
+  font-size: 20px;
 }
+
+td {
+  border-bottom: 1px solid #CCC;
+}
+
+
 
 /* :root {
   --background-light: #F0F2FA;

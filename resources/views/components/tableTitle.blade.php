@@ -1,9 +1,11 @@
-<table border="1" class="table table-hover">
-  <th>{{$item1 ?? ''}}</th>
-  <th>{{$item2 ?? ''}}</th>
-  <th>{{$item3 ?? ''}}</th>
-  <th>{{$item4 ?? ''}}</th>
-  <th>{{$item5 ?? ''}}</th>
-  <th>{{$item6 ?? ''}}</th>
-  <th>{{$item7 ?? ''}}</th>
-</table>
+<thead>
+  <tr class="title">
+    <th scope="col">{{$plate ?? ''}}</th>
+    <th scope="col">{{$brand ?? ''}}</th>
+    <th scope="col">{{$model ?? ''}}</th>
+    <th scope="col">{{$color ?? ''}}</th>
+    <th scope="col">{{$year ?? ''}}</th>
+    <th scope="col">{{$km ?? ''}}</th>
+    <th scope="col">{{$actions ?? ''}}</th>
+  </tr>
+</thead>
