@@ -8,9 +8,7 @@ Route::get('/', function(){
     return view('home');
 });
 
-Route::get('/vehicles', function(){
-    return view('vehicles');
-});
+Route::get('/vehicles', [VehicleController::class, 'index'])->name('vehicles');
 
 Route::get('/clients', function(){
     return view('clients');
