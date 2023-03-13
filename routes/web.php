@@ -2,15 +2,14 @@
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/vehicles', [VehicleController::class, 'index'])->name('vehicles');
 
-Route::get('/clients', function(){
-    return view('clients');
-});
+Route::get('/clients', [ClientController::class, 'index'])->name('clients');
 
 Route::get('/addresses', function(){
     return view('addresses');

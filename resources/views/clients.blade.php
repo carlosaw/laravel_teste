@@ -1,35 +1,48 @@
 <x-layout page="Aw2web | Clientes">
 
   <x-subMenu />
-    
-  
-    
-    Tela de CLIENTES
+        
+  <div class="table">
+    <table class="table-striped">
+      <x-tableTitle
+        id='ID'
+        name='Nome'
+        address='ID End.'
+        cpf='Cpf'
+        fone='Telefone'
+        email='E-mail'
+        actions='Ações'
+      >
+      </x-tableTitle>
+     
+      <tbody>    
+        @foreach ($clients as $client)    
+        
+          <tr>
+            <td>{{$client->id ?? ''}}</td>
+            <td>{{$client->name ?? ''}}</td>
+            <td>{{$client->address_id ?? ''}}</td>
+            <td>{{$client->cpf ?? ''}}</td>
+            <td>{{$client->fone ?? ''}}</td>  
+            <td>{{$client->email ?? ''}}</td>
+            <td>
+              <div class="actions">
+                <a title="Editar" href="http://meusite.com/clients/edit/{{$client['id']}}">
+                  <img src="/assets/images/icon-edit.png" />
+                </a>
+                <a title="Excluir" href="http://meusite.com/clients/delete/{{$client['id'] ?? ''}}">
+                  <img src="/assets/images/icon-delete.png" />
+                </a>
+              </div>                                    
+            </td>
+          </tr>
+        
+        @endforeach 
+      </tbody>   
+    </table>
+
+  </div>
    
     
-    {{-- @php
-      $vehicles = [
-        [
-          'id' => 1,
-          'plate' => 'OBC1385',
-          'brand' => 'Honda',
-          'model' => 'Civic',
-          'color' => 'Branca',
-          'year' => '2012',
-          'km' => 82.532,
-        ],
-        [
-          'id' => 2,
-          'plate' => 'ABC1234',
-          'brand' => 'Ford',
-          'model' => 'Corcel',
-          'color' => 'Amarela',
-          'year' => '1978',
-          'km' => 50.353,
-        ],
-      ];
-    @endphp
-
-    <x-list_vehicle :data=$vehicles[0] />
-    <x-list_vehicle :data=$vehicles[1] /> --}}
+    
 </x-layout>

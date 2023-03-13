@@ -4,6 +4,7 @@
   <div class="table">
     <table class="table-striped">
       <x-tableTitle
+        id=ID
         plate='Placa'
         brand='Marca'
         model='Modelo'
@@ -15,8 +16,10 @@
       </x-tableTitle>
      
       @foreach ($vehicles as $vehicle)
+      
       <tbody>
         <tr>
+          <td>{{$vehicle->id ?? ''}}</td>
           <td>{{$vehicle->plate ?? ''}}</td>
           <td>{{$vehicle->brand ?? ''}}</td>
           <td>{{$vehicle->model ?? ''}}</td>
@@ -25,10 +28,10 @@
           <td>{{$vehicle->km ?? ''}}</td>
           <td>
             <div class="actions">
-              <a>
+              <a title="Editar" href="http://meusite.com/vehicles/edit/{{$vehicle['id']}}">
                 <img src="/assets/images/icon-edit.png" />
               </a>
-              <a>
+              <a title="Excluir" href="http://meusite.com/vehicles/delete/{{$vehicle['id'] ?? ''}}">
                 <img src="/assets/images/icon-delete.png" />
               </a>
             </div>                                    
