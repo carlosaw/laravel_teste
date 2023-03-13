@@ -57,6 +57,7 @@ nav {
 .btn:hover {
   transform: scale(1.05);
   opacity: .8;
+  background-color: var(--color-selected);
 }
 
 a.btn {
@@ -150,12 +151,14 @@ a.btn {
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 300px;
 }
 
 .table-striped{
   margin-top: 30px;
   width: 90%;
   text-align: center;
+  overflow-y: scroll;
 }
 
 tbody tr:hover {
