@@ -10,7 +10,7 @@ class ClientController extends Controller
 {
     //
     public function index(Request $request) {
-        $clients = Client::all()->take(20);
+        $clients = Client::all()->take(50);
         
         return view('clients', ['clients' => $clients]);
     }
