@@ -34,7 +34,7 @@ class VehicleFactory extends Factory
             'product_id' => $product,
             'plate' => fake()->text(8),
             'brand' => fake()->text(8),
-            'model' => fake()->unique()->safeEmail(),
+            'model' => fake()->text(10),
             'color' => fake()->safeColorName(),
             'year' => rand(1999, 2023),
             'km' => rand(1000, 200000)
