@@ -20,12 +20,14 @@ body {
   background-color: var(--background-white);
   display: flex;
   justify-content: center;
+  /* max-width: 1440px; */
 }
 
 .container {
-  max-width: 1440px;
   height: 100%;
   display: flex;
+  /* width: 100vw; */
+  max-width: 1440px;
 }
 
 .sidebar {
@@ -82,21 +84,18 @@ a.btn {
 }
 
 .list {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  display: flex;
-  /* height: 300px; */
-  /* background-color: burlywood; */
-  /* overflow: auto; */
+  width: 1440px;
 }
-
 .list_header {
   display: flex;
   align-items: baseline;
   margin-top: 30px;
-  justify-content: space-between;
-  width: 90%;
-  /* position: fixed; */
+  justify-content: space-evenly;
+  /* width: 100%; */
 }
 
 .list_header-select {
@@ -163,16 +162,20 @@ a.btn {
   font-weight: normal;
   height: 30px;
 }
-
-.tr_body td {
-  height: 30px;
+.tr_body {
+  overflow-x: auto;
 }
-.tr_body:hover {
+tbody>.tr_body td {
+  height: 35px;
+}
+tbody>.tr_body:hover {
   border-radius: 7px;
   transform: scale(1.01);
   overflow: hidden;
   background-color: #c4e9ff;
 }
+
+tr:nth-child(even) {background-color: #f2f2f2;}
 
 .title1 {
   padding: 0px 0px;
@@ -190,7 +193,7 @@ a.btn {
   padding: 0px 7px;
 }
 .title6 {
-  padding: 0px 49px;
+  padding: 0px 49.5px;
 }
 .title7 {
   padding: 0px 23px;
@@ -225,26 +228,32 @@ a.btn {
 }
 
 .tdLine1 {
-  padding-left: 10px;
+  padding-left: 8px;
+  width: 37px;
 }
 .tdLine2 {
-  padding: 0px 78px;
+  padding-left: 10px;
+  width: 22.5%;
 }
 .tdLine3 {
   padding: opx 34px;
-  padding: 0px 41.5px;
+  padding: 0px 28.5px;
+  width: 5.5%;
 }
 .tdLine4 {
-  padding: 0px 43px;
+  padding: 0px 10px;
+  width: 18%;
 }
 .tdLine5 {
-  padding: 0px 26px;
+  padding: 0px 10px;
+  width: 13%;
 }
 .tdLine6 {
-  padding: 0px 8px;
+  padding: 0px 10px;
+  width: 24%;
 }
 .tdLine7 {
-  padding: 0px 5px;
+  padding: 0px 26px;
 }
 
 
@@ -276,20 +285,30 @@ a.btn {
   padding: 0px -2px;
   padding: 0px 5px;
 }
+.table_container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  width: 1440px;
+}
 
 table {
-  width: 90%;
-  /* height: 200px; */
   margin-top: 30px;
-  /* background-color: beige; */
   border-collapse: collapse;
   table-layout: fixed;
-  /* background-color: aquamarine; */
+  background-color: #FFF;
+  justify-content: space-between;
+  display: block;
+  justify-content: flex-end;
+  overflow-x: auto;
 }
+
 tbody {
   display: block;
   overflow: auto;
-  height: 400px;
+  height: 600px;
+  /* width: 579px; */
+  /* width: 1341px; */
+  /* overflow-x: auto; */
 }
 table thead {
   width:100%;
