@@ -40,8 +40,11 @@
         @endif      
       </nav>
 
-      <section class="list">  
-        {{$slot}}
+      <section class="list">
+        <div class="list-content">
+          {{$slot}}
+        </div>
+        
       </section>
     </div>
   </div>

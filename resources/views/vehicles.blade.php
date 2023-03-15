@@ -1,9 +1,8 @@
 <x-layout page="Aw2web | Veiculos">
 
   <x-subMenu />
-  <table border="1">
+  <table border="0">
     <thead>     
-      <tr class="trHeader">
         <x-tableTitle
         id=ID
         plate='Placa'
@@ -14,35 +13,33 @@
         km='Km'
         actions='Ações'
       >
-      </x-tableTitle>
-      </tr>     
+      </x-tableTitle>    
     </thead>
 
-    <tbody>
-      <div  class="trBody">
-        @foreach ($vehicles as $vehicle)     
-          <tr class="tr_body">
-            <td class="tdLine1v">{{$vehicle->id ?? ''}}</td>
-            <td class="tdLine2v">{{$vehicle->plate ?? ''}}</td>
-            <td class="tdLine3v">{{$vehicle->brand ?? ''}}</td>
-            <td class="tdLine4v">{{$vehicle->model ?? ''}}</td>
-            <td class="tdLine5v">{{$vehicle->color ?? ''}}</td>  
-            <td class="tdLine6v">{{$vehicle->year ?? ''}}</td>
-            <td class="tdLine7v">{{$vehicle->km ?? ''}}</td>
-            <td class="tdLine8v">
-              <div class="actions">
-                <a title="Editar" href="http://meusite.com/vehicles/edit/{{$vehicle['id']}}">
-                  <img src="/assets/images/icon-edit.png" />
-                </a>
-                <a title="Excluir" href="http://meusite.com/vehicles/delete/{{$vehicle['id'] ?? ''}}">
-                  <img src="/assets/images/icon-delete.png" />
-                </a>
-              </div>                                    
-            </td>
-          </tr>       
-        @endforeach
-      </div>    
+    <tbody>      
+      @foreach ($vehicles as $vehicle)     
+        <tr class="tr_body">
+          <td class="tdLine1v">{{$vehicle->id ?? ''}}</td>
+          <td class="tdLine2v">{{$vehicle->plate ?? ''}}</td>
+          <td class="tdLine3v">{{$vehicle->brand ?? ''}}</td>
+          <td class="tdLine4v">{{$vehicle->model ?? ''}}</td>
+          <td class="tdLine5v">{{$vehicle->color ?? ''}}</td>  
+          <td class="tdLine6v">{{$vehicle->year ?? ''}}</td>
+          <td class="tdLine7v">{{$vehicle->km ?? ''}}</td>
+          <td class="tdLine8v">
+            <div class="actions">
+              <a title="Editar" href="http://meusite.com/vehicles/edit/{{$vehicle['id']}}">
+                <img src="/assets/images/icon-edit.png" />
+              </a>
+              <a title="Excluir" href="http://meusite.com/vehicles/delete/{{$vehicle['id'] ?? ''}}">
+                <img src="/assets/images/icon-delete.png" />
+              </a>
+            </div>                                    
+          </td>
+        </tr>       
+      @endforeach 
     </tbody>
+
   </table>
   {{-- <div class="table">
     <table class="table-striped">
