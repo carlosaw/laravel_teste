@@ -43,8 +43,7 @@
       <section class="list">
         <div class="list-content">
           {{$slot}}
-        </div>
-        
+        </div>        
       </section>
     </div>
   </div>
