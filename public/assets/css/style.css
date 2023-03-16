@@ -24,7 +24,6 @@ body {
 .container {
   height: 100vh;
   display: flex;
-  /* width: 100vw; */
   max-width: 1440px;
 }
 
@@ -104,7 +103,6 @@ section.list {
   margin-top: 30px;
   justify-content: sp;
   justify-content: space-between;
-  /* justify-content: space-evenly; */
 }
 
 .list_header-select {
@@ -139,8 +137,6 @@ section.list {
 
 
 
-
-
 .actions {
   display: flex;
   flex-direction: row;
@@ -148,13 +144,11 @@ section.list {
   align-items: baseline;
   padding: 0 4px;
 }
-
 .actions a {
   justify-content: center;
   transition: all .3s ease-in-out;
   margin: 0px 26px;
 }
-
 .actions>a:hover {
   cursor: pointer;
   transform: scale(1.20);
@@ -195,7 +189,7 @@ tbody>.tr_body:hover {
 
 tr:nth-child(even) {background-color: #f2f2f2;}
 
-
+/* Título tabela clientes */
 .title1 {
   width: 29px;
   border-color: 1px solid #FFF;
@@ -266,6 +260,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   border: 1px solid #FFF;
 }
 
+
 .tdLine1 {
   padding-left: 6px;
   width: 2.47%;
@@ -291,9 +286,6 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   padding-left: 10px;
   padding-left: 8px;
 }
-/* .tdLine7 {
-  width: 36%;
-} */
 
 
 
@@ -321,9 +313,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 .tdLine7v {
   padding: 0px 23px;
 }
-/* .tdLine8v {
-  
-} */
+
 
 
 table {
@@ -345,73 +335,3 @@ tbody {
 table thead {
   display: table;
 }
-
-
-
-
-
-
-/* table{
-  border-collapse: collapse;
-  table-layout: fixed;
-  background-color: aquamarine;
-}
-
-table th, table td{
-  text-align: left;
-}
-
-table td{
-  border-bottom: 1px solid black;
-}
-
-table tbody{
-  display: block;
-  overflow: auto;
-  height: 400px;
-}
-
-table thead {
-   width:100%;
-   display: table;
-} */
-
-
-/* .table {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 300px;
-}
-
-.table-striped{
-  margin-top: 30px;
-  width: 90%;
-  text-align: center;
-}
-
-tbody tr:hover {
-  border-radius: 7px;
-  transform: scale(1.01);
-  overflow: hidden;
-  background-color: #c4e9ff;
-}
-
-tr {
-  width: 40px;
-}
-th {
-  font-weight: normal;
-  background-color: var(--color-primary);
-  color: var(--background-white);
-}
-
-.title {
-  height: 30px;
-  font-size: 18px;
-}
-
-td {
-  border-bottom: 1px solid #CCC;
-
-} */
