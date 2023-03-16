@@ -18,7 +18,8 @@ class AddressFactory extends Factory
     {
         return [
             //
-            'street_num' => fake()->text(20),
+            'street' => fake()->text(20),
+            'number' => fake()->numerify('###'),
             'cep' => fake()->numerify('#####-###'),
             'district' => fake()->text(8),
             'city' => fake()->text(8),

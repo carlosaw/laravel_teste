@@ -2,7 +2,7 @@
   <div class="table_container">
     <x-subMenu />
 
-    <table border="0" class="tableBody">
+    <table border="1" class="tableBody">
       <thead>     
        
           <x-tableTitle

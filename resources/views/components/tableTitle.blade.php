@@ -20,5 +20,17 @@
     <th class="title6">{{$email ?? ''}}</th>
     <th class="title7">{{$actions ?? ''}}</th>      
   </tr>
-  
+
+@elseif (request()->is('addresses'))   
+  <tr class="title">
+    <th class="title1a">{{$id ?? ''}}</th>       
+    <th class="title2a">{{$street ?? ''}}</th>
+    <th class="title3a">{{$number ?? ''}}</th>      
+    <th class="title4a">{{$cep ?? ''}}</th>
+    <th class="title5a">{{$district ?? ''}}</th>
+    <th class="title6a">{{$city ?? ''}}</th>
+    <th class="title7a">{{$state ?? ''}}</th>
+    <th class="title8a">{{$actions ?? ''}}</th>     
+  </tr>
+
 @endif

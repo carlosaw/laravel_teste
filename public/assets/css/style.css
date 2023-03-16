@@ -139,14 +139,14 @@ section.list {
 .actions {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: baseline;
-  padding: 0 4px;
+  /* padding: 0 4px; */
 }
 .actions a {
   justify-content: center;
   transition: all .3s ease-in-out;
-  margin: 0px 26px;
+  /* margin: 0px 23px; */
 }
 .actions>a:hover {
   cursor: pointer;
@@ -171,6 +171,7 @@ section.list {
 }
 tbody>.tr_body td {
   height: 35px;
+  /* width: 209px; */
 }
 tbody>.tr_body:hover {
   border-radius: 7px;
@@ -182,137 +183,112 @@ tbody>.tr_body:hover {
 
 .title {
   background-color: var(--color-primary);
-  width: 100vw;
   color: #FFF;
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
 
-/* Título tabela clientes */
-.title1 {
-  width: 29px;
-  border-color: 1px solid #FFF;
-  border: 1px solid #FFF;
+/* Título tabela Clients */
+.title1, .title2, .title3, .title4, .title5, .title6, .title7, .title8 {border: 1px solid #FFF;}
+.title1, .tdLine1 {
+  width: 34px;
 }
-.title2 {
+.title2, .tdLine2 {
   width: 257px;
-  border-right: 1pxsolid #FFF;
-  border: 1px solid #FFF;
 }
-.title3 {
-  width: 112px;
-  border: 1px solid #FFF;
+.title3, .tdLine3 {
+  width: 66px;
 }
-.title4 {
-  width: 207px;
-  border: 1px solid #FFF;
+.title4, .tdLine4 {
+  width: 189px;
 }
-.title5 {
+.title5, .tdLine5 {
   width: 147px;
-  border: 1px solid #FFF;
 }
-.title6 {
-  width: 281px;
-  border: 1px solid #FFF;
-  padding: 0px 49.5px;
+.title6, .tdLine6 {
+  width: 270px;
 }
 .title7 {
-  width: 175px;
-  margin-right: 14px;
-  border: 1px solid #FFF;
+  width: 151px;
 }
-.title8 {
-  padding: 0px 20px;
+/* Linhas tabela CLIENTS */
+.tdLine1, .tdLine3, .tdLine4, .tdLine5 {text-align: center;}
+.tdLine2, .tdLine6 {padding-left: 10px;}
+.tdLine7 {
+  width: 128px;
 }
 
 
-.title1v {
-  width: 35px;
+/* Titulo tabela VEHICLES */
+.title1v, .title2v, .title3v,
+.title4v, .title5v,
+.title6v, .title7v, .title8v {
   border: 1px solid #FFF;
 }
-.title2v {
-  width: 210px;
-  border: 1px solid #FFF;
+.title1v, .tdLine1v {
+  width: 34px;
 }
-.title3v {
-  width: 219px;
-  border: 1px solid #FFF;
+.title2v, .tdLine2v {
+  width: 184px;
 }
-.title4v {
-  width: 185px;
-  border: 1px solid #FFF;
+.title3v, .tdLine3v {
+  width: 203px;
 }
-.title5v {
-  width: 140px;
-  border: 1px solid #FFF;
+.title4v, .tdLine4v{
+  width: 181px;
 }
-.title6v {
-  width: 121px;
-  border: 1px solid #FFF;
+.title5v,.tdLine5v {
+  width: 137px;
 }
-.title7v {
-  width: 104px;
-  border: 1px solid #FFF;
+.title6v, .tdLine6v {
+  width: 110px;
+}
+.title7v, .tdLine7v {
+  width: 100px;
 }
 .title8v {
-  width: 174px;
-  border: 1px solid #FFF;
+  width: 151px;
+}
+/* Linhas tabela VEHICLES */
+.tdLine1v, .tdLine2v, .tdLine3v, .tdLine4v, .tdLine5v, .tdLine6v, .tdLine7v {text-align: center;}
+.tdLine8v {
+  width: 128px;
 }
 
 
-.tdLine1 {
-  padding-left: 6px;
-  width: 2.47%;
+/* Titulo tabela ADDRESSES */
+.title1a, .title2a, .title3a, .title4a, .title5a, .title6a, .title7a, .title8a {border: 1px solid #FFF;}
+.title1a, .tdLine1a {
+  width: 34px;
 }
-.tdLine2 {
-  padding-left: 10px;
-  width: 21.9%;
+.title2a, .tdLine2a {
+  width: 243px;
 }
-.tdLine3 {
-  width: 9.4%;
-  text-align: center;
+.title3a, .tdLine3a {
+  width: 71px;
 }
-.tdLine4 {
-  width: 17.6%;
-  text-align: center;
+.title4a, .tdLine4a {
+  width: 146px;
 }
-.tdLine5 {
-  width: 12.4%;
-  text-align: center;
+.title5a, .tdLine5a {
+  width: 243px;
 }
-.tdLine6 {
-  width: 23.6%;
-  padding-left: 10px;
-  padding-left: 8px;
+.title6a, .tdLine6a {
+  width: 180px;
 }
-
-
-
-.tdLine1v {
-  width: 35px;
-  padding-left: 12px;
+.title7a, .tdLine7a {
+  width: 65px;
 }
-.tdLine2v {
-  width: 210px;
-  text-align: center;
-}
-.tdLine3v {
-  padding: opx 34px;
-  padding: 0px 68.5px;
-}
-.tdLine4v {
-  padding: 0px 54px;
-}
-.tdLine5v {
-  padding: 0px 46px;
-}
-.tdLine6v {
-  padding: 0px 40px;
-}
-.tdLine7v {
-  padding: 0px 23px;
+.title8a {
+  width: 151px;
 }
 
+/* Linhas tabela ADDRESSES */
+.tdLine1a, .tdLine3a, .tdLine4a, .tdLine7a {text-align: center;}
+.tdLine2a, .tdLine5a, .tdLine6a {padding-left: 10px;}
+.tdLine8a {
+  width: 128px;
+}
 
 
 table {

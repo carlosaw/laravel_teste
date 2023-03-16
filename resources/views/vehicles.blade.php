@@ -1,7 +1,8 @@
 <x-layout page="Aw2web | Veiculos">
 
   <x-subMenu />
-  <table border="0">
+  
+  <table border="1">
     <thead>     
         <x-tableTitle
         id=ID
