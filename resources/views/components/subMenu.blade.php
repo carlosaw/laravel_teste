@@ -21,11 +21,11 @@
     @if(request()->is('vehicles'))
       <a href="vehicles/new">Novo Veículo</a>
     @elseif(request()->is('clients'))
-      <a href="#">Novo Cliente</a>
+      <a href="clients/new">Novo Cliente</a>
     @elseif(request()->is('addresses'))
-      <a href="#">Novo Endereço</a>
+      <a href="addresses/new">Novo Endereço</a>
     @elseif(request()->is('products'))
-      <a href="#">Novo Produto</a>
+      <a href="products/new">Novo Produto</a>
     @elseif(request()->is('orders'))
       <a href="#">Nova Ordem</a>
     @elseif(request()->is('mechanics'))

@@ -14,10 +14,13 @@ Route::get('/vehicles', [VehicleController::class, 'index'])->name('vehicles');
 Route::get('/vehicles/new', [VehicleController::class, 'create'])->name('vehicle.create');
 
 Route::get('/clients', [ClientController::class, 'index'])->name('clients');
+Route::get('/clients/new', [ClientController::class, 'create'])->name('client.create');
 
 Route::get('/addresses', [AddressController::class, 'index'])->name('addresses');
+Route::get('/addresses/new', [AddressController::class, 'create'])->name('address.create');
 
 Route::get('/products', [ProductController::class, 'index'])->name('products');
+Route::get('/products/new', [ProductController::class, 'create'])->name('product.create');
 
 Route::get('/orders', function(){
     return view('orders');

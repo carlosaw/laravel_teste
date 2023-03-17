@@ -12,6 +12,10 @@ class AddressController extends Controller
     public function index(Request $request) {
         $addresses = Address::all();
         
-        return view('addresses', ['addresses' => $addresses]);
+        return view('addresses/addresses', ['addresses' => $addresses]);
+    }
+
+    public function create(Request $request) {
+        return view('addresses/new');
     }
 }

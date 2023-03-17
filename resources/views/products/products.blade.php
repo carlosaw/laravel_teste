@@ -7,7 +7,7 @@
       <x-tableTitle
         id='ID'
         name='Nome'
-        value='Valor'
+        value='Preço R$'
         quantity='Qtde.'
         actions='Ações'
       >

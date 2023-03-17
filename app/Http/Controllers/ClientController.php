@@ -12,10 +12,11 @@ class ClientController extends Controller
     public function index(Request $request) {
         $clients = Client::all()->take(50);
         
-        return view('clients', ['clients' => $clients]);
+        return view('clients/clients', ['clients' => $clients]);
     }
 
     public function create(Request $request) {
-        return view('clients/create');
+        
+        return view('clients/new');
     }
 }
