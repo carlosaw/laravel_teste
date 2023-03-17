@@ -2,20 +2,18 @@
   <div class="table_container">
     <x-subMenu />
 
-    <table border="1" class="tableBody">
-      <thead>     
-       
-          <x-tableTitle
-            id='ID'
-            name='Nome'
-            address='End.'
-            cpf='Cpf'
-            fone='Telefone'
-            email='E-mail'
-            actions='Ações'
-          >
-          </x-tableTitle>
-           
+    <table border="1">
+      <thead>            
+        <x-tableTitle
+          id='ID'
+          name='Nome'
+          address='End.'
+          cpf='Cpf'
+          fone='Telefone'
+          email='E-mail'
+          actions='Ações'
+        >
+        </x-tableTitle>           
       </thead>
 
       <tbody>      

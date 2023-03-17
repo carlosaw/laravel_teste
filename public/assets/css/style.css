@@ -135,27 +135,23 @@ section.list {
 }
 
 
-
-.actions {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: baseline;
-  /* padding: 0 4px; */
-}
-.actions a {
-  justify-content: center;
-  transition: all .3s ease-in-out;
-  /* margin: 0px 23px; */
-}
-.actions>a:hover {
-  cursor: pointer;
-  transform: scale(1.20);
-}
-
-.logo img {
-  width: 100px;
+table {
   margin-top: 30px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: #FFF;
+  justify-content: space-between;
+  display: block;
+  justify-content: flex-end;
+  overflow-x: auto;
+}
+tbody {
+  display: block;
+  overflow: auto;
+  height: 600px;
+}
+table thead {
+  display: table;
 }
 
 .title th {
@@ -186,7 +182,29 @@ tbody>.tr_body:hover {
   color: #FFF;
 }
 
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.actions a {
+  justify-content: center;
+  transition: all .3s ease-in-out;
+}
+.actions>a:hover {
+  cursor: pointer;
+  transform: scale(1.20);
+}
+
+.logo img {
+  width: 100px;
+  margin-top: 30px;
+}
+
 tr:nth-child(even) {background-color: #f2f2f2;}
+
+
 
 /* Título tabela Clients */
 .title1, .title2, .title3, .title4, .title5, .title6, .title7, .title8 {border: 1px solid #FFF;}
@@ -291,22 +309,59 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 }
 
 
-table {
-  margin-top: 30px;
-  border-collapse: collapse;
-  table-layout: fixed;
-  background-color: #FFF;
-  justify-content: space-between;
-  display: block;
-  justify-content: flex-end;
-  overflow-x: auto;
+
+/* Título tabela Products */
+.title1p, .title2p, .title3p, .title4p, .title5p {border: 1px solid #FFF;}
+.tdLine3p, .tdLine4p {text-align: center;}
+.title1p, .tdLine1p {
+  width: 34px;
+}
+.title2p, .tdLine2p {
+  width: 257px;
+}
+.title3p, .tdLine3p {
+  width: 169px;
+}
+.title4p, .tdLine4p {
+  width: 189px;
+}
+.title5p {
+  width: 151px;
+}
+/* Linhas tabela Products */
+.tdLine1p {text-align: center;}
+.tdLine2p {padding-left: 10px;}
+.tdLine5p {
+  width: 128px;
 }
 
-tbody {
-  display: block;
-  overflow: auto;
-  height: 600px;
+
+/* Título tabela Mecânicos */
+.title1m, .title2m, .title3m, .title4m, .title5m, .title6m, .title7m, .title8m {border: 1px solid #FFF;}
+.title1m, .tdLine1m {
+  width: 34px;
 }
-table thead {
-  display: table;
+.title2m, .tdLine2m {
+  width: 347px;
+}
+.title3m, .tdLine3m {
+  width: 204px;
+}
+.title4m, .tdLine4m {
+  width: 189px;
+}
+.title5m, .tdLine5m {
+  width: 147px;
+}
+.title6m, .tdLine6m {
+  width: 270px;
+}
+.title7m {
+  width: 151px;
+}
+/* Linhas tabela Mecânicos */
+.tdLine1m, .tdLine3m, .tdLine4m, .tdLine5m {text-align: center;}
+.tdLine2m, .tdLine6m {padding-left: 10px;}
+.tdLine7m {
+  width: 128px;
 }

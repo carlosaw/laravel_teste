@@ -19,7 +19,7 @@
 
   <div class="btnNew">
     @if(request()->is('vehicles'))
-      <a href="#">Novo Veículo</a>
+      <a href="vehicles/new">Novo Veículo</a>
     @elseif(request()->is('clients'))
       <a href="#">Novo Cliente</a>
     @elseif(request()->is('addresses'))

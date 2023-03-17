@@ -21,7 +21,7 @@ class MechanicFactory extends Factory
         return [
             //
             'name' => fake()->text(12),
-            'phone' => fake()->numerify('9 ####-####'),
+            'phone' => fake()->numerify('# ####-####'),
             'percentage' => rand(50, 55),
             'vehicle_id' => Vehicle::all()->random(),
             'client_id' => Client::all()->random()

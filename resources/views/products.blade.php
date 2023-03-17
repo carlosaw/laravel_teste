@@ -2,32 +2,38 @@
 
   <x-subMenu />
     
-    Tela de PRODUTOS
-   
-    
-    {{-- @php
-      $vehicles = [
-        [
-          'id' => 1,
-          'plate' => 'OBC1385',
-          'brand' => 'Honda',
-          'model' => 'Civic',
-          'color' => 'Branca',
-          'year' => '2012',
-          'km' => 82.532,
-        ],
-        [
-          'id' => 2,
-          'plate' => 'ABC1234',
-          'brand' => 'Ford',
-          'model' => 'Corcel',
-          'color' => 'Amarela',
-          'year' => '1978',
-          'km' => 50.353,
-        ],
-      ];
-    @endphp
+  <table border="1">
+    <thead>            
+      <x-tableTitle
+        id='ID'
+        name='Nome'
+        value='Valor'
+        quantity='Qtde.'
+        actions='Ações'
+      >
+      </x-tableTitle>           
+    </thead>
 
-    <x-list_vehicle :data=$vehicles[0] />
-    <x-list_vehicle :data=$vehicles[1] /> --}}
+    <tbody>      
+      @foreach ($products as $product)            
+        <tr class="tr_body">
+          <td class="tdLine1p">{{$product->id ?? ''}}</td>
+          <td class="tdLine2p">{{$product->name ?? ''}}</td>
+          <td class="tdLine3p">{{$product->value ?? ''}}</td>
+          <td class="tdLine4p">{{$product->quantity ?? ''}}</td>
+          <td class="tdLine5p">
+            <div class="actions">
+              <a title="Editar" href="http://meusite.com/products/edit/{{$product['id']}}">
+                <img src="/assets/images/icon-edit.png" />
+              </a>
+              <a title="Excluir" href="http://meusite.com/products/delete/{{$product['id'] ?? ''}}">
+                <img src="/assets/images/icon-delete.png" />
+              </a>
+            </div>                                    
+          </td>
+        </tr>        
+      @endforeach          
+    </tbody>
+  
+  </table>
 </x-layout>

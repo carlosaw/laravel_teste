@@ -31,9 +31,9 @@ class DatabaseSeeder extends Seeder
         Address::factory(55)->create();
         User::factory(5)->create();
         Client::factory(50)->create();
-        Product::factory(2)->create();
+        Product::factory(80)->create();
         Vehicle::factory(25)->create();
-        Mechanic::factory(1)->create();
+        Mechanic::factory(25)->create();
         Order::factory(75)->create();
         //Order::factory(3)->create();
         // \App\Models\User::factory()->create([
