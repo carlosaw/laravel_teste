@@ -6,6 +6,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MechanicController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -22,11 +23,11 @@ Route::get('/addresses/new', [AddressController::class, 'create'])->name('addres
 Route::get('/products', [ProductController::class, 'index'])->name('products');
 Route::get('/products/new', [ProductController::class, 'create'])->name('product.create');
 
-Route::get('/orders', function(){
-    return view('orders');
-});
+Route::get('/orders', [OrderController::class, 'index'])->name('orders');
+Route::get('/orders/new', [OrderController::class, 'create'])->name('order.create');
 
 Route::get('/mechanics', [MechanicController::class, 'index'])->name('mechanics');
+Route::get('/mechanics/new', [MechanicController::class, 'create'])->name('mechanic.create');
 
 Route::get('/login', function(){
     return view('login');

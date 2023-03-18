@@ -27,10 +27,9 @@
     @elseif(request()->is('products'))
       <a href="products/new">Novo Produto</a>
     @elseif(request()->is('orders'))
-      <a href="#">Nova Ordem</a>
+      <a href="orders/new">Nova Ordem</a>
     @elseif(request()->is('mechanics'))
-      <a href="#">Novo Mecânico</a>
+      <a href="mechanics/new">Novo Mecânico</a>
     @endif
-    
   </div>          
 </div>

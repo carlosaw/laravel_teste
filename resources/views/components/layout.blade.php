@@ -22,7 +22,7 @@
     </div>
     <div class="content">
       <nav>
-        @if ($page !== 'Aw2web | Login' && $page !== 'Aw2web | Registro' && $page !== 'Aw2web | Novo Veiculo')
+        @if ($page !== 'Aw2web | Login' && $page !== 'Aw2web | Registro' && $page !== 'Aw2web | Novo Veiculo' && $page !== 'Aw2web | Nova OS')
           <x-btn btnHref='vehicles' btnText='Veículos'></x-btn>                  
           <x-btn btnHref='clients' btnText='Clientes'></x-btn>
           <x-btn btnHref='addresses' btnText='Endereços'></x-btn>
@@ -30,6 +30,13 @@
           <x-btn btnHref='orders' btnText='Serviços'></x-btn>
           <x-btn btnHref='mechanics' btnText='Mecânicos'></x-btn>
         @elseif ($page == 'Aw2web | Novo Veiculo')
+          <x-btn btnHref='/vehicles' btnText='Veículos'></x-btn>
+          <x-btn btnHref='/clients' btnText='Clientes'></x-btn>
+          <x-btn btnHref='/addresses' btnText='Endereços'></x-btn>
+          <x-btn btnHref='/products' btnText='Produtos'></x-btn>
+          <x-btn btnHref='/orders' btnText='Serviços'></x-btn>
+          <x-btn btnHref='/mechanics' btnText='Mecânicos'></x-btn>
+        @elseif ($page == 'Aw2web | Nova OS')
           <x-btn btnHref='/vehicles' btnText='Veículos'></x-btn>
           <x-btn btnHref='/clients' btnText='Clientes'></x-btn>
           <x-btn btnHref='/addresses' btnText='Endereços'></x-btn>
