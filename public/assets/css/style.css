@@ -44,13 +44,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding-right: 20px;
 }
 
 .btn {
   display: flex;
   padding: 10px 20px;
   border-radius: 10px;
-  margin-right: 20px;
+  margin-left: 20px;
   transition: all .3s ease-in-out;
   width: 130px;
 }
