@@ -133,14 +133,23 @@ section.list {
   padding: 10px 12px;
   border-radius: 8px;
   margin-right: 0px;
+  color: #FFF;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
 }
-
+button.btnNew {
+  font-size: 16px;
+  border: 0;
+}
 .btnNew a {
   justify-content: center;
   text-decoration: none;
   color: #FFF;
 }
-
+.btnNew:hover {
+  opacity: .8;
+  transform: scale(1.01);
+}
 
 table {
   margin-top: 30px;
@@ -384,4 +393,32 @@ footer {
 }
 .footer {
   color: var(--color-primary);
+}
+
+#create_vehicle_section {
+  margin: auto;
+  padding-top: 20px;
+  height: calc(100vh - 150px);
+}
+#create_vehicle_section h1{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.inputArea {
+  display: block;
+  margin: 15px;
+}
+.inputArea>label {
+  display: block;
+  padding-left: 10px;
+}
+
+.inputArea>input, .inputArea>select {
+  height: 40px;
+  width: 400px;
+  padding-left: 10px;
+  outline: none;
+  font-size: medium;
+  border-radius: 5px;
+  border: 1px solid #333;
 }
