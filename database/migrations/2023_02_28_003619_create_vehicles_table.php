@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('color')->nullable(true);
             $table->integer('year')->nullable(true);
             $table->integer('km')->nullable(true);
+            $table->unique('plate');
 
             //$table->timestamps();
         });

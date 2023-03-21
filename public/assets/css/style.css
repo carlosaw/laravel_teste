@@ -48,10 +48,10 @@ nav {
 .btn {
   display: flex;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-left: 20px;
   transition: all .3s ease-in-out;
-  width: 130px;
+  width: 150px;
 }
 
 .btn:hover {
@@ -69,11 +69,23 @@ a.btn {
   background-color: var(--color-primary);
   color: white;
 }
-
+.btn-primary-form {
+  background-color: var(--color-primary);
+  color: white;
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  border: 0;
+}
 .btn-selected {
   background-color: var(--color-selected);
   color: #F0F2FA;
-  transform: scale(1.08);
+  transform: scale(1.05);
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  border: 0;
 }
 
 .frase {
@@ -92,15 +104,14 @@ section.list {
   align-items: center;
   display: flex;
   width: auto;
-  padding: 0px 20px;
+  padding: 10px 20px;
   background-color: var(--background-light);
 }
-.list {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 1440px;
+section.list h1 {
+  color: #605f5f;
+  font-size: 400;
+  font-size: 20px;
+  font-weight: 500;
 }
 .list_header {
   display: flex;
@@ -123,6 +134,26 @@ section.list {
   font-size: 18px;
 }
 
+
+.btns_form {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 15px 0 15px;
+}
+button.btnNew, button[type=submit] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  background-color: forestgreen;
+  padding: 10px 12px;
+  border-radius: 5px;
+  color: #FFF;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  font-size: 16px;
+  border: 0;
+}
 .btnNew {
   display: flex;
   align-items: center;
@@ -130,29 +161,21 @@ section.list {
   width: 150px;
   background-color: forestgreen;
   padding: 10px 12px;
-  border-radius: 8px;
-  margin-right: 0px;
+  border-radius: 5px;
   color: #FFF;
   transition: all .3s ease-in-out;
   cursor: pointer;
-}
-button.btnNew {
   font-size: 16px;
   border: 0;
 }
 .btnNew a {
-  justify-content: center;
+  font-size: 16px;
   text-decoration: none;
-  color: #FFF;
+  color: #F0F2FA;
 }
 .btnNew:hover {
   opacity: .8;
-  transform: scale(1.01);
-}
-
-.btns_form {
-  display: flex;
-  justify-content: space-between;
+  transform: scale(1.05);
 }
 
 table {
@@ -394,26 +417,17 @@ footer {
   justify-content: center;
   align-items: center;
   /* margin-top: 0px; */
+  border-top: 1px solid #CCC;
 }
 .footer {
   color: var(--color-primary);
 }
 
-#create_vehicle_section {
-  margin: auto;
-  padding-top: 20px;
-  height: calc(100vh - 150px);
-}
-#create_vehicle_section h1{
-  text-align: center;
-  margin-bottom: 20px;
-  color: #605f5f;
-  font-weight: 500;
-}
 .inputArea {
   display: block;
   margin: 15px;
 }
+
 .inputArea>label {
   display: block;
   padding-left: 5px;
@@ -429,6 +443,12 @@ footer {
   border-radius: 5px;
   border: 1px solid #CCC;
   background-color: rgba(255,255,255,0.5);
+}
+input[type=text]:focus {
+  border-color: #0000FF;
+}
+select:focus {
+  border-color: #0000FF;
 }
 .inputArea>select {
   color: #605f5f;
