@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\Client;
-use App\Models\Product;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,7 +15,7 @@ return new class extends Migration
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Client::class)->references('id')->on('clients')->onDelete('CASCADE');
-            $table->foreignIdFor(Product::class)->references('id')->on('products')->onDelete('CASCADE');
+
             $table->string('plate');
             $table->string('brand')->nullable(true);
             $table->string('model')->nullable(true);
@@ -35,7 +34,6 @@ return new class extends Migration
     {
         Schema::table('vehicles', function(Blueprint $table){
             $table->dropForeignIdFor(Client::class);
-            $table->dropForeignIdFor(Product::class);
         });
         
         Schema::dropIfExists('vehicles');

@@ -13,6 +13,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/vehicles', [VehicleController::class, 'index'])->name('vehicles');
 Route::get('/vehicles/new', [VehicleController::class, 'create'])->name('vehicle.create');
+Route::post('/vehicles/new_action', [VehicleController::class, 'create_action'])->name('vehicle.create_action');
 
 Route::get('/clients', [ClientController::class, 'index'])->name('clients');
 Route::get('/clients/new', [ClientController::class, 'create'])->name('client.create');

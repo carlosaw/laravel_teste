@@ -23,15 +23,9 @@ class VehicleFactory extends Factory
         //     $client = Client::all()->random();
         // }
 
-        $product = Product::all()->random();
-        // while(count($product->vehicles) == 0) {
-        //     $product = Product::all()->random();
-        // }
-
         return [
             //
             'client_id' => $client,
-            'product_id' => $product,
             'plate' => fake()->text(8),
             'brand' => fake()->text(8),
             'model' => fake()->text(10),

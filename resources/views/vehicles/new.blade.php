@@ -2,52 +2,43 @@
     
     <section id="create_vehicle_section">
         <h1>Cadastrar Veículo</h1>
-        <form>
+       
+        <form method="POST" action="{{route('vehicle.create_action')}}">
+            @csrf
             <x-form.text_input 
-                name="plate" label="Placa do Veículo" placeholder="Digite a Placa do veículo" autofocus="autofocus" required='required'
-            ></x-form.text_input>
-            <div class="inputArea">
-                <label for="brand">
-                    Marca
-                </label>
-                <input id="brand" name="brand" required placeholder="Digite a Marca do veículo" autofocus/>
+                name="plate" label="Placa do Veículo" placeholder="Digite a Placa do veículo" autofocus required />
+
+            <x-form.text_input 
+                name="brand" label="Marca" placeholder="Digite a Marca do veículo"/>
+            
+            <x-form.text_input 
+                name="model" label="Modelo" placeholder="Digite a Modelo do veículo" />
+
+            <x-form.text_input 
+                name="color" label="Cor" placeholder="Digite a Cor do veículo" />
+            
+            <x-form.text_input 
+                name="year" label="Ano" placeholder="Digite o Ano do veículo"/>
+
+            <x-form.select_input 
+                name="client_id"
+                label="Cliente"
+                selectItem='Selecione um Cliente'
+            >
+            @foreach($clients as $client)
+                <option value="{{$client->id}}">{{$client->name}}</option>
+            @endforeach
+            </x-form.select_input>
+            
+            <div class="btns_form">
+                <div class="inputArea">
+                    <button type="reset" class="btnNew">Resetar</button>
+                </div>
+                <div class="inputArea">
+                    <button type="submit" class="btnNew">Enviar</button>
+                </div>                  
             </div>
-            <div class="inputArea">
-                <label for="model">
-                    Modelo
-                </label>
-                <input id="model" name="model" required placeholder="Digite o Modelo do veículo" />
-            </div>
-            <div class="inputArea">
-                <label for="color">
-                    Cor
-                </label>
-                <input id="color" name="color" required placeholder="Digite a Cor do veículo" />
-            </div>
-            <div class="inputArea">
-                <label for="year">
-                    Ano
-                </label>
-                <input id="year" name="year" placeholder="Digite o Ano do veículo" />
-            </div>
-            <div class="inputArea">
-                <label for="km">
-                    Km
-                </label>
-                <input id="km" name="km" required placeholder="Digite a Quilometragem do veículo" autofocus/>
-            </div>
-            <div class="inputArea">
-                <label for="client">
-                    Cliente
-                </label>
-                <select id="client" name="client" required>
-                    <option selected disabled value="">Selecione o Cliente</option>
-                    <option>Valor qualquer</option>
-                </select>
-            </div>
-            <div class="inputArea">
-                <button type="submit" class="btnNew">Enviar</button>
-            </div>
+            
         </form>
     </section>
 </x-layout>

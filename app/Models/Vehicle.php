@@ -14,7 +14,6 @@ class Vehicle extends Model
 
     protected $fillable = [
         'client_id',
-        'product_id',
         'plate',
         'brand',
         'model',

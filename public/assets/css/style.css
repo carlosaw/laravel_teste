@@ -16,7 +16,6 @@
 }
 
 body {
-  /* height: 100vh; */
   background-color: var(--background-white);
   justify-content: center;
 }
@@ -83,7 +82,6 @@ a.btn {
 
 .home {
   height: calc(100vh - 100px);
-  /* width: calc(100vw - 158px); */
   background-color: aqua;
   display: flex;
   justify-content: center;
@@ -95,6 +93,7 @@ section.list {
   display: flex;
   width: auto;
   padding: 0px 20px;
+  background-color: var(--background-light);
 }
 .list {
   display: flex;
@@ -149,6 +148,11 @@ button.btnNew {
 .btnNew:hover {
   opacity: .8;
   transform: scale(1.01);
+}
+
+.btns_form {
+  display: flex;
+  justify-content: space-between;
 }
 
 table {
@@ -403,6 +407,8 @@ footer {
 #create_vehicle_section h1{
   text-align: center;
   margin-bottom: 20px;
+  color: #605f5f;
+  font-weight: 500;
 }
 .inputArea {
   display: block;
@@ -410,7 +416,8 @@ footer {
 }
 .inputArea>label {
   display: block;
-  padding-left: 10px;
+  padding-left: 5px;
+  color: #605f5f;
 }
 
 .inputArea>input, .inputArea>select {
@@ -420,5 +427,9 @@ footer {
   outline: none;
   font-size: medium;
   border-radius: 5px;
-  border: 1px solid #333;
+  border: 1px solid #CCC;
+  background-color: rgba(255,255,255,0.5);
+}
+.inputArea>select {
+  color: #605f5f;
 }

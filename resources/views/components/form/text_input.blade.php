@@ -5,6 +5,8 @@
     <input
         type="{{empty($type) ? 'text' : $type}}"
         id="{{$name}}"
-        name="{{$name}}" {{$required ? 'required' : ''}}
-        placeholder="{{$placeholder ?? ''}}" {{$autofocus ? 'autofocus' : ''}} />
+        name="{{$name}}"        
+        placeholder="{{$placeholder ?? ''}}"
+        {{empty($required) ? '' : 'required'}}
+        {{empty($autofocus) ? '' : 'autofocus'}} />
 </div>
