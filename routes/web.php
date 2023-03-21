@@ -17,9 +17,11 @@ Route::post('/vehicles/new_action', [VehicleController::class, 'create_action'])
 
 Route::get('/clients', [ClientController::class, 'index'])->name('clients');
 Route::get('/clients/new', [ClientController::class, 'create'])->name('client.create');
+Route::post('/clients/new_action', [ClientController::class, 'create_action'])->name('client.create_action');
 
 Route::get('/addresses', [AddressController::class, 'index'])->name('addresses');
 Route::get('/addresses/new', [AddressController::class, 'create'])->name('address.create');
+Route::post('/addressses/new_action', [AddressController::class, 'create_action'])->name('address.create_action');
 
 Route::get('/products', [ProductController::class, 'index'])->name('products');
 Route::get('/products/new', [ProductController::class, 'create'])->name('product.create');

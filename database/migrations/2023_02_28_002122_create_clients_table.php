@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable(false);
             $table->foreignIdFor(Address::class)->references('id')->on('addresses')->onDelete('CASCADE');
-            $table->string('cpf', 14)->nullable(true);
+            $table->string('cpf', 14)->unique()->nullable(true);
             $table->string('fone', 15)->nullable(true);
             $table->string('email')->unique()->nullable(true);
             

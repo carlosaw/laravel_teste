@@ -106,6 +106,7 @@ section.list {
   width: auto;
   padding: 10px 20px;
   background-color: var(--background-light);
+  /* height: calc(100vh - 101px); */
 }
 section.list h1 {
   color: #605f5f;
