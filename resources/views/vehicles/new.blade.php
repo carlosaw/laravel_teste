@@ -1,6 +1,6 @@
 <x-layout page="Aw2web | Novo Veiculo">
 
-  <section class="list">
+  <div class="form">
       <h1>Cadastrar Veículo</h1>
 
     <form method="POST" action="{{ route('vehicle.create_action') }}">
@@ -25,5 +25,7 @@
       <x-form.form_button resetTxt='Limpar' submitTxt='Cadastrar' ></x-form.form_button>
 
     </form>
-  </section>
+    
+
+</div>
 </x-layout>

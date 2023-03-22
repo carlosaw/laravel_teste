@@ -46,15 +46,17 @@
       <section class="list">
         <div class="list-content">
           {{$slot}}
-          <footer>
-            <div class="footer">
-              Copyright@2023 | Aw2web
-            </div>
-          </footer>
-        </div>                
+          
+        </div>
+        <footer>
+          <div class="footer">
+            Copyright@2023 | Aw2web
+          </div>
+        </footer>                
       </section>
-      
+        
     </div>
+    
   </div>
 </body>
 
