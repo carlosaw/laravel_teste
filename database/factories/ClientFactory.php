@@ -17,12 +17,11 @@ class ClientFactory extends Factory
      */
     public function definition(): array
     {
-        $address = Address::all()->random();
+        
 
         return [
             //
             'name' => fake()->text(12),
-            'address_id' => $address,
             'cpf' => fake()->numerify('###.###.###-##'),
             'fone' => fake()->numerify('9 ####-####'),
             'email' => fake()->unique()->safeEmail()

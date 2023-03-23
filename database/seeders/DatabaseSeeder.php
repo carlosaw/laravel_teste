@@ -28,13 +28,14 @@ class DatabaseSeeder extends Seeder
             //ProductSeeder::class,
             //VehicleSeeder::class
         ]);
-        Address::factory(55)->create();
-        User::factory(5)->create();
-        Client::factory(50)->create();
-        Product::factory(80)->create();
+        
+        User::factory(1)->create();
+        Client::factory(25)->create();
+        Address::factory(25)->create();
+        Product::factory(25)->create();
         Vehicle::factory(25)->create();
         Mechanic::factory(25)->create();
-        Order::factory(75)->create();
+        Order::factory(10)->create();
         //Order::factory(3)->create();
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

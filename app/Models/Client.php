@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Address;
+
 use App\Models\Vehicle;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -14,7 +14,6 @@ class Client extends Model
 
     protected $fillable = [
         'name',
-        'address_id',
         'cpf',
         'fone',
         'email'
@@ -25,7 +24,7 @@ class Client extends Model
         return $this->hasMany(Address::class);
     }
 
-    // Um cliente pode ter vários veículos
+    //Um cliente pode ter vários veículos
     public function vehicles() {
         return $this->hasMany(Vehicle::class);
     }

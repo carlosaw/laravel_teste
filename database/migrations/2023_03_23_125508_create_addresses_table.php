@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Client;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,7 +13,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('addresses', function (Blueprint $table) {
-            $table->id();           
+            $table->id();
+            $table->foreignIdFor(Client::class)->references('id')->on('clients')->onDelete('CASCADE');           
             $table->string('street')->nullable(true);
             $table->string('number')->nullable(true);
             $table->string('cep')->nullable(true);
@@ -28,7 +30,10 @@ return new class extends Migration
      * Reverse the migrations.
      */
     public function down(): void
-    {
+    {   
+        Schema::table('addresses', function(Blueprint $table){
+            $table->dropForeignIdFor(Client::class);
+        });
         Schema::dropIfExists('addresses');
     }
 };

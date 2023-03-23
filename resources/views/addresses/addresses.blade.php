@@ -6,6 +6,7 @@
     <thead>     
       <x-tableTitle
         id=ID
+        client_id='ID'
         street='Rua'
         number='Nº'
         cep='Cep'
@@ -21,13 +22,14 @@
       @foreach ($addresses as $address)     
         <tr class="tr_body">
           <td class="tdLine1a">{{$address->id ?? ''}}</td>
-          <td class="tdLine2a">{{$address->street ?? ''}}</td>
-          <td class="tdLine3a">{{$address->number ?? ''}}</td>
-          <td class="tdLine4a">{{$address->cep ?? ''}}</td>
-          <td class="tdLine5a">{{$address->district ?? ''}}</td>
-          <td class="tdLine6a">{{$address->city ?? ''}}</td>  
-          <td class="tdLine7a">{{$address->state ?? ''}}</td>
-          <td class="tdLine8a">
+          <td class="tdLine2a">{{$address->client_id ?? ''}}</td>
+          <td class="tdLine3a">{{$address->street ?? ''}}</td>
+          <td class="tdLine4a">{{$address->number ?? ''}}</td>
+          <td class="tdLine5a">{{$address->cep ?? ''}}</td>
+          <td class="tdLine6a">{{$address->district ?? ''}}</td>
+          <td class="tdLine7a">{{$address->city ?? ''}}</td>  
+          <td class="tdLine8a">{{$address->state ?? ''}}</td>
+          <td class="tdLine9a">
             <div class="actions">
               <a title="Editar" href="http://meusite.com/addresss/edit/{{$address['id']}}">
                 <img src="/assets/images/icon-edit.png" />

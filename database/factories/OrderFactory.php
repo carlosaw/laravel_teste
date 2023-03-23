@@ -20,9 +20,9 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         $client = Client::all()->random();
-        while(count($client->vehicles) == 0) {
-            $client = Client::all()->random();
-        }
+        // while(count($client->vehicles) == 0) {
+        //     $client = Client::all()->random();
+        // }
         
         $product = Product::all()->random();
         
@@ -30,7 +30,7 @@ class OrderFactory extends Factory
 
         return [
             //
-            'client_id' => $client->vehicles->random(),
+            'client_id' => $client,
             'product_id' => $product,
             'vehicle_id' => $vehicle,
             'mechanic_id' => 1

@@ -45,8 +45,7 @@
 
       <section class="list">
         <div class="list-content">
-          {{$slot}}
-          
+          {{$slot}}          
         </div>
         <footer>
           <div class="footer">

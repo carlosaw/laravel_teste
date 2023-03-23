@@ -17,11 +17,12 @@ class ClientController extends Controller
     }
 
     public function create(Request $request) {
-        $addresses = Address::all();
+        // $addresses = Address::all();
         
-        $data['addresses'] = $addresses;
+        // $data['addresses'] = $addresses;
 
-        return view('clients/new', $data);
+        return view('clients/new');
+        
     }
 
     public function create_action(Request $request) {

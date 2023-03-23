@@ -27,7 +27,7 @@ class Vehicle extends Model
         return $this->belongsTo(Client::class);
     }
 
-    // Um Veículo pode ter vários Produtos
+    //Um Veículo pode ter vários Produtos
     public function product() {
         return $this->hasMany(Product::class);
     }

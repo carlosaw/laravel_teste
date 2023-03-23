@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Address;
+use App\Models\Client;
 
 class AddressController extends Controller
 {
@@ -16,6 +17,11 @@ class AddressController extends Controller
     }
 
     public function create(Request $request) {
-        return view('addresses/new');
+        $client = Client::all();
+        
+        $data['clients'] = $client;
+
+        return view('addresses/new', $data);
+        
     }
 }

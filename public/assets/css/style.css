@@ -258,27 +258,25 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   width: 34px;
 }
 .title2, .tdLine2 {
-  width: 257px;
+  width: 169px;
 }
 .title3, .tdLine3 {
-  width: 66px;
+  width: 150px;
 }
 .title4, .tdLine4 {
-  width: 189px;
+  width: 169px;
 }
 .title5, .tdLine5 {
-  width: 147px;
+  width: 271px;
 }
-.title6, .tdLine6 {
-  width: 270px;
-}
-.title7 {
+.title6 {
   width: 151px;
 }
+
 /* Linhas tabela CLIENTS */
 .tdLine1, .tdLine3, .tdLine4, .tdLine5 {text-align: center;}
-.tdLine2, .tdLine6 {padding-left: 10px;}
-.tdLine7 {
+.tdLine2 {padding-left: 10px;}
+.tdLine6 {
   width: 128px;
 }
 
@@ -321,34 +319,41 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 
 /* Titulo tabela ADDRESSES */
-.title1a, .title2a, .title3a, .title4a, .title5a, .title6a, .title7a, .title8a {border: 1px solid #FFF;}
+.title1a, .title1b, .title2a, .title3a, .title4a, .title5a, .title6a, .title7a, .title8a {border: 1px solid #FFF;}
 .title1a, .tdLine1a {
   width: 34px;
 }
+.title1b {
+  width: 50px;
+
+}
 .title2a, .tdLine2a {
-  width: 243px;
+  width: 50px;
 }
 .title3a, .tdLine3a {
-  width: 71px;
-}
-.title4a, .tdLine4a {
-  width: 146px;
-}
-.title5a, .tdLine5a {
   width: 243px;
 }
+.title4a, .tdLine4a {
+  width: 71px;
+}
+.title5a, .tdLine5a {
+  width: 146px;
+}
 .title6a, .tdLine6a {
-  width: 180px;
+  width: 243px;
 }
 .title7a, .tdLine7a {
+  width: 180px;
+}
+.title8a, .tdLine8a {
   width: 65px;
 }
-.title8a {
+.title9a {
   width: 151px;
 }
 
 /* Linhas tabela ADDRESSES */
-.tdLine1a, .tdLine3a, .tdLine4a, .tdLine7a {text-align: center;}
+.tdLine1a, .tdLine1b .tdLine3a, .tdLine4a, .tdLine7a {text-align: center;}
 .tdLine2a, .tdLine5a, .tdLine6a {padding-left: 10px;}
 .tdLine8a {
   width: 128px;

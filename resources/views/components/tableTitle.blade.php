@@ -13,17 +13,17 @@
   @elseif (request()->is('clients'))   
   <tr class="title">
     <th class="title1">{{$id ?? ''}}</th>       
-    <th class="title2">{{$name ?? ''}}</th>      
-    <th class="title3">{{$address ?? ''}}</th>
-    <th class="title4">{{$cpf ?? ''}}</th>
-    <th class="title5">{{$fone ?? ''}}</th>
-    <th class="title6">{{$email ?? ''}}</th>
-    <th class="title7">{{$actions ?? ''}}</th>      
+    <th class="title2">{{$name ?? ''}}</th>
+    <th class="title3">{{$cpf ?? ''}}</th>
+    <th class="title4">{{$fone ?? ''}}</th>
+    <th class="title5">{{$email ?? ''}}</th>
+    <th class="title6">{{$actions ?? ''}}</th>      
   </tr>
 
   @elseif (request()->is('addresses'))   
   <tr class="title">
-    <th class="title1a">{{$id ?? ''}}</th>       
+    <th class="title1a">{{$id ?? ''}}</th>
+    <th class="title1b">{{$client_id ?? ''}}</th>       
     <th class="title2a">{{$street ?? ''}}</th>
     <th class="title3a">{{$number ?? ''}}</th>      
     <th class="title4a">{{$cep ?? ''}}</th>
