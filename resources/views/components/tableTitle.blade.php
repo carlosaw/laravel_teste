@@ -23,14 +23,14 @@
   @elseif (request()->is('addresses'))   
   <tr class="title">
     <th class="title1a">{{$id ?? ''}}</th>
-    <th class="title1b">{{$client_id ?? ''}}</th>       
-    <th class="title2a">{{$street ?? ''}}</th>
-    <th class="title3a">{{$number ?? ''}}</th>      
-    <th class="title4a">{{$cep ?? ''}}</th>
-    <th class="title5a">{{$district ?? ''}}</th>
-    <th class="title6a">{{$city ?? ''}}</th>
-    <th class="title7a">{{$state ?? ''}}</th>
-    <th class="title8a">{{$actions ?? ''}}</th>     
+    <th class="title2a">{{$client ?? ''}}</th>
+    <th class="title3a">{{$street ?? ''}}</th>
+    <th class="title4a">{{$number ?? ''}}</th>   
+    <th class="title5a">{{$cep ?? ''}}</th>5
+    <th class="title6a">{{$district ?? ''}}</th>
+    <th class="title7a">{{$city ?? ''}}</th>
+    <th class="title8a">{{$state ?? ''}}</th>
+    <th class="title9a">{{$actions ?? ''}}</th>    
   </tr>
   @elseif (request()->is('products'))   
   <tr class="title">

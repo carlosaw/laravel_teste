@@ -21,7 +21,7 @@ class Address extends Model
 
     // Um Endereço sempre vai pertencer a um Cliente
     public function client() {
-        return $this->hasMany(Client::class);
+        return $this->belongsTo(Client::class);
     }
 
     public $timestamps = false;

@@ -1,12 +1,12 @@
 <x-layout page="Aw2web | Endereços">
 
-  <x-subMenu />
-    
-  <table border="1">
+  <x-subMenu/>
+
+  <table border="0">
     <thead>     
       <x-tableTitle
         id=ID
-        client_id='ID'
+        client='Cliente'
         street='Rua'
         number='Nº'
         cep='Cep'
@@ -22,7 +22,7 @@
       @foreach ($addresses as $address)     
         <tr class="tr_body">
           <td class="tdLine1a">{{$address->id ?? ''}}</td>
-          <td class="tdLine2a">{{$address->client_id ?? ''}}</td>
+          <td class="tdLine2a">{{$address->client->id ?? ''}}</td>
           <td class="tdLine3a">{{$address->street ?? ''}}</td>
           <td class="tdLine4a">{{$address->number ?? ''}}</td>
           <td class="tdLine5a">{{$address->cep ?? ''}}</td>

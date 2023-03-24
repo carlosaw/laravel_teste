@@ -1,8 +1,8 @@
 <x-layout page="Aw2web | Clientes">
-  <div class="table_container">
+  
     <x-subMenu />
 
-    <table border="1">
+    <table border="0">
       <thead>            
         <x-tableTitle
           id='ID'

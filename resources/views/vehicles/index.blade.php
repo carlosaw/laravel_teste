@@ -2,7 +2,7 @@
 
   <x-subMenu />
   
-  <table border="1">
+  <table border="0">
     <thead>     
         <x-tableTitle
         id=ID

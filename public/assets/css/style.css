@@ -17,7 +17,6 @@
 
 body {
   background-color: var(--background-white);
-  justify-content: center;
 }
 
 .container {
@@ -119,7 +118,6 @@ h1 {
   display: flex;
   align-items: baseline;
   margin-top: 30px;
-  justify-content: sp;
   justify-content: space-between;
 }
 
@@ -185,9 +183,7 @@ table {
   border-collapse: collapse;
   table-layout: fixed;
   background-color: #FFF;
-  justify-content: space-between;
   display: block;
-  justify-content: flex-end;
   overflow-x: auto;
 }
 tbody {
@@ -253,29 +249,28 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 }
 
 /* Título tabela Clients */
-.title1, .title2, .title3, .title4, .title5, .title6, .title7, .title8 {border: 1px solid #FFF;}
+.title1, .title2, .title3, .title4, .title5, .title6 {border: 1px solid #FFF;}
 .title1, .tdLine1 {
   width: 34px;
 }
 .title2, .tdLine2 {
-  width: 169px;
+  width: 257px;
 }
 .title3, .tdLine3 {
-  width: 150px;
+  width: 151px;
 }
 .title4, .tdLine4 {
-  width: 169px;
+  width: 189px;
 }
 .title5, .tdLine5 {
-  width: 271px;
+  width: 342px;
 }
 .title6 {
   width: 151px;
 }
-
 /* Linhas tabela CLIENTS */
-.tdLine1, .tdLine3, .tdLine4, .tdLine5 {text-align: center;}
-.tdLine2 {padding-left: 10px;}
+.tdLine1, .tdLine3, .tdLine4 {text-align: center;}
+.tdLine2, .tdLine5 {padding-left: 10px;}
 .tdLine6 {
   width: 128px;
 }
@@ -319,43 +314,39 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 
 /* Titulo tabela ADDRESSES */
-.title1a, .title1b, .title2a, .title3a, .title4a, .title5a, .title6a, .title7a, .title8a {border: 1px solid #FFF;}
+.title1a, .title2a, .title3a, .title4a, .title5a, .title6a, .title7a, .title8a, .title9a {border: 1px solid #FFF;/* color: #e6f705; */}
 .title1a, .tdLine1a {
   width: 34px;
 }
-.title1b {
-  width: 50px;
-
-}
 .title2a, .tdLine2a {
-  width: 50px;
+  width: 62px;
 }
 .title3a, .tdLine3a {
-  width: 243px;
+  width: 266px;
 }
 .title4a, .tdLine4a {
-  width: 71px;
+  width: 72px;
 }
 .title5a, .tdLine5a {
-  width: 146px;
+  width: 117px;
 }
 .title6a, .tdLine6a {
-  width: 243px;
+  width: 204px;
 }
 .title7a, .tdLine7a {
-  width: 180px;
+  width: 186px;
 }
 .title8a, .tdLine8a {
-  width: 65px;
+  width: 66px;
 }
 .title9a {
   width: 151px;
 }
 
 /* Linhas tabela ADDRESSES */
-.tdLine1a, .tdLine1b .tdLine3a, .tdLine4a, .tdLine7a {text-align: center;}
-.tdLine2a, .tdLine5a, .tdLine6a {padding-left: 10px;}
-.tdLine8a {
+.tdLine1a, .tdLine2a, .tdLine4a, .tdLine5a, .tdLine8a {text-align: center;}
+.tdLine3a, .tdLine6a, .tdLine7a {padding-left: 10px;}
+.tdLine9a {
   width: 128px;
 }
 

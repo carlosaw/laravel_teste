@@ -31,5 +31,5 @@
     @elseif(request()->is('mechanics'))
       <a href="mechanics/new">Novo Mecânico</a>
     @endif
-  </div>          
+  </div>
 </div>
