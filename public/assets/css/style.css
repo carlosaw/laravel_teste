@@ -189,9 +189,6 @@ tbody {
   overflow: auto;
   height: 600px;
 }
-table thead {
-  display: table;
-}
 
 .title th {
   color: #FFF;
@@ -317,10 +314,10 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   width: 34px;
 }
 .title2a, .tdLine2a {
-  width: 62px;
+  width: 180px;
 }
 .title3a, .tdLine3a {
-  width: 266px;
+  width: 246px;
 }
 .title4a, .tdLine4a {
   width: 72px;
@@ -329,13 +326,13 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   width: 117px;
 }
 .title6a, .tdLine6a {
-  width: 204px;
+  width: 176px;
 }
 .title7a, .tdLine7a {
-  width: 186px;
+  width: 163px;
 }
 .title8a, .tdLine8a {
-  width: 66px;
+  width: 44px;
 }
 .title9a {
   width: 151px;
