@@ -3,7 +3,7 @@
   <x-subMenu/>
 
   <table border="0">
-    <thead>     
+    <thead>
       <x-tableTitle
         id=ID
         client='Cliente'
@@ -15,11 +15,11 @@
         state='UF'
         actions='Ações'
       >
-      </x-tableTitle>    
+      </x-tableTitle>
     </thead>
 
-    <tbody>      
-      @foreach ($addresses as $address)     
+    <tbody>
+      @foreach ($addresses as $address)
         <tr class="tr_body">
           <td class="tdLine1a">{{$address->id ?? ''}}</td>
           <td class="tdLine2a">{{$address->client->id ?? ''}}</td>
@@ -27,7 +27,7 @@
           <td class="tdLine4a">{{$address->number ?? ''}}</td>
           <td class="tdLine5a">{{$address->cep ?? ''}}</td>
           <td class="tdLine6a">{{$address->district ?? ''}}</td>
-          <td class="tdLine7a">{{$address->city ?? ''}}</td>  
+          <td class="tdLine7a">{{$address->city ?? ''}}</td>
           <td class="tdLine8a">{{$address->state ?? ''}}</td>
           <td class="tdLine9a">
             <div class="actions">

@@ -11,9 +11,9 @@ class ClientController extends Controller
 {
     //
     public function index(Request $request) {
-        $clients = Client::all()->take(50);
+        $clients = Client::all();
         
-        return view('clients/clients', ['clients' => $clients]);
+        return view('clients/index', ['clients' => $clients]);
     }
 
     public function create(Request $request) {

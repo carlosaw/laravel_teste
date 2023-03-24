@@ -2,9 +2,9 @@
   --background-light: #F0F2FA;
   --background-white: #FFFFFF;
   --text-dark: #0A0040;
-  --color-primary: #0000FF;
+  --color-primary: #0043b9;
   --color-secundary: #7fd9f7;
-  --color-selected: #6b69f5;
+  --color-selected: #0955d8;
 }
 
 * {
@@ -56,7 +56,6 @@ nav {
 .btn:hover {
   transform: scale(1.05);
   opacity: .8;
-  background-color: var(--color-selected);
 }
 
 a.btn {
@@ -93,7 +92,6 @@ a.btn {
 
 .home {
   height: calc(100vh - 100px);
-  background-color: aqua;
   display: flex;
   justify-content: center;
 }
@@ -314,7 +312,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 
 /* Titulo tabela ADDRESSES */
-.title1a, .title2a, .title3a, .title4a, .title5a, .title6a, .title7a, .title8a, .title9a {border: 1px solid #FFF;/* color: #e6f705; */}
+.title1a, .title2a, .title3a, .title4a, .title5a, .title6a, .title7a, .title8a, .title9a {border: 1px solid #FFF;}
 .title1a, .tdLine1a {
   width: 34px;
 }

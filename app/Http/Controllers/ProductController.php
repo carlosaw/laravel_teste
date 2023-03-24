@@ -1,31 +1,32 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+namespace App\Http\Controllers;
 
-return new class extends Migration
+use App\Http\Controllers\Controller;
+use App\Models\Product;
+use Illuminate\Http\Request;
+class ProductController extends Controller
 {
-  /**
-   * Run the migrations.
-   */
-  public function up(): void
-  {
-    Schema::create('products', function (Blueprint $table) {
-      $table->id();
-      $table->string('name');
-      $table->float('value')->nullable(true);
-      $table->integer('quantity')->nullable(true);
+    //
+    public function index(Request $request) {
+        $products = Product::all();
+        
+        return view('products/index', ['products' => $products]);
+    }
 
-      //$table->timestamps();
-    });
-  }
+    // public function create(Request $request) {
+    //     $clients = Client::all();
+        
+    //     $data['clients'] = $clients;
 
-  /**
-   * Reverse the migrations.
-   */
-  public function down(): void
-  {
-    Schema::dropIfExists('products');
-  }
-};
+    //     return view('vehicles/new', $data);
+    // }
+
+    // public function create_action(Request $request) {
+    //     //dd($request->all());
+    //     $vehicle = $request->only(['plate', 'brand', 'model', 'color', 'year', 'km', 'client_id']);
+    //     $vehicle['client_id'] = 1;
+    //     $dbVehicle = Vehicle::create($vehicle);
+    //     return $dbVehicle;
+    // }
+}
