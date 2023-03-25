@@ -29,10 +29,10 @@
           <td class="tdLine7v">{{$vehicle->km ?? ''}}</td>
           <td class="tdLine8v">
             <div class="actions">
-              <a title="Editar" href="http://meusite.com/vehicles/edit/{{$vehicle['id']}}">
+              <a title="Editar" href="{{route('vehicle.edit', ['id' => $vehicle->id])}}">
                 <img src="/assets/images/icon-edit.png" />
               </a>
-              <a title="Excluir" href="http://meusite.com/vehicles/delete/{{$vehicle['id'] ?? ''}}">
+              <a title="Excluir" href="{{route('vehicle.delete', ['id' => $vehicle->id])}}">
                 <img src="/assets/images/icon-delete.png" />
               </a>
             </div>                                    

@@ -8,5 +8,7 @@
         name="{{$name}}"        
         placeholder="{{$placeholder ?? ''}}"
         {{empty($required) ? '' : 'required'}}
-        {{empty($autofocus) ? '' : 'autofocus'}} />
+        {{empty($autofocus) ? '' : 'autofocus'}} 
+        value="{{$value ?? ''}}"
+        />
 </div>
