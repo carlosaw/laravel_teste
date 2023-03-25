@@ -26,8 +26,7 @@ class VehicleController extends Controller
     public function create_action(Request $request) {
         //dd($request->all());
         $vehicle = $request->only(['plate', 'brand', 'model', 'color', 'year', 'km', 'client_id']);
-        $vehicle['client_id'] = 1;
-        $dbVehicle = Vehicle::create($vehicle);
-        return $dbVehicle;
+        Vehicle::create($vehicle);
+        return redirect(route('vehicles'));
     }
 }

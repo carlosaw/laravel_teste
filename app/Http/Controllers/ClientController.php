@@ -28,7 +28,7 @@ class ClientController extends Controller
     public function create_action(Request $request) {
         //dd($request->all());
         $client = $request->only(['name', 'cpf', 'fone', 'email']);
-        $dbClient = Client::create($client);
-        return $dbClient;
+        Client::create($client);
+        return redirect(route('clients'));
     }
 }

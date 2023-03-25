@@ -22,7 +22,7 @@
         @foreach ($addresses as $address)     
           <tr class="tr_body">
             <td class="tdLine1a">{{$address->id ?? ''}}</td>
-            <td class="tdLine2a">{{$address->client_id ?? ''}}</td>
+            <td class="tdLine2a">{{$address->client->name ?? ''}}</td>
             <td class="tdLine3a">{{$address->street ?? ''}}</td>
             <td class="tdLine4a">{{$address->number ?? ''}}</td>
             <td class="tdLine5a">{{$address->cep ?? ''}}</td>  

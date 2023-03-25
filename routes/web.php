@@ -25,6 +25,7 @@ Route::post('/addressses/new_action', [AddressController::class, 'create_action'
 
 Route::get('/products', [ProductController::class, 'index'])->name('products');
 Route::get('/products/new', [ProductController::class, 'create'])->name('product.create');
+Route::post('/products/new_action', [ProductController::class, 'create_action'])->name('product.create_action');
 
 Route::get('/orders', [OrderController::class, 'index'])->name('orders');
 Route::get('/orders/new', [OrderController::class, 'create'])->name('order.create');

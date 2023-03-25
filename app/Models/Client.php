@@ -19,10 +19,10 @@ class Client extends Model
         'email'
     ];
 
-    // Um cliente pode ter vários endereços
-    public function address() {
-        return $this->hasMany(Address::class);
-    }
+    // // Um cliente pode ter vários endereços
+    // public function address() {
+    //     return $this->hasMany(Address::class);
+    // }
 
     //Um cliente pode ter vários veículos
     public function vehicles() {

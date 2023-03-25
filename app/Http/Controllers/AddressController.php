@@ -17,11 +17,19 @@ class AddressController extends Controller
     }
 
     public function create(Request $request) {
-        $client = Client::all();
+        $clients = Client::all();
         
-        $data['clients'] = $client;
+        $data['clients'] = $clients;
 
-        return view('addresses/new', $data);
-        
+        return view('addresses/new', $data);       
+    }
+
+    public function create_action(Request $request) {
+        //dd($request->all());
+        $address = $request->only(['street', 'number', 'cep', 'district', 'city', 'state', 'client_id']);
+        $address['client_id'] = 1;
+        // $dbaddress = Address::create($address);
+        Address::create($address);
+        return redirect(route('addresses'));
     }
 }

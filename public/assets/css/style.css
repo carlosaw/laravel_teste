@@ -21,6 +21,7 @@ body {
 
 .container {
   display: flex;
+  height: 100vh;
 }
 
 .sidebar {
@@ -32,6 +33,7 @@ body {
   flex: 1;
   width: calc(100vw-100px);
   height: calc(100vh-150px);
+  height: 10;
 }
 
 nav {
@@ -101,9 +103,11 @@ a.btn {
   align-items: center;
   display: flex;
   background-color: #F0F2FA;
+  height: calc(100vh - 100px);
 }
 .list-content {
-  min-height: calc(100vh - 173px);
+  /* min-height: calc(100vh - 173px); */
+  /* background-color: blanchedalmond; */
 }
 h1 {
   color: #605f5f;
@@ -314,7 +318,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   width: 34px;
 }
 .title2a, .tdLine2a {
-  width: 180px;
+  width: 206px;
 }
 .title3a, .tdLine3a {
   width: 246px;
@@ -335,16 +339,18 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   width: 44px;
 }
 .title9a {
-  width: 151px;
+  width: 155px;
 }
 
 /* Linhas tabela ADDRESSES */
-.tdLine1a, .tdLine2a, .tdLine4a, .tdLine5a, .tdLine8a {text-align: center;}
-.tdLine3a, .tdLine6a, .tdLine7a {padding-left: 10px;}
+.tdLine1a, .tdLine4a, .tdLine5a, .tdLine8a {text-align: center;}
+.tdLine2a, .tdLine3a, .tdLine6a, .tdLine7a {padding-left: 10px;}
 .tdLine9a {
   width: 128px;
 }
-
+#text {
+  display: none;
+}
 
 
 /* Título tabela Products */

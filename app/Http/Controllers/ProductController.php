@@ -14,19 +14,14 @@ class ProductController extends Controller
         return view('products/index', ['products' => $products]);
     }
 
-    // public function create(Request $request) {
-    //     $clients = Client::all();
-        
-    //     $data['clients'] = $clients;
+    public function create(Request $request) {
+        return view('products/new');
+    }
 
-    //     return view('vehicles/new', $data);
-    // }
-
-    // public function create_action(Request $request) {
-    //     //dd($request->all());
-    //     $vehicle = $request->only(['plate', 'brand', 'model', 'color', 'year', 'km', 'client_id']);
-    //     $vehicle['client_id'] = 1;
-    //     $dbVehicle = Vehicle::create($vehicle);
-    //     return $dbVehicle;
-    // }
+    public function create_action(Request $request) {
+        //dd($request->all());
+        $product = $request->only(['name', 'value', 'quantity']);
+        Product::create($product);
+        return redirect(route('products'));
+    }
 }

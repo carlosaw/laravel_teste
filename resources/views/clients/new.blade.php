@@ -6,7 +6,11 @@
       @csrf
       <x-form.text_input name="name" label="Nome do Cliente" placeholder="Digite o nome do cliente" autofocus required/>
 
-      
+      {{-- <x-form.select_input name="address_id" label="End." selectItem='Selecione um Endereço'>
+        @foreach ($addresses as $address)
+          <option value="{{$address->id}}">{{$address->street}}, {{$address->number}}</option>
+        @endforeach
+      </x-form.select_input> --}}
           
       <x-form.text_input name="cpf" label="Cpf" placeholder="Digite o Cpf"/>
 
