@@ -32,6 +32,7 @@ Route::get('/orders/new', [OrderController::class, 'create'])->name('order.creat
 
 Route::get('/mechanics', [MechanicController::class, 'index'])->name('mechanics');
 Route::get('/mechanics/new', [MechanicController::class, 'create'])->name('mechanic.create');
+Route::post('/mechanics/new_action', [MechanicController::class, 'create_action'])->name('mechanic.create_action');
 
 Route::get('/login', function(){
     return view('login');

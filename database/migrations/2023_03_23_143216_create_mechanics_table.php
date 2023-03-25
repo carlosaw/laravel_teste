@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('name')->nullable(false);
             $table->string('phone')->nullable(false);
             $table->string('percentage')->default(0);
-            $table->foreignIdFor(Client::class)->references('id')->on('clients')->onDelete('CASCADE');
-            $table->foreignIdFor(Vehicle::class)->references('id')->on('vehicles')->onDelete('CASCADE');
+            // $table->foreignIdFor(Client::class)->references('id')->on('clients')->onDelete('CASCADE');
+            // $table->foreignIdFor(Vehicle::class)->references('id')->on('vehicles')->onDelete('CASCADE');
             //$table->timestamps();
         });
     }
@@ -29,10 +29,10 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('mechanics', function (Blueprint $table) {
-            $table->dropForeignIdFor(Client::class);
-            $table->dropForeignIdFor(Vehicles::class);
-        });
+        // Schema::table('mechanics', function (Blueprint $table) {
+        //     $table->dropForeignIdFor(Client::class);
+        //     $table->dropForeignIdFor(Vehicles::class);
+        // });
         Schema::dropIfExists('mechanics');
     }
 };

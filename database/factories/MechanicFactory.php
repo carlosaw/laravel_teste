@@ -23,8 +23,8 @@ class MechanicFactory extends Factory
             'name' => fake()->text(12),
             'phone' => fake()->numerify('# ####-####'),
             'percentage' => rand(50, 55),
-            'vehicle_id' => Vehicle::all()->random(),
-            'client_id' => Client::all()->random()
+            // 'vehicle_id' => Vehicle::all()->random(),
+            // 'client_id' => Client::all()->random()
         ];
     }
 

@@ -18,17 +18,17 @@ class Mechanic extends Model
         'name',
         'phone',
         'percentage',
-        'vehicle_id',
-        'client_id'
+        // 'vehicle_id',
+        // 'client_id'
     ];
 
-    // Um mecânico pode ter vários clientes
-    public function client() {
-        return $this->hasMany(Client::class);
-    }
+    // // Um mecânico pode ter vários clientes
+    // public function client() {
+    //     return $this->hasMany(Client::class);
+    // }
 
-    // Um mecânico pode fazer serviços em vários veículos
-    public function vehicles() {
-        return $this->hasMany(Vehicle::class);
-    }
+    // // Um mecânico pode fazer serviços em vários veículos
+    // public function vehicles() {
+    //     return $this->hasMany(Vehicle::class);
+    // }
 }

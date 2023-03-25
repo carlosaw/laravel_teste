@@ -18,4 +18,11 @@ class MechanicController extends Controller
     public function create(Request $request) {
         return view('mechanics/new');
     }
+
+    public function create_action(Request $request) {
+        //dd($request->all());
+        $mechanic = $request->only(['name', 'phone', 'percentage']);
+        Mechanic::create($mechanic);
+        return redirect(route('mechanics'));
+    }
 }
