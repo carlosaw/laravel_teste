@@ -1,4 +1,4 @@
-@if (request()->is('vehicles/new'))
+@if (request()->is('vehicles/new') || request()->is('vehicles/edit'))
   <x-btnselect btnHref='/vehicles' btnText='Veículos'></x-btnselect>
   <x-btn btnHref='/clients' btnText='Clientes'></x-btn>
   <x-btn btnHref='/addresses' btnText='Endereços'></x-btn>

@@ -22,7 +22,16 @@
     </div>
     <div class="content">
       <nav>
-        @if ($page !== 'Aw2web | Login' && $page !== 'Aw2web | Registro' && $page !== 'Aw2web | Novo Veiculo' && $page !== 'Aw2web | Novo Cliente' && $page !== 'Aw2web | Novo Endereço' && $page !== 'Aw2web | Novo Produto' && $page !== 'Aw2web | Nova OS' && $page !== 'Aw2web | Novo Mecânico')
+        @if (
+          $page !== 'Aw2web | Login' && 
+          $page !== 'Aw2web | Registro' && 
+          $page !== 'Aw2web | Novo Veiculo' && 
+          $page !== 'Aw2web | Novo Cliente' && 
+          $page !== 'Aw2web | Novo Endereço' && 
+          $page !== 'Aw2web | Novo Produto' && 
+          $page !== 'Aw2web | Nova OS' && 
+          $page !== 'Aw2web | Novo Mecânico' && 
+          $page !== 'Aw2web | Editar Veiculo')
           <x-btn btnHref='vehicles' btnText='Veículos'></x-btn>                  
           <x-btn btnHref='clients' btnText='Clientes'></x-btn>
           <x-btn btnHref='addresses' btnText='Endereços'></x-btn>

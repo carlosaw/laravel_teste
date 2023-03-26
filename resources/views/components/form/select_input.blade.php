@@ -5,10 +5,9 @@
     <select
         id="{{$name}}"
         name="{{$name}}"
-        {{empty($required) ? '' : 'required'}}
-        value="{{$value ?? ''}}"
+        {{empty($required) ? '' : 'required'}}        
         >
-        <option selected disabled value="">{{$selectItem ?? ''}}</option>
+        <option selected disabled value="{{$value ?? ''}}">{{$selectItem ?? ''}}</option>
         {{$slot}}
     </select>
 </div>

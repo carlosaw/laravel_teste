@@ -41,7 +41,7 @@ class VehicleController extends Controller
 
         $clients = Client::all();        
         $data['clients'] = $clients;
-//dd($data);
+
         return view('vehicles/edit', $data, $data1);
     }
 

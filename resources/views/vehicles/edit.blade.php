@@ -16,9 +16,15 @@
       <x-form.text_input value="{{$vehicles->year}}" name="year" label="Ano" placeholder="Digite o Ano do veículo"/>
       <x-form.text_input value="{{$vehicles->km}}" name="km" label="Km" placeholder="Digite a Quilometragem do veículo"/>
 
-      <x-form.select_input name="client_id" label="Cliente" selectItem='Selecione um Cliente'>
+      <x-form.select_input name="client_id" label="Cliente" selected selectItem>
         @foreach ($clients as $client)
-          <option value="{{ $client->id }}">{{ $client->name }}</option>
+          
+          <option value="{{$client->id}}" 
+            @if ($client->id===$vehicles->client_id)
+              {{'selected';}} selectItem={{$client->name}}
+            @endif
+          >{{ $client->name }}
+          </option>
         @endforeach
       </x-form.select_input>
 
