@@ -45,8 +45,27 @@ class VehicleController extends Controller
         return view('vehicles/edit', $data, $data1);
     }
 
+    public function edit_action(Request $request) {
+        //dd($request->all());
+
+        $request_data = $request->only(['plate', 'brand', 'model', 'color', 'year', 'km', 'client_id']);
+        $vehicle = Vehicle::find($request->id);
+        if(!$vehicle) {
+            return 'Erro: Veículo não existe!';
+        }
+        //dd($vehicle);
+        $vehicle->update($request_data);
+        $vehicle->save();
+        //dd($vehicle);
+        return redirect(route('vehicles'));
+    }
+
     public function delete(Request $request) {
-        
+        $id = $request->id;
+        $vehicle = Vehicle::find($id);
+        if($vehicle) {
+            $vehicle->delete();
+        }
         return redirect(route('vehicles'));
     }
 }

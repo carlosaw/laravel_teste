@@ -10,5 +10,6 @@
         {{empty($required) ? '' : 'required'}}
         {{empty($autofocus) ? '' : 'autofocus'}} 
         value="{{$value ?? ''}}"
+        {{empty($disabled) ? '' : 'disabled'}}
         />
 </div>

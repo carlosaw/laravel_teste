@@ -31,10 +31,10 @@
             <td class="tdLine8a">{{$address->state ?? ''}}</td>
             <td class="tdLine9a">
               <div class="actions">
-                <a title="Editar" href="http://meusite.com/addresses/edit/{{$address['id']}}">
+                <a title="Editar" href="{{route('address.edit', ['id' => $address->id])}}">
                   <img src="/assets/images/icon-edit.png" />
                 </a>
-                <a title="Excluir" href="http://meusite.com/addresses/delete/{{$address['id'] ?? ''}}">
+                <a title="Excluir" href="{{route('address.delete', ['id' => $address->id])}}">
                   <img src="/assets/images/icon-delete.png" />
                 </a>
               </div>                                    

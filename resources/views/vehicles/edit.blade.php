@@ -3,8 +3,9 @@
   <div class="form">
       <h1>Editar Veículo</h1>
 
-    <form method="POST">
+    <form method="POST" action="{{route('vehicle.edit_action')}}">
       @csrf
+      <input type="hidden" name="id" value="{{$vehicles->id}}" />
       <x-form.text_input value="{{$vehicles->plate}}" name="plate" label="Placa do Veículo" autofocus />
           
       <x-form.text_input value="{{$vehicles->brand}}" name="brand" label="Marca" placeholder="Digite a Marca do veículo"/>
@@ -28,7 +29,7 @@
         @endforeach
       </x-form.select_input>
 
-      <x-form.form_button resetTxt='Limpar' submitTxt='Cadastrar' ></x-form.form_button>
+      <x-form.form_button resetTxt='Limpar' submitTxt='Atualizar' ></x-form.form_button>
 
     </form>
     

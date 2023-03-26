@@ -25,10 +25,10 @@
             <td class="tdLine5">{{$client->email ?? ''}}</td>
             <td class="tdLine6">
               <div class="actions">
-                <a title="Editar" href="http://meusite.com/clients/edit/{{$client['id']}}">
+                <a title="Editar" href="{{route('client.edit', ['id' => $client->id])}}">
                   <img src="/assets/images/icon-edit.png" />
                 </a>
-                <a title="Excluir" href="http://meusite.com/clients/delete/{{$client['id'] ?? ''}}">
+                <a title="Excluir" href="{{route('client.delete', ['id' => $client->id])}}">
                   <img src="/assets/images/icon-delete.png" />
                 </a>
               </div>                                    

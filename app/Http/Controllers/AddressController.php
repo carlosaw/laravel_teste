@@ -32,4 +32,43 @@ class AddressController extends Controller
         Address::create($address);
         return redirect(route('addresses'));
     }
+
+    public function edit(Request $request) {
+        $id = $request->id;
+        //dd($id);
+        $addresses = Address::find($id);
+        if(!$addresses) {
+            return redirect(route('addresses'));
+        }
+        $data1['addresses'] = $addresses;
+
+        $clients = Client::all();        
+        $data['clients'] = $clients;
+
+        return view('addresses/edit', $data, $data1);
+    }
+
+    public function edit_action(Request $request) {
+        //dd($request->all());
+
+        $request_data = $request->only(['street', 'number', 'cep', 'district', 'city', 'state', 'client_id']);
+        $address = Address::find($request->id);
+        if(!$address) {
+            return 'Erro: Endereço não existe!';
+        }
+        //dd($client);
+        $address->update($request_data);
+        $address->save();
+        //dd($address);
+        return redirect(route('addresses'));
+    }
+
+    public function delete(Request $request) {
+        $id = $request->id;
+        $address = Address::find($id);
+        if($address) {
+            $address->delete();
+        }
+        return redirect(route('addresses'));
+    }
 }

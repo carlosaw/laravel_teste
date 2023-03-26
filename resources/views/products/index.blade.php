@@ -23,10 +23,10 @@
           <td class="tdLine4p">{{$product->quantity ?? ''}}</td>
           <td class="tdLine5p">
             <div class="actions">
-              <a title="Editar" href="http://meusite.com/products/edit/{{$product['id']}}">
+              <a title="Editar" href="{{route('product.edit', ['id' => $product->id])}}">
                 <img src="/assets/images/icon-edit.png" />
               </a>
-              <a title="Excluir" href="http://meusite.com/products/delete/{{$product['id'] ?? ''}}">
+              <a title="Excluir" href="{{route('product.delete', ['id' => $product->id])}}">
                 <img src="/assets/images/icon-delete.png" />
               </a>
             </div>                                    

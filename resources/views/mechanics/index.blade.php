@@ -23,10 +23,10 @@
           <td class="tdLine4m">{{$mechanic->percentage ?? ''}}</td>
           <td class="tdLine7m">
             <div class="actions">
-              <a title="Editar" href="http://meusite.com/mechanics/edit/{{$mechanic['id']}}">
+              <a title="Editar" href="{{route('mechanic.edit', ['id' => $mechanic->id])}}">
                 <img src="/assets/images/icon-edit.png" />
               </a>
-              <a title="Excluir" href="http://meusite.com/mechanics/delete/{{$mechanic['id'] ?? ''}}">
+              <a title="Excluir" href="{{route('mechanic.delete', ['id' => $mechanic->id])}}">
                 <img src="/assets/images/icon-delete.png" />
               </a>
             </div>                                    

@@ -6,7 +6,7 @@
   <x-btn btnHref='/orders' btnText='Serviços'></x-btn>
   <x-btn btnHref='/mechanics' btnText='Mecânicos'></x-btn>
           
-@elseif (request()->is('clients/new'))
+@elseif (request()->is('clients/new') || request()->is('clients/edit'))
   <x-btn btnHref='/vehicles' btnText='Veiculos'></x-btn>
   <x-btnselect btnHref='/clients' btnText='Clientes'></x-btnselect>
   <x-btn btnHref='/addresses' btnText='Endereços'></x-btn>
@@ -14,7 +14,7 @@
   <x-btn btnHref='/orders' btnText='Serviços'></x-btn>
   <x-btn btnHref='/mechanics' btnText='Mecânicos'></x-btn>          
 
-@elseif (request()->is('addresses/new'))
+@elseif (request()->is('addresses/new') || request()->is('addresses/edit'))
   <x-btn btnHref='/vehicles' btnText='Veiculos'></x-btn>
   <x-btn btnHref='/clients' btnText='Clientes'></x-btn>
   <x-btnselect btnHref='/addresses' btnText='Endereços'></x-btnselect>
@@ -22,7 +22,7 @@
   <x-btn btnHref='/orders' btnText='Serviços'></x-btn>
   <x-btn btnHref='/mechanics' btnText='Mecânicos'></x-btn>          
 
-@elseif (request()->is('products/new'))
+@elseif (request()->is('products/new') || request()->is('products/edit'))
   <x-btn btnHref='/vehicles' btnText='Veiculos'></x-btn>
   <x-btn btnHref='/clients' btnText='Clientes'></x-btn>
   <x-btn btnHref='/addresses' btnText='Endereços'></x-btn>
@@ -38,7 +38,7 @@
   <x-btnselect btnHref='/orders' btnText='Serviços'></x-btnselect>
   <x-btn btnHref='/mechanics' btnText='Mecânicos'></x-btn>          
 
-@elseif (request()->is('mechanics/new'))
+@elseif (request()->is('mechanics/new') || request()->is('mechanics/edit'))
   <x-btn btnHref='/vehicles' btnText='Veiculos'></x-btn>
   <x-btn btnHref='/clients' btnText='Clientes'></x-btn>
   <x-btn btnHref='/addresses' btnText='Endereços'></x-btn>
