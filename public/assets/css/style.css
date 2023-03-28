@@ -106,10 +106,10 @@ a.btn {
   background-color: #F0F2FA;
   height: calc(100vh - 100px);
 }
-.list-content {
-  /* min-height: calc(100vh - 173px); */
-  /* background-color: blanchedalmond; */
-}
+/* .list-content {
+  min-height: calc(100vh - 173px);
+  background-color: blanchedalmond;
+} */
 h1 {
   color: #605f5f;
   font-size: 400;

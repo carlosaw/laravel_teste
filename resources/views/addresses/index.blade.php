@@ -22,7 +22,7 @@
         @foreach ($addresses as $address)     
           <tr class="tr_body">
             <td class="tdLine1a">{{$address->id ?? ''}}</td>
-            <td class="tdLine2a">{{$address->client->name ?? ''}}</td>
+            <td class="tdLine2a">{{$address->client_id ?? ''}}</td>
             <td class="tdLine3a">{{$address->street ?? ''}}</td>
             <td class="tdLine4a">{{$address->number ?? ''}}</td>
             <td class="tdLine5a">{{$address->cep ?? ''}}</td>  
@@ -34,9 +34,10 @@
                 <a title="Editar" href="{{route('address.edit', ['id' => $address->id])}}">
                   <img src="/assets/images/icon-edit.png" />
                 </a>
-                <a title="Excluir" href="{{route('address.delete', ['id' => $address->id])}}">
+                <a id="sweetalert2" title="Excluir" href="{{route('address.delete', ['id' => $address->id])}}">
                   <img src="/assets/images/icon-delete.png" />
                 </a>
+                
               </div>                                    
             </td>
           </tr>       
@@ -44,5 +45,26 @@
       </tbody>
   
     </table>
-            
+    
   </x-layout>
+  <script>
+    document.getElementById('sweetalert2').addEventListener('click', function(){
+      Swal.fire({
+      title: 'Tem certeza?',
+      text: "Você não será capaz de reverter isso!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sim, apague-o!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deletado!',
+          'Seu arquivo foi excluído.',
+          'success'
+        )
+      }
+    })
+    });
+  </script>

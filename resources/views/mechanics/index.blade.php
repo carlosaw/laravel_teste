@@ -26,7 +26,7 @@
               <a title="Editar" href="{{route('mechanic.edit', ['id' => $mechanic->id])}}">
                 <img src="/assets/images/icon-edit.png" />
               </a>
-              <a title="Excluir" href="{{route('mechanic.delete', ['id' => $mechanic->id])}}">
+              <a id="sweetalert2" title="Excluir" href="{{route('mechanic.delete', ['id' => $mechanic->id])}}">
                 <img src="/assets/images/icon-delete.png" />
               </a>
             </div>                                    
@@ -37,3 +37,25 @@
   
   </table>
 </x-layout>
+
+  <script>
+    document.getElementById('sweetalert2').addEventListener('click', function(){
+      Swal.fire({
+      title: 'Tem certeza?',
+      text: "Você não será capaz de reverter isso!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sim, apague-o!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deletado!',
+          'Seu arquivo foi excluído.',
+          'success'
+        )
+      }
+    })
+    });
+  </script>
