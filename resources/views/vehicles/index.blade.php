@@ -1,8 +1,12 @@
 <x-layout page="Aw2web | Veiculos">
 
   <x-subMenu />
-  
-  <table border="0">
+  <!-- @if(Session::has('fail'))
+    <div class="alert alert-danger">
+       {{Session::get('fail')}}
+    </div>
+  @endif  -->
+  <table border="0">  
     <thead>     
         <x-tableTitle
         id='ID'
@@ -18,7 +22,8 @@
     </thead>
 
     <tbody>      
-      @foreach ($vehicles as $vehicle)     
+      @foreach ($vehicles as $vehicle) 
+         
         <tr class="tr_body">
           <td class="tdLine1v">{{$vehicle->id ?? ''}}</td>
           <td class="tdLine2v">{{$vehicle->plate ?? ''}}</td>
@@ -32,7 +37,8 @@
               <a title="Editar" href="{{route('vehicle.edit', ['id' => $vehicle->id])}}">
                 <img src="/assets/images/icon-edit.png" />
               </a>
-              <a id="normalalert" title="Excluir" href="{{route('vehicle.delete', ['id' => $vehicle->id])}}">
+              
+              <a id="alert" onclick="return confirm('Tem certeza que deseja excluir? Este processo é irreversível!')" title="Excluir" href="{{route('vehicle.delete', ['id' => $vehicle->id])}}">
                 <img src="/assets/images/icon-delete.png" />
               </a>
             </div>                                    
@@ -45,9 +51,9 @@
           
 </x-layout>
 
-  <script>
-    document.getElementById('normalalert').addEventListener('click', function(){
-      //e.preventDefault();
+  <!-- <script>
+    document.getElementById('alert').addEventListener('click', function(e){
+      e.preventDefault();
       Swal.fire({
         title: 'Tem certeza?',
         text: "Você não será capaz de reverter isso!",
@@ -58,12 +64,9 @@
         confirmButtonText: 'Sim, apague-o!'
       }).then((result) => {      
         if (result.isConfirmed) {
-          Swal.fire(
-            'Deletado!',
-            'Seu arquivo foi excluído.',
-            'success'
-          )        
+          window.location.href="{{route('vehicle.delete', ['id' => $vehicle->id])}}"       
         }
       })
+      
     });
-  </script>
+  </script> -->

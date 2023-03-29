@@ -451,3 +451,9 @@ select:focus {
 .inputArea>select {
   color: #605f5f;
 }
+
+.alert-danger {
+  width: 500px;
+  height: 50px;
+  background-color: coral;
+}
