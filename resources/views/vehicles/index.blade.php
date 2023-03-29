@@ -46,8 +46,8 @@
 </x-layout>
 
   <script>
-    document.getElementById('normalalert').addEventListener('click', function(){
-      //e.preventDefault();
+    document.getElementById('normalalert').addEventListener('click', function(e){
+      e.preventDefault();
       Swal.fire({
         title: 'Tem certeza?',
         text: "Você não será capaz de reverter isso!",
@@ -61,8 +61,8 @@
           Swal.fire(
             'Deletado!',
             'Seu arquivo foi excluído.',
-            'success'
-          )        
+            'success',            
+          )                  
         }
       })
     });
