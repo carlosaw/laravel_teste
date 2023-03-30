@@ -1,19 +1,19 @@
 <x-layout page="Aw2web | Veiculos">
 
   <x-subMenu />
-  <script> 
-    setTimeout(function () {
-      document.getElementById("alert").style.display = "none";
-    }, 3000);
-    function hide(){
-      document.getElementById("alert-success").style.display = "none";
-    }
-  </script>
+  
   @if (session('alert'))
-    <div id="alert" class="alert">
+    <script> 
+      setTimeout(function () {
+        document.getElementById("alert").style.display = "none";
+    }, 3000);
+      function hide(){
+        document.getElementById("alert-success").style.display = "none";
+    }
+    </script>  
+    <div id="alert">
       <div id="alert-success" class="alert-success">
-        {{ session('alert') }}
-        <a class="close" href="{{route('vehicles')}}">X</a>
+        {{ session('alert') }} ✔
       </div>
     </div>        
   @endif
@@ -48,7 +48,7 @@
               <a title="Editar" href="{{route('vehicle.edit', ['id' => $vehicle->id])}}">
                 <img src="/assets/images/icon-edit.png" />
               </a>              
-              <a id="alert" onclick="return confirm('Tem certeza que deseja excluir? Este processo é irreversível!')" title="Excluir" href="{{route('vehicle.delete', ['id' => $vehicle->id])}}">
+              <a onclick="return confirm('Tem certeza que deseja excluir? Este processo é irreversível!')" title="Excluir" href="{{route('vehicle.delete', ['id' => $vehicle->id])}}">
                 <img src="/assets/images/icon-delete.png" />
               </a>
             </div>                                    
@@ -58,5 +58,5 @@
     </tbody>
 
   </table>
-          
+       
 </x-layout>

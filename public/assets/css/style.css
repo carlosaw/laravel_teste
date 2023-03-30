@@ -182,7 +182,7 @@ button.btnNew, button[type=submit] {
 }
 
 table {
-  margin-top: 30px;
+  margin-top: 10px;
   border-collapse: collapse;
   table-layout: fixed;
   background-color: #FFF;
@@ -452,19 +452,25 @@ select:focus {
   color: #605f5f;
 }
 
-.alert {
-  display: flex;
-  justify-content: center;
+#alert {
+  justify-content: space-evenly;
+  position: absolute;
+  margin-top: -39px;
+  margin-left: 655px;
+  border-radius: 18px;
 }
+
 .alert-success {
   color: var(--background-light);
-  width: 500px;
+  width: 250px;
   height: 40px;
-  background-color: forestgreen;
+  background-color: #4eb94e;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 5px;
+  font-size: large;
+  align-items: center;
 }
 a.close {
   color: var(--background-light);
