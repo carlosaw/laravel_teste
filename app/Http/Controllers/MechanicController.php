@@ -58,6 +58,6 @@ class MechanicController extends Controller
         if($mechanic) {
             $mechanic->delete();
         }
-        return redirect(route('mechanics'));
+        return redirect(route('mechanics'))->with('alert', 'Excluído com sucesso!');
     }
 }

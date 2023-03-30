@@ -57,6 +57,6 @@ class ProductController extends Controller
         if($product) {
             $product->delete();
         }
-        return redirect(route('products'));
+        return redirect(route('products'))->with('alert', 'Excluído com sucesso!');
     }
 }

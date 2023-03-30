@@ -65,6 +65,6 @@ class ClientController extends Controller
         if($client) {
             $client->delete();
         }
-        return redirect(route('clients'));
+        return redirect(route('clients'))->with('alert', 'Excluído com sucesso!');
     }
 }

@@ -69,6 +69,6 @@ class AddressController extends Controller
         if($address) {
             $address->delete();
         }
-        return redirect(route('addresses'));
+        return redirect(route('addresses'))->with('alert', 'Excluído com sucesso!');
     }
 }

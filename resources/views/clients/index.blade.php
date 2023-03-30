@@ -2,6 +2,22 @@
   
     <x-subMenu />
 
+    @if (session('alert'))
+      <script> 
+        setTimeout(function () {
+          document.getElementById("alert").style.display = "none";
+      }, 3000);
+        function hide(){
+          document.getElementById("alert-success").style.display = "none";
+      }
+      </script>  
+      <div id="alert">
+        <div id="alert-success" class="alert-success">
+          {{ session('alert') }} ✔
+        </div>
+      </div>        
+    @endif
+
     <table border="0">
       <thead>            
         <x-tableTitle
@@ -28,7 +44,7 @@
                 <a title="Editar" href="{{route('client.edit', ['id' => $client->id])}}">
                   <img src="/assets/images/icon-edit.png" />
                 </a>
-                <a id="sweetalert2" title="Excluir" href="{{route('client.delete', ['id' => $client->id])}}">
+                <a  onclick="return confirm('Tem certeza que deseja excluir? Este processo é irreversível!')" title="Excluir" href="{{route('client.delete', ['id' => $client->id])}}">
                   <img src="/assets/images/icon-delete.png" />
                 </a>
               </div>                                    
@@ -40,25 +56,3 @@
     </table>
   
 </x-layout>
-
-  <script>
-    document.getElementById('sweetalert2').addEventListener('click', function(){
-      Swal.fire({
-      title: 'Tem certeza?',
-      text: "Você não será capaz de reverter isso!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Sim, apague-o!'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire(
-          'Deletado!',
-          'Seu arquivo foi excluído.',
-          'success'
-        )
-      }
-    })
-    });
-  </script>
