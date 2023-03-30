@@ -66,6 +66,6 @@ class VehicleController extends Controller
         if($vehicle) {
             $vehicle->delete();
         }
-        return redirect(route('vehicles'))->with('confirm');
+        return redirect(route('vehicles'))->with('alert', 'Excluído com sucesso!');
     }
 }

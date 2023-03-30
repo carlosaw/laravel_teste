@@ -452,8 +452,23 @@ select:focus {
   color: #605f5f;
 }
 
-.alert-danger {
+.alert {
+  display: flex;
+  justify-content: center;
+}
+.alert-success {
+  color: var(--background-light);
   width: 500px;
-  height: 50px;
-  background-color: coral;
+  height: 40px;
+  background-color: forestgreen;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 8px;
+}
+a.close {
+  color: var(--background-light);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 30px;
 }
