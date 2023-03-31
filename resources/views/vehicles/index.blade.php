@@ -1,22 +1,14 @@
 <x-layout page="Aw2web | Veiculos">
 
   <x-subMenu />
-  
-  @if (session('alert'))
-    <script> 
-      setTimeout(function () {
-        document.getElementById("alert").style.display = "none";
-    }, 3000);
-      function hide(){
-        document.getElementById("alert-success").style.display = "none";
-    }
-    </script>  
-    <div id="alert">
-      <div id="alert-success" class="alert-success">
-        {{ session('alert') }} ✔
-      </div>
-    </div>        
-  @endif
+
+  @if(Session::has('warning'))
+    Swal.fire({
+        icon: 'warning',
+        title: 'Oops...',
+        text: '{{ Session::get("warning") }}'
+    })
+@endif
 
   <table border="0">  
     <thead>     
@@ -48,7 +40,7 @@
               <a title="Editar" href="{{route('vehicle.edit', ['id' => $vehicle->id])}}">
                 <img src="/assets/images/icon-edit.png" />
               </a>              
-              <a onclick="return confirm('Tem certeza que deseja excluir? Este processo é irreversível!')" title="Excluir" href="{{route('vehicle.delete', ['id' => $vehicle->id])}}">
+              <a id="del" title="Excluir" href="{{route('vehicle.delete', ['id' => $vehicle->id])}}">
                 <img src="/assets/images/icon-delete.png" />
               </a>
             </div>                                    
@@ -60,3 +52,27 @@
   </table>
        
 </x-layout>
+
+<script>
+  var del = document.getElementById('del').addEventListener('click', function(e){
+    e.preventDefault();
+    Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Sim, delete isto!'    
+  }).then((result) => {    
+    if (result.isConfirmed) {
+      window.location.href="{{route('vehicle.delete', ['id' => $vehicle->id])}}"
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+    }
+  })
+});
+</script>

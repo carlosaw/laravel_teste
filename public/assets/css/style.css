@@ -452,7 +452,7 @@ select:focus {
   color: #605f5f;
 }
 
-#alert {
+/* #alert {
   justify-content: space-evenly;
   position: absolute;
   margin-top: -39px;
@@ -477,4 +477,4 @@ a.close {
   cursor: pointer;
   text-decoration: none;
   font-size: 30px;
-}
+} */

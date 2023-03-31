@@ -8,6 +8,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MechanicController;
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -50,6 +51,8 @@ Route::post('/mechanics/new_action', [MechanicController::class, 'create_action'
 Route::get('/mechanics/edit', [MechanicController::class, 'edit'])->name('mechanic.edit');
 Route::post('/mechanics/edit_action', [MechanicController::class, 'edit_action'])->name('mechanic.edit_action');
 Route::get('/mechanics/delete', [MechanicController::class, 'delete'])->name('mechanic.delete');
+
+Route::get('notification', [SiteController::class, 'showMessages']);
 
 Route::get('/login', function(){
     return view('login');
