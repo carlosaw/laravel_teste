@@ -5,6 +5,7 @@
 
     <form method="POST" action="{{ route('address.edit_action') }}">
       @csrf
+      <input type="hidden" name="id" value="{{$addresses->id}}" />
       <x-form.text_input value="{{$addresses->street}}" name="street" label="Rua" autofocus />
           
       <x-form.text_input value="{{$addresses->number}}" name="number" label="Nº"/>
@@ -30,7 +31,7 @@
           @endforeach
         </x-form.select_input>
 
-      <x-form.form_button resetTxt='Limpar' submitTxt='Cadastrar' ></x-form.form_button>
+      <x-form.form_button resetTxt='Limpar' submitTxt='Atualizar' ></x-form.form_button>
 
     </form>
     

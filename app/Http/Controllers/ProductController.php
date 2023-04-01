@@ -22,7 +22,7 @@ class ProductController extends Controller
         //dd($request->all());
         $product = $request->only(['name', 'value', 'quantity']);
         Product::create($product);
-        return redirect(route('products'));
+        return redirect(route('products'))->with('alert', 'Adicionado com sucesso!');
     }
 
     public function edit(Request $request) {
@@ -48,7 +48,7 @@ class ProductController extends Controller
         $product->update($request_data);
         $product->save();
         //dd($product);
-        return redirect(route('products'));
+        return redirect(route('products'))->with('alert', 'Editado com sucesso!');
     }
 
     public function delete(Request $request) {

@@ -12,8 +12,8 @@ class AddressController extends Controller
     //
     public function index(Request $request) {
         $addresses = Address::all();
-        
-        return view('addresses/index', ['addresses' => $addresses]);
+        $clients = Client::all();
+        return view('addresses/index', ['addresses' => $addresses], ['clients' => $clients]);
     }
 
     public function create(Request $request) {
@@ -27,10 +27,10 @@ class AddressController extends Controller
     public function create_action(Request $request) {
         //dd($request->all());
         $address = $request->only(['street', 'number', 'cep', 'district', 'city', 'state', 'client_id']);
-        $address['client_id'] = 1;
+        //$address['client_id'] = 1;
         // $dbaddress = Address::create($address);
         Address::create($address);
-        return redirect(route('addresses'));
+        return redirect(route('addresses'))->with('alert', 'Adicionado com sucesso!');
     }
 
     public function edit(Request $request) {
@@ -60,7 +60,7 @@ class AddressController extends Controller
         $address->update($request_data);
         $address->save();
         //dd($address);
-        return redirect(route('addresses'));
+        return redirect(route('addresses'))->with('alert', 'Editado com sucesso!');
     }
 
     public function delete(Request $request) {

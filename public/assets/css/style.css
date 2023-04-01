@@ -103,7 +103,7 @@ a.btn {
   flex-direction: column;
   align-items: center;
   display: flex;
-  background-color: #F0F2FA;
+  background-color: #ffffff;
   height: calc(100vh - 100px);
 }
 /* .list-content {
@@ -182,7 +182,7 @@ button.btnNew, button[type=submit] {
 }
 
 table {
-  margin-top: 10px;
+  margin-top: 20px;
   border-collapse: collapse;
   table-layout: fixed;
   background-color: #FFF;
@@ -196,9 +196,11 @@ tbody {
 }
 
 .title th {
-  color: #FFF;
+  color: #0d0af7;
   font-weight: normal;
   height: 30px;
+  border-bottom: 1px solid #CCC;
+  /* margin-bottom: 6px; */
 }
 
 .tr_body {
@@ -218,8 +220,8 @@ tbody>.tr_body:hover {
 
 
 .title {
-  background-color: var(--color-primary);
-  color: #FFF;
+  color: #2c2b2b;
+  /* margin-bottom: 21px; */
 }
 
 .actions {
@@ -361,7 +363,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   width: 34px;
 }
 .title2p, .tdLine2p {
-  width: 257px;
+  width: 598px;
 }
 .title3p, .tdLine3p {
   width: 169px;
@@ -389,10 +391,10 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   width: 347px;
 }
 .title3m, .tdLine3m {
-  width: 204px;
+  width: 288px;
 }
 .title4m, .tdLine4m {
-  width: 189px;
+  width: 255px;
 }
 .title5m, .tdLine5m {
   width: 147px;
@@ -452,7 +454,7 @@ select:focus {
   color: #605f5f;
 }
 
-/* #alert {
+#alert {
   justify-content: space-evenly;
   position: absolute;
   margin-top: -39px;
@@ -477,4 +479,35 @@ a.close {
   cursor: pointer;
   text-decoration: none;
   font-size: 30px;
-} */
+}
+
+#alertAddress {
+  justify-content: space-evenly;
+  position: absolute;
+  margin-top: -39px;
+  margin-left: 746px;
+  border-radius: 18px;
+}
+
+#alertClient {
+  justify-content: space-evenly;
+  position: absolute;
+  margin-top: -39px;
+  margin-left: 668px;
+  border-radius: 18px;
+}
+
+#alertProduct {
+  justify-content: space-evenly;
+  position: absolute;
+  margin-top: -39px;
+  margin-left: 686px;
+  border-radius: 18px;
+}
+#alertMechanic {
+  justify-content: space-evenly;
+  position: absolute;
+  margin-top: -39px;
+  margin-left: 640px;
+  border-radius: 18px;
+}

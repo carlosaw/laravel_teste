@@ -5,23 +5,23 @@
   @if (session('alert'))
     <script> 
       setTimeout(function () {
-        document.getElementById("alert").style.display = "none";
+        document.getElementById("alertProduct").style.display = "none";
     }, 3000);
       function hide(){
         document.getElementById("alert-success").style.display = "none";
     }
-    </script>  
-    <div id="alert">
+    </script>
+    <div id="alertProduct">
       <div id="alert-success" class="alert-success">
         {{ session('alert') }} ✔
       </div>
     </div>        
   @endif
   
-  <table border="1">
+  <table border="0">
     <thead>            
       <x-tableTitle
-        id='ID'
+        id='#'
         name='Nome'
         value='Preço R$'
         quantity='Qtde.'

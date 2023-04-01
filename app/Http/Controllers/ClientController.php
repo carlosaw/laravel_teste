@@ -30,7 +30,7 @@ class ClientController extends Controller
         //dd($request->all());
         $client = $request->only(['name', 'cpf', 'fone', 'email']);
         Client::create($client);
-        return redirect(route('clients'));
+        return redirect(route('clients'))->with('alert', 'Adicionado com sucesso!');
     }
 
     public function edit(Request $request) {
@@ -56,7 +56,7 @@ class ClientController extends Controller
         $client->update($request_data);
         $client->save();
         //dd($client);
-        return redirect(route('clients'));
+        return redirect(route('clients'))->with('alert', 'Editado com sucesso!');
     }
 
     public function delete(Request $request) {

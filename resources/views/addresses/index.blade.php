@@ -3,25 +3,25 @@
     <x-subMenu />
     
     @if (session('alert'))
-      <script> 
-        setTimeout(function () {
-          document.getElementById("alert").style.display = "none";
-      }, 3000);
-        function hide(){
-          document.getElementById("alert-success").style.display = "none";
-      }
-      </script>  
-      <div id="alert">
-        <div id="alert-success" class="alert-success">
-          {{ session('alert') }} ✔
-        </div>
-      </div>        
-    @endif
+    <script> 
+      setTimeout(function () {
+        document.getElementById("alertAddress").style.display = "none";
+    }, 3000);
+      function hide(){
+        document.getElementById("alert-success").style.display = "none";
+    }
+    </script>  
+    <div id="alertAddress">
+      <div id="alert-success" class="alert-success">
+        {{ session('alert') }} ✔
+      </div>
+    </div>        
+  @endif
 
     <table border="0">
       <thead>     
           <x-tableTitle
-          id='ID'
+          id='#'
           client='Cliente'
           street='Rua'
           number='Nº'
@@ -37,8 +37,8 @@
       <tbody>      
         @foreach ($addresses as $address)     
           <tr class="tr_body">
-            <td class="tdLine1a">{{$address->id ?? ''}}</td>
-            <td class="tdLine2a">{{$address->client_id ?? ''}}</td>
+            <td class="tdLine1a">{{$address->id ?? ''}}</td>            
+            <td class="tdLine2a">{{$address->client['name'] ?? ''}}</td>            
             <td class="tdLine3a">{{$address->street ?? ''}}</td>
             <td class="tdLine4a">{{$address->number ?? ''}}</td>
             <td class="tdLine5a">{{$address->cep ?? ''}}</td>  

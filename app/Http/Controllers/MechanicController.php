@@ -23,7 +23,7 @@ class MechanicController extends Controller
         //dd($request->all());
         $mechanic = $request->only(['name', 'phone', 'percentage']);
         Mechanic::create($mechanic);
-        return redirect(route('mechanics'));
+        return redirect(route('mechanics'))->with('alert', 'Adicionado com sucesso!');
     }
 
     public function edit(Request $request) {
@@ -49,7 +49,7 @@ class MechanicController extends Controller
         $mechanic->update($request_data);
         $mechanic->save();
         //dd($product);
-        return redirect(route('mechanics'));
+        return redirect(route('mechanics'))->with('alert', 'Editado com sucesso!');
     }
 
     public function delete(Request $request) {

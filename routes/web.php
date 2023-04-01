@@ -52,8 +52,6 @@ Route::get('/mechanics/edit', [MechanicController::class, 'edit'])->name('mechan
 Route::post('/mechanics/edit_action', [MechanicController::class, 'edit_action'])->name('mechanic.edit_action');
 Route::get('/mechanics/delete', [MechanicController::class, 'delete'])->name('mechanic.delete');
 
-Route::get('notification', [SiteController::class, 'showMessages']);
-
 Route::get('/login', function(){
     return view('login');
 });

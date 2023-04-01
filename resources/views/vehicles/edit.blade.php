@@ -1,5 +1,21 @@
 <x-layout page="Aw2web | Editar Veiculo">
 
+  @if (session('alert'))
+    <script> 
+      setTimeout(function () {
+        document.getElementById("alert").style.display = "none";
+    }, 3000);
+      function hide(){
+        document.getElementById("alert-success").style.display = "none";
+    }
+    </script>  
+    <div id="alert">
+      <div id="alert-success" class="alert-success">
+        {{ session('alert') }} ✔
+      </div>
+    </div>        
+  @endif
+
   <div class="form">
       <h1>Editar Veículo</h1>
 
@@ -29,7 +45,7 @@
         @endforeach
       </x-form.select_input>
 
-      <x-form.form_button resetTxt='Limpar' submitTxt='Atualizar' ></x-form.form_button>
+      <x-form.form_button resetTxt='Limpar' submitTxt='Atualizar' onclick="return confirm('Tem certeza que deseja editar?')"></x-form.form_button>
 
     </form>
     

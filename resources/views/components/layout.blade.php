@@ -8,8 +8,7 @@
     <title>{{$page ?? 'Aw2web | Home'}}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 
@@ -72,7 +71,5 @@
     
   </div>
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.js">
-  </script>
+
 </html>
