@@ -15,17 +15,20 @@
 
   @elseif (request()->is('addresses'))
   <form action="../addresses" method="GET">
-    <input type="text" id="search" name="search" placeholder="Procure por CLIENTE" />
+    <input type="text" id="search" name="search" placeholder="Procure por RUA" />
   </form>
+
   @elseif (request()->is('products'))
   <form action="../products" method="GET">
     <input type="text" id="search" name="search" placeholder="Procure por PRODUTO" />
   </form>
+  
   @elseif (request()->is('orders'))
   <x-all allSelect='Todos os Serviços'></x-all>
   @elseif (request()->is('mechanics'))
   <x-all allSelect='Todos os Mecânicos'></x-all>
   @endif
+
   <div class="btnNew">
     @if(request()->is('vehicles'))
     <a href="vehicles/new">Novo Veículo</a>

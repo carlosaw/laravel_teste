@@ -22,7 +22,7 @@ class AddressController extends Controller
             $clients = Client::all();           
             $addresses = Address::all();
         }                
-        return view('addresses/index', ['addresses' => $addresses, 'search' => $search], ['clients' => $clients]);
+        return view('addresses/index', ['addresses' => $addresses, 'search' => $search, 'clients' => $clients]);
 
 
         // $addresses = Address::all();
