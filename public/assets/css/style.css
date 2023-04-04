@@ -511,3 +511,12 @@ a.close {
   margin-left: 640px;
   border-radius: 18px;
 }
+
+#search {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cececf;
+  font-size: 16px;
+}

@@ -10,9 +10,16 @@ class VehicleController extends Controller
 {
     //
     public function index(Request $request) {
-        $vehicles = Vehicle::all();
-        
-        return view('vehicles/index', ['vehicles' => $vehicles]);
+        $search = request('search');
+        if($search) {
+            $vehicles = Vehicle::where([
+                ['plate', 'like', '%'.$search. '%']
+            ])->get();
+        } else {
+            $vehicles = Vehicle::all();
+        }
+                
+        return view('vehicles/index', ['vehicles' => $vehicles, 'search' => $search]);
     }
 
     public function create(Request $request) {

@@ -12,9 +12,15 @@ class ClientController extends Controller
 {
     //
     public function index(Request $request) {
-        $clients = Client::all();
-        
-        return view('clients/index', ['clients' => $clients]);
+        $search = request('search');
+        if($search) {
+            $clients = Client::where([                
+                ['name', 'like', '%'.$search.'%']
+            ])->get();
+        } else {
+            $clients = Client::all();
+        }               
+        return view('clients/index', ['clients' => $clients, 'search' => $search]);
     }
 
     public function create(Request $request) {

@@ -33,6 +33,10 @@
       </x-tableTitle>    
     </thead>
 
+    @if ($search)
+      <p>Buscando por: <strong>'{{ $search }}'</strong></p> 
+    @endif
+
     <tbody>      
       @foreach ($vehicles as $vehicle)          
         <tr class="tr_body">
@@ -54,9 +58,14 @@
             </div>                                    
           </td>
         </tr>       
-      @endforeach 
+      @endforeach
+      @if(count($vehicles) == 0 && $search)
+        <p>Não foi possível encontrar nenhum veículo com placa {{ $search }}! <a href="/vehicles">Ver todos os Veículos</a></p> 
+      @elseif(count($vehicles) == 0)
+      <p>Este existem Veículos!</p>
+      @endif
     </tbody>
 
   </table>
-       
+     
 </x-layout>

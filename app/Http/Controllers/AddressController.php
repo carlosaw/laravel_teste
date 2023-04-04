@@ -11,9 +11,23 @@ class AddressController extends Controller
 {
     //
     public function index(Request $request) {
-        $addresses = Address::all();
-        $clients = Client::all();
-        return view('addresses/index', ['addresses' => $addresses], ['clients' => $clients]);
+
+        $search = request('search');
+        if($search) {
+            $clients = Client::all();
+            $addresses = Address::where([
+                ['street', 'like', '%'.$search. '%']
+            ])->get();
+        } else { 
+            $clients = Client::all();           
+            $addresses = Address::all();
+        }                
+        return view('addresses/index', ['addresses' => $addresses, 'search' => $search], ['clients' => $clients]);
+
+
+        // $addresses = Address::all();
+        // $clients = Client::all();
+        // return view('addresses/index', ['addresses' => $addresses], ['clients' => $clients]);
     }
 
     public function create(Request $request) {

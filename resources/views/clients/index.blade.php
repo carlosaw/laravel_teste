@@ -31,6 +31,10 @@
         </x-tableTitle>           
       </thead>
 
+      @if ($search)
+        <p>Buscando por: <strong>'{{ $search }}'</strong></p> 
+      @endif
+
       <tbody>      
         @foreach ($clients as $client)            
           <tr class="tr_body">
@@ -52,7 +56,11 @@
           </tr>        
         @endforeach          
       </tbody>
-    
+      @if(count($clients) == 0 && $search)
+        <p>Não foi possível encontrar nenhum cliente {{ $search }}! <a href="/clients">Ver todos os Clientes</a></p> 
+      @elseif(count($clients) == 0)
+        <p>Não existem Clientes!</p>
+      @endif
     </table>
   
 </x-layout>

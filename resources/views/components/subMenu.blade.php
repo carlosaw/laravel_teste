@@ -3,14 +3,24 @@
     {{ date('d-m-Y') }}
   </div>
 
-  @if(request()->is('vehicles'))
-  <x-all allSelect='Todos os Veículos'></x-all>
+  @if(request()->is('vehicles'))  
+  <form action="../vehicles" method="GET">
+    <input type="text" id="search" name="search" placeholder="Procure por PLACA" />
+  </form>
+
   @elseif (request()->is('clients'))
-  <x-all allSelect='Todos os Clientes'></x-all>
+  <form action="../clients" method="GET">
+    <input type="text" id="search" name="search" placeholder="Procure por NOME" />
+  </form>
+
   @elseif (request()->is('addresses'))
-  <x-all allSelect='Todos os Endereços'></x-all>
+  <form action="../addresses" method="GET">
+    <input type="text" id="search" name="search" placeholder="Procure por CLIENTE" />
+  </form>
   @elseif (request()->is('products'))
-  <x-all allSelect='Todos os Produtos'></x-all>
+  <form action="../products" method="GET">
+    <input type="text" id="search" name="search" placeholder="Procure por PRODUTO" />
+  </form>
   @elseif (request()->is('orders'))
   <x-all allSelect='Todos os Serviços'></x-all>
   @elseif (request()->is('mechanics'))

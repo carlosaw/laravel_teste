@@ -30,6 +30,10 @@
       </x-tableTitle>           
     </thead>
 
+    @if ($search)
+      <p>Buscando por: <strong>'{{ $search }}'</strong></p> 
+    @endif
+
     <tbody>      
       @foreach ($products as $product)            
         <tr class="tr_body">
