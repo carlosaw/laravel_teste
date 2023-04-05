@@ -13,7 +13,7 @@
     </script>
     <div id="alertProduct">
       <div id="alert-success" class="alert-success">
-        {{ session('alert') }} ✔
+        {{ session('alert') }}
       </div>
     </div>        
   @endif

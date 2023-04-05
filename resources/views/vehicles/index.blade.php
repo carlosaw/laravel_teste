@@ -1,19 +1,18 @@
 <x-layout page="Aw2web | Veiculos">
 
   <x-subMenu />
-
+  <script> 
+    setTimeout(function () {
+      document.getElementById("alert").style.display = "none";
+  }, 3000);
+    function hide(){
+      document.getElementById("alert-success").style.display = "none";
+  }
+  </script>
   @if (session('alert'))
-    <script> 
-      setTimeout(function () {
-        document.getElementById("alert").style.display = "none";
-    }, 3000);
-      function hide(){
-        document.getElementById("alert-success").style.display = "none";
-    }
-    </script>  
     <div id="alert">
       <div id="alert-success" class="alert-success">
-        {{ session('alert') }} ✔
+        {{ session('alert') }}
       </div>
     </div>        
   @endif

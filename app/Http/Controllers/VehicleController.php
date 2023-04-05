@@ -34,7 +34,7 @@ class VehicleController extends Controller
         //dd($request->all());
         $vehicle = $request->only(['plate', 'brand', 'model', 'color', 'year', 'km', 'client_id']);
         Vehicle::create($vehicle);
-        return redirect(route('vehicles'))->with('alert', 'Adicionado com sucesso!');
+        return redirect(route('vehicles'))->with('alert', '✔');
     }
 
     public function edit(Request $request) {
@@ -64,7 +64,7 @@ class VehicleController extends Controller
         $vehicle->update($request_data);
         $vehicle->save();
         //dd($vehicle);
-        return redirect(route('vehicles'))->with('alert', 'Editado com sucesso!');
+        return redirect(route('vehicles'))->with('alert', '✔');
     }
 
     public function delete(Request $request) {
@@ -73,6 +73,6 @@ class VehicleController extends Controller
         if($vehicle) {
             $vehicle->delete();
         }
-        return redirect(route('vehicles'))->with('alert', 'Excluído com sucesso!');
+        return redirect(route('vehicles'))->with('alert', '✔');
     }
 }

@@ -10,9 +10,16 @@ class MechanicController extends Controller
 {
     //
     public function index() {
-        $mechanics = Mechanic::all();
-        
-        return view('mechanics/index', ['mechanics' => $mechanics]);
+        $search = request('search');
+        if($search) {
+            $mechanics = Mechanic::where([
+                ['name', 'like', '%'.$search. '%']
+            ])->get();
+        } else {
+            $mechanics = Mechanic::all();
+        }
+                
+        return view('mechanics/index', ['mechanics' => $mechanics, 'search' => $search]);
     }
 
     public function create(Request $request) {
@@ -23,7 +30,7 @@ class MechanicController extends Controller
         //dd($request->all());
         $mechanic = $request->only(['name', 'phone', 'percentage']);
         Mechanic::create($mechanic);
-        return redirect(route('mechanics'))->with('alert', 'Adicionado com sucesso!');
+        return redirect(route('mechanics'))->with('alert', '✔');
     }
 
     public function edit(Request $request) {
@@ -49,7 +56,7 @@ class MechanicController extends Controller
         $mechanic->update($request_data);
         $mechanic->save();
         //dd($product);
-        return redirect(route('mechanics'))->with('alert', 'Editado com sucesso!');
+        return redirect(route('mechanics'))->with('alert', '✔');
     }
 
     public function delete(Request $request) {
@@ -58,6 +65,6 @@ class MechanicController extends Controller
         if($mechanic) {
             $mechanic->delete();
         }
-        return redirect(route('mechanics'))->with('alert', 'Excluído com sucesso!');
+        return redirect(route('mechanics'))->with('alert', '✔');
     }
 }

@@ -10,10 +10,10 @@
       function hide(){
         document.getElementById("alert-success").style.display = "none";
     }
-    </script>  
+    </script>
     <div id="alertAddress">
       <div id="alert-success" class="alert-success">
-        {{ session('alert') }} ✔
+        {{ session('alert') }}
       </div>
     </div>        
   @endif

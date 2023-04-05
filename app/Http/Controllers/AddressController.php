@@ -74,7 +74,7 @@ class AddressController extends Controller
         $address->update($request_data);
         $address->save();
         //dd($address);
-        return redirect(route('addresses'))->with('alert', 'Editado com sucesso!');
+        return redirect(route('addresses'))->with('alert', '✔');
     }
 
     public function delete(Request $request) {
@@ -83,6 +83,6 @@ class AddressController extends Controller
         if($address) {
             $address->delete();
         }
-        return redirect(route('addresses'))->with('alert', 'Excluído com sucesso!');
+        return redirect(route('addresses'))->with('alert', '✔');
     }
 }

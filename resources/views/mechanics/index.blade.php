@@ -13,7 +13,7 @@
     </script>
     <div id="alertMechanic">
       <div id="alert-success" class="alert-success">
-        {{ session('alert') }} ✔
+        {{ session('alert') }}
       </div>
     </div>        
   @endif
@@ -29,6 +29,10 @@
       >
       </x-tableTitle>           
     </thead>
+
+    @if ($search)
+      <p>Buscando por: <strong>'{{ $search }}'</strong></p> 
+    @endif
 
     <tbody>      
       @foreach ($mechanics as $mechanic)            

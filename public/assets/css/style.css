@@ -464,15 +464,15 @@ select:focus {
 
 .alert-success {
   color: var(--background-light);
-  width: 250px;
-  height: 40px;
+  width: 39px;
+  height: 38px;
   background-color: #4eb94e;
   display: flex;
   justify-content: center;
-  align-items: center;
   border-radius: 5px;
   font-size: large;
   align-items: center;
+  margin-left: 221px;
 }
 a.close {
   color: var(--background-light);
@@ -485,7 +485,7 @@ a.close {
   justify-content: space-evenly;
   position: absolute;
   margin-top: -39px;
-  margin-left: 746px;
+  margin-left: 770px;
   border-radius: 18px;
 }
 
@@ -493,7 +493,7 @@ a.close {
   justify-content: space-evenly;
   position: absolute;
   margin-top: -39px;
-  margin-left: 668px;
+  margin-left: 680px;
   border-radius: 18px;
 }
 
@@ -501,14 +501,14 @@ a.close {
   justify-content: space-evenly;
   position: absolute;
   margin-top: -39px;
-  margin-left: 686px;
+  margin-left: 698px;
   border-radius: 18px;
 }
 #alertMechanic {
   justify-content: space-evenly;
   position: absolute;
   margin-top: -39px;
-  margin-left: 640px;
+  margin-left: 631px;
   border-radius: 18px;
 }
 
