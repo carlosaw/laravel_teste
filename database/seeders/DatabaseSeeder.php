@@ -29,17 +29,17 @@ class DatabaseSeeder extends Seeder
             //VehicleSeeder::class
         ]);
         
-        User::factory(1)->create();
+        //User::factory(1)->create();
         Client::factory(25)->create();
         Address::factory(25)->create();
         Product::factory(25)->create();
         Vehicle::factory(25)->create();
         Mechanic::factory(25)->create();
         Order::factory(10)->create();
-        //Order::factory(3)->create();
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Order::factory(3)->create();
+        \App\Models\User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+        ]);
     }
 }

@@ -25,6 +25,7 @@
   
   @elseif (request()->is('orders'))
   <x-all allSelect='Todos os Serviços'></x-all>
+  
   @elseif (request()->is('mechanics'))
   <form action="../products" method="GET">
     <input type="text" id="search" name="search" placeholder="Procure por MECÂNICO" />
