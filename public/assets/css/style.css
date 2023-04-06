@@ -460,6 +460,7 @@ select:focus {
   margin-top: -39px;
   margin-left: 655px;
   border-radius: 18px;
+  display: block;
 }
 
 .alert-success {

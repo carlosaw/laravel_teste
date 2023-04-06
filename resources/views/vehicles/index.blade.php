@@ -1,6 +1,15 @@
 <x-layout page="Aw2web | Veiculos">
 
   <x-subMenu />
+  
+  @if (session('alert'))
+    <div id="alert">
+      <div id="alert-success" class="alert-success">
+        {{ session('alert') }}
+      </div>
+    </div>        
+  @endif
+
   <script> 
     setTimeout(function () {
       document.getElementById("alert").style.display = "none";
@@ -9,13 +18,6 @@
       document.getElementById("alert-success").style.display = "none";
   }
   </script>
-  @if (session('alert'))
-    <div id="alert">
-      <div id="alert-success" class="alert-success">
-        {{ session('alert') }}
-      </div>
-    </div>        
-  @endif
 
   <table border="0">  
     <thead>     

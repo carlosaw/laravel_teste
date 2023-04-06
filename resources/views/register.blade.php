@@ -1,9 +1,9 @@
 <x-layout page='Aw2web | Registro'> 
-<x-form.form_errors />
+
     <div class="form">
         <h1>Registrar-se</h1>
 
-        
+        <x-form.form_errors />
 
         <form method="POST" action="{{route('user.register_action')}}">
             @csrf

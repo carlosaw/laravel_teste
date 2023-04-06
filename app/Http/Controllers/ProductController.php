@@ -5,49 +5,55 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
+
 class ProductController extends Controller
 {
     //
-    public function index(Request $request) {
+    public function index(Request $request)
+    {
         $search = request('search');
-        if($search) {
+        if ($search) {
             $products = Product::where([
-                ['name', 'like', '%'.$search. '%']
+                ['name', 'like', '%' . $search . '%']
             ])->get();
         } else {
             $products = Product::all();
-        }               
+        }
         return view('products/index', ['products' => $products, 'search' => $search]);
     }
 
-    public function create(Request $request) {
+    public function create(Request $request)
+    {
         return view('products/new');
     }
 
-    public function create_action(Request $request) {
+    public function create_action(Request $request)
+    {
         //dd($request->all());
         $product = $request->only(['name', 'value', 'quantity']);
         Product::create($product);
         return redirect(route('products'))->with('alert', '✔');
     }
 
-    public function edit(Request $request) {
+    public function edit(Request $request)
+    {
         $id = $request->id;
         //dd($id);
         $products = Product::find($id);
-        if(!$products) {
+        if (!$products) {
             return redirect(route('products'));
-        }        
+        }
         $data['products'] = $products;
         return view('products/edit', $data);
     }
 
-    public function edit_action(Request $request) {
+    public function edit_action(Request $request)
+    {
         //dd($request->all());
 
         $request_data = $request->only(['name', 'value', 'quantity']);
         $product = Product::find($request->id);
-        if(!$product) {
+        if (!$product) {
             return 'Erro: Produto não existe!';
         }
         //dd($product);
@@ -57,10 +63,11 @@ class ProductController extends Controller
         return redirect(route('products'))->with('alert', '✔');
     }
 
-    public function delete(Request $request) {
+    public function delete(Request $request)
+    {
         $id = $request->id;
         $product = Product::find($id);
-        if($product) {
+        if ($product) {
             $product->delete();
         }
         return redirect(route('products'))->with('alert', '✔');
