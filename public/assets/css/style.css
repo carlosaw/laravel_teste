@@ -545,3 +545,30 @@ a.close {
   transform: scale(1.05);
   border-bottom: 1px solid #0000FF;
 }
+.search_form {
+  display: flex;
+  outline: none;
+  border: 0;
+}
+.search_form input {
+  outline: 1px solid #CCC;
+}
+.search_submit {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -40px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button.btn_search {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+button.btn_search img {
+  width: 235%;
+}

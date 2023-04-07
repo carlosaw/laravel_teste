@@ -3,15 +3,32 @@
     {{ date('d-m-Y') }}
   </div>
 
-  @if(request()->is('vehicles'))  
-  <form action="../vehicles" method="GET">
-    <input type="text" id="search" name="search" placeholder="Procure por PLACA" />
-  </form>
+  @if(request()->is('vehicles'))
+  <div class="search_form">
+    <form action="../vehicles" method="GET">
+      <input type="search" id="search" name="query" placeholder="Procure por PLACA" />
+    </form>
+    <div class="search_submit" title="Pesquisar">
+      <button type="submit" class="btn_search">
+        <img src="assets/images/search.png" alt=""/>
+      </button>      
+    </div>
+  </div>  
+  
 
   @elseif (request()->is('clients'))
-  <form action="../clients" method="GET">
-    <input type="text" id="search" name="search" placeholder="Procure por NOME" />
-  </form>
+  <a>
+    <div class="search_form">
+      <form action="../clients" method="GET">
+        <input type="text" id="search" name="search" placeholder="Procure por NOME" />
+        {{-- <div class="search_submit" title="Pesquisar">
+          <img src="assets/images/search.png" alt=""/>
+        </div> --}}
+      </form>
+      <button type="submit">Search</button>
+    </div>
+  </a>
+  
 
   @elseif (request()->is('addresses'))
   <form action="../addresses" method="GET">
