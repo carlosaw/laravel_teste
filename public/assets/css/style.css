@@ -43,16 +43,16 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 20px;
+  padding-right: 80px;
 }
 
 .btn {
   display: flex;
-  padding: 10px 20px;
+  padding: 10px 0px;
   border-radius: 5px;
   margin-left: 20px;
   transition: all .3s ease-in-out;
-  width: 150px;
+  width: 115px;
 }
 
 .btn:hover {
@@ -162,9 +162,9 @@ button.btnNew, button[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
+  width: 125px;
   background-color: forestgreen;
-  padding: 10px 12px;
+  padding: 10px 0px;
   border-radius: 5px;
   color: #FFF;
   transition: all .3s ease-in-out;
@@ -521,4 +521,27 @@ a.close {
   border-radius: 5px;
   border: 1px solid #cececf;
   font-size: 16px;
+}
+
+.user_home {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #DDD;
+  width: -webkit-fill-available;
+}
+.user-logout {
+  transition: all .3s ease-in-out;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+.user-logout a {
+  font-size: 20px;
+  text-decoration: none;
+  color: hsl(238.15deg 100% 50%);
+}
+.user-logout:hover {
+  transform: scale(1.05);
+  border-bottom: 1px solid #0000FF;
 }

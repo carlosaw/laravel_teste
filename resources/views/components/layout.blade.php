@@ -42,6 +42,9 @@
           <x-btn btnHref='products' btnText='Produtos'></x-btn>
           <x-btn btnHref='orders' btnText='Serviços'></x-btn>
           <x-btn btnHref='mechanics' btnText='Mecânicos'></x-btn>
+          <div class="user-logout">
+            <a href="{{route('logout')}}">Sair</a>  
+          </div>
         @endif        
         
         @if ($page == 'Aw2web | Login')
