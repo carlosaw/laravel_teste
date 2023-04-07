@@ -1,3 +1,13 @@
 <x-layout page='Aw2web | Login'>
-    Tela de Login <a href="/">Ir para a Home</a>
+  <div class="form">
+    <h1>Login</h1>
+    <x-form.form_errors />
+    
+    <form method="POST" action="{{ route('user.login_action') }}">
+      @csrf
+      <x-form.text_input type="email" name="email" label="Seu e-mail" placeholder="Seu e-mail" autofocus />
+      <x-form.text_input type="password" name="password" label="Sua senha" placeholder="Sua senha" />
+      <x-form.form_button resetTxt="Limpar" submitTxt="Login" />
+    </form>
+  </div>
 </x-layout>

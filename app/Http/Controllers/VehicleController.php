@@ -31,6 +31,15 @@ class VehicleController extends Controller
     }
 
     public function create_action(Request $request) {
+        $validator = $request->validate([
+            'plate' => 'required',
+            'brand' => 'required',
+            'model' => 'required',
+            'color' => 'required',
+            'year' => 'required',
+            'km' => 'required',
+            'client_id' => 'required'
+          ]);
         //dd($request->all());
         $vehicle = $request->only(['plate', 'brand', 'model', 'color', 'year', 'km', 'client_id']);
         Vehicle::create($vehicle);

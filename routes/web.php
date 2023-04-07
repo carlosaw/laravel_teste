@@ -53,6 +53,7 @@ Route::post('/mechanics/edit_action', [MechanicController::class, 'edit_action']
 Route::get('/mechanics/delete', [MechanicController::class, 'delete'])->name('mechanic.delete');
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
+Route::post('/login', [AuthController::class, 'login_action'])->name('user.login_action');
 
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register_action', [AuthController::class, 'register_action'])->name('user.register_action');
