@@ -241,8 +241,9 @@ tbody>.tr_body:hover {
 }
 
 .logo img {
-  width: 100px;
-  margin-top: 30px;
+  width: 71px;
+  margin-top: 16px;
+  margin-left: 17px;
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
@@ -571,4 +572,26 @@ button.btn_search {
 }
 button.btn_search img {
   width: 235%;
+}
+
+#search-sub {
+  background-color: var(--background-white);
+  width: 40px;
+  margin-top: -40px;
+  margin-left: 260px;
+  z-index: 999;
+  position: relative;
+  /* background: bottom; */
+  border: 0px 1px 1px 0px solid #CCC;
+  border-top: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  border-radius: 0px 5px 5px 0px;
+}
+#search-sub img {
+  width: 230%;
+}
+.search_form  {
+  outline: 1px solid #CCC;
+  border-radius: 5px;
 }

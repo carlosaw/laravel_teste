@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -58,8 +59,8 @@ class AuthController extends Controller
     $data['password'] = Hash::make($data['password']);
       
     User::create($data);
-
-    return redirect(route('login'));
+    
+    return redirect(route('home'));    
   }
 
   public function logout() {

@@ -16,7 +16,7 @@
   <div class="container">
     <div class="sidebar">
       <div class="logo">
-        <img src="/assets/images/logo4.png" alt="" />
+        <img src="/assets/images/logo2.jpg" alt="" />
       </div>
     </div>
     <div class="content">

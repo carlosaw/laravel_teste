@@ -6,47 +6,56 @@
   @if(request()->is('vehicles'))
   <div class="search_form">
     <form action="../vehicles" method="GET">
-      <input type="search" id="search" name="query" placeholder="Procure por PLACA" />
-    </form>
-    <div class="search_submit" title="Pesquisar">
-      <button type="submit" class="btn_search">
+      <input type="search" id="search" name="search" placeholder="Procure por PLACA" />
+      <button class="search_submit" type="submit" id="search-sub" name="search-sub">
         <img src="assets/images/search.png" alt=""/>
-      </button>      
-    </div>
+      </button>
+    </form>
   </div>  
   
 
   @elseif (request()->is('clients'))
-  <a>
     <div class="search_form">
       <form action="../clients" method="GET">
-        <input type="text" id="search" name="search" placeholder="Procure por NOME" />
-        {{-- <div class="search_submit" title="Pesquisar">
+        <input type="search" id="search" name="search" placeholder="Procure por NOME" />
+        <button class="search_submit" type="submit" id="search-sub" name="search-sub">
           <img src="assets/images/search.png" alt=""/>
-        </div> --}}
+        </button>
       </form>
-      <button type="submit">Search</button>
     </div>
-  </a>
   
-
   @elseif (request()->is('addresses'))
-  <form action="../addresses" method="GET">
-    <input type="text" id="search" name="search" placeholder="Procure por RUA" />
-  </form>
+  <div class="search_form">
+    <form action="../addresses" method="GET">
+      <input type="search" id="search" name="search" placeholder="Procure por RUA" />
+      <button class="search_submit" type="submit" id="search-sub" name="search-sub">
+        <img src="assets/images/search.png" alt=""/>
+      </button>
+    </form>
+  </div>
 
   @elseif (request()->is('products'))
-  <form action="../products" method="GET">
-    <input type="text" id="search" name="search" placeholder="Procure por PRODUTO" />
-  </form>
-  
+  <div class="search_form">
+    <form action="../products" method="GET">
+      <input type="search" id="search" name="search" placeholder="Procure por PRODUTO" />
+      <button class="search_submit" type="submit" id="search-sub" name="search-sub">
+        <img src="assets/images/search.png" alt=""/>
+      </button>
+    </form>
+  </div>
+
   @elseif (request()->is('orders'))
   <x-all allSelect='Todos os Serviços'></x-all>
   
   @elseif (request()->is('mechanics'))
-  <form action="../products" method="GET">
-    <input type="text" id="search" name="search" placeholder="Procure por MECÂNICO" />
-  </form>
+  <div class="search_form">
+    <form action="../mechanics" method="GET">
+      <input type="search" id="search" name="search" placeholder="Procure por MECÂNICO" />
+      <button class="search_submit" type="submit" id="search-sub" name="search-sub">
+        <img src="assets/images/search.png" alt=""/>
+      </button>
+    </form>
+  </div>
   @endif
 
   <div class="btnNew">
