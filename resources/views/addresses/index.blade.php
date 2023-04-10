@@ -1,22 +1,14 @@
 <x-layout page="Aw2web | Endereços">
 
     <x-subMenu />
-    
+
     @if (session('alert'))
-    <script> 
-      setTimeout(function () {
-        document.getElementById("alertAddress").style.display = "none";
-    }, 3000);
-      function hide(){
-        document.getElementById("alert-success").style.display = "none";
-    }
-    </script>
-    <div id="alertAddress">
-      <div id="alert-success" class="alert-success">
-        {{ session('alert') }}
-      </div>
-    </div>        
-  @endif
+      <div id="alert">
+        <div id="alert-success" class="alert-success">
+          {{ session('alert') }}
+        </div>
+      </div>        
+    @endif
 
     <table border="0">
       <thead>     
@@ -62,13 +54,13 @@
             </td>
           </tr>       
         @endforeach
-        @if(count($addresses) == 0 && $search)
-          <p>Não foi possível encontrar nenhum cliente {{ $search }}! <a href="/addresses">Ver todos os Endereços</a></p> 
-        @elseif(count($addresses) == 0)
-          <p>Não existem Endereços!</p>
-        @endif 
+         
       </tbody>
-  
+      @if(count($addresses) == 0 && $search)
+        <p>Não foi possível encontrar nenhum endereço {{ $search }}! <a href="/addresses"> Ver todos os Endereços</a></p> 
+      @elseif(count($addresses) == 0)
+        <p>Não existem Endereços!</p>
+      @endif
     </table>
     
   </x-layout>

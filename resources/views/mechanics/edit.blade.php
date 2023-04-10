@@ -1,4 +1,13 @@
 <x-layout page='Aw2web | Editar Mecânico'>
+
+  @if (session('alert'))
+    <div id="alert">
+      <div id="alert-success" class="alert-success">
+        {{ session('alert') }}
+      </div>
+    </div>        
+  @endif
+
   <div class="form">
     <h1>Editar Mecânico</h1>
     <form method="POST" action="{{ route('mechanic.edit_action') }}">

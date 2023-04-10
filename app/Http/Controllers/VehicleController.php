@@ -82,6 +82,6 @@ class VehicleController extends Controller
         if($vehicle) {
             $vehicle->delete();
         }
-        return redirect(route('vehicles'))->with('alert', '✔');
+        return redirect(route('vehicles'))->with('alert',  '✔');
     }
 }

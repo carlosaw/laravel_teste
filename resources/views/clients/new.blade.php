@@ -1,4 +1,13 @@
 <x-layout page="Aw2web | Novo Cliente">
+
+  @if (session('alert'))
+    <div id="alert">
+      <div id="alert-success" class="alert-success">
+        {{ session('alert') }}
+      </div>
+    </div>        
+  @endif
+  
   <div class="form"> 
     <h1>Cadastrar Cliente</h1>
 

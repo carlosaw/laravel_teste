@@ -1,4 +1,12 @@
 <x-layout page="Aw2web | Editar Endereço">
+
+  @if (session('alert'))
+    <div id="alert">
+      <div id="alert-success" class="alert-success">
+        {{ session('alert') }}
+      </div>
+    </div>        
+  @endif
     
   <div class="form">
       <h1>Editar Endereço</h1>

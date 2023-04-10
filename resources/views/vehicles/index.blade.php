@@ -10,15 +10,6 @@
     </div>        
   @endif
 
-  <script> 
-    setTimeout(function () {
-      document.getElementById("alert").style.display = "none";
-  }, 3000);
-    function hide(){
-      document.getElementById("alert-success").style.display = "none";
-  }
-  </script>
-
   <table border="0">  
     <thead>     
         <x-tableTitle

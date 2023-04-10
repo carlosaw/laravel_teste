@@ -3,20 +3,12 @@
     <x-subMenu />
 
     @if (session('alert'))
-    <script> 
-      setTimeout(function () {
-        document.getElementById("alertClient").style.display = "none";
-    }, 3000);
-      function hide(){
-        document.getElementById("alert-success").style.display = "none";
-    }
-    </script>
-    <div id="alertClient">
-      <div id="alert-success" class="alert-success">
-        {{ session('alert') }}
-      </div>
-    </div>        
-  @endif
+      <div id="alert">
+        <div id="alert-success" class="alert-success">
+          {{ session('alert') }}
+        </div>
+      </div>        
+    @endif
 
     <table border="0">
       <thead>            

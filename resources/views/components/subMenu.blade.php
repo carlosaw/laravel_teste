@@ -7,7 +7,7 @@
   <div class="search_form">
     <form action="../vehicles" method="GET">
       <input type="search" id="search" name="search" placeholder="Procure por PLACA" />
-      <button class="search_submit" type="submit" id="search-sub" name="search-sub">
+      <button class="search_submit" type="submit" id="search-sub" name="search-sub" title="search">
         <img src="assets/images/search.png" alt=""/>
       </button>
     </form>

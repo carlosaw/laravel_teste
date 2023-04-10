@@ -44,7 +44,7 @@ class AddressController extends Controller
         //$address['client_id'] = 1;
         // $dbaddress = Address::create($address);
         Address::create($address);
-        return redirect(route('addresses'))->with('alert', 'Adicionado com sucesso!');
+        return redirect(route('addresses'))->with('alert', '✔');
     }
 
     public function edit(Request $request) {

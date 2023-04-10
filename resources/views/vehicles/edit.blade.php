@@ -1,24 +1,15 @@
 <x-layout page="Aw2web | Editar Veiculo">
-
+  
   @if (session('alert'))
-    <script> 
-      setTimeout(function () {
-        document.getElementById("alert").style.display = "none";
-    }, 3000);
-      function hide(){
-        document.getElementById("alert-success").style.display = "none";
-    }
-    </script>  
     <div id="alert">
       <div id="alert-success" class="alert-success">
-        {{ session('alert') }} ✔
+        {{ session('alert') }}
       </div>
     </div>        
   @endif
-
+  
   <div class="form">
       <h1>Editar Veículo</h1>
-
     <form method="POST" action="{{route('vehicle.edit_action')}}">
       @csrf
       <input type="hidden" name="id" value="{{$vehicles->id}}" />
@@ -34,8 +25,7 @@
       <x-form.text_input value="{{$vehicles->km}}" name="km" label="Km" placeholder="Digite a Quilometragem do veículo"/>
 
       <x-form.select_input name="client_id" label="Cliente" selected selectItem>
-        @foreach ($clients as $client)
-          
+        @foreach ($clients as $client)          
           <option value="{{$client->id}}" 
             @if ($client->id===$vehicles->client_id)
               {{'selected';}} selectItem={{$client->name}}

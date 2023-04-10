@@ -1,5 +1,13 @@
 <x-layout page="Aw2web | Novo Veiculo">
 
+  @if (session('alert'))
+    <div id="alert">
+      <div id="alert-success" class="alert-success">
+        {{ session('alert') }}
+      </div>
+    </div>        
+  @endif
+
   <div class="form">
       <h1>Cadastrar Veículo</h1>
     <x-form.form_errors />

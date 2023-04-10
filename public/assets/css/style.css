@@ -107,10 +107,9 @@ a.btn {
   background-color: #ffffff;
   height: calc(100vh - 100px);
 }
-/* .list-content {
-  min-height: calc(100vh - 173px);
-  background-color: blanchedalmond;
-} */
+.list-content p {
+  text-align: center;
+}
 h1 {
   color: #605f5f;
   font-size: 400;
@@ -466,16 +465,18 @@ select:focus {
 }
 
 .alert-success {
-  color: var(--background-light);
-  width: 39px;
-  height: 38px;
-  background-color: #4eb94e;
+  color: #4eb94e;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   border-radius: 5px;
-  font-size: large;
   align-items: center;
   margin-left: 221px;
+  border: 1px solid #4eb94e;
+}
+.alert-success img {
+  width: 90%;
 }
 a.close {
   color: var(--background-light);

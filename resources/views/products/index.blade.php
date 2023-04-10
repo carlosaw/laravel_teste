@@ -3,15 +3,7 @@
   <x-subMenu />
    
   @if (session('alert'))
-    <script> 
-      setTimeout(function () {
-        document.getElementById("alertProduct").style.display = "none";
-    }, 3000);
-      function hide(){
-        document.getElementById("alert-success").style.display = "none";
-    }
-    </script>
-    <div id="alertProduct">
+    <div id="alert">
       <div id="alert-success" class="alert-success">
         {{ session('alert') }}
       </div>
