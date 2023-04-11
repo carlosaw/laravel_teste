@@ -44,10 +44,10 @@
             <td class="tdLine9a">
               <div class="actions">
                 <a title="Editar" href="{{route('address.edit', ['id' => $address->id])}}">
-                  <img src="/assets/images/icon-edit.png" />
+                  <img src="/assets/images/icon-edit.png" title="Editar"/>
                 </a>
                 <a  onclick="return confirm('Tem certeza que deseja excluir? Este processo é irreversível!')" title="Excluir" href="{{route('address.delete', ['id' => $address->id])}}">
-                  <img src="/assets/images/icon-delete.png" />
+                  <img src="/assets/images/icon-delete.png" title="Deletar"/>
                 </a>
                 
               </div>                                    

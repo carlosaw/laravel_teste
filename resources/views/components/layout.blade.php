@@ -73,14 +73,7 @@
     </div>
     
   </div>
-  <script> 
-    setTimeout(function () {
-      document.getElementById("alert").style.display = "none";
-  }, 5000);
-    function hide(){
-      document.getElementById("alert-success").style.display = "none";
-  }
-  </script>
+  <script src="assets/js/script.js" type="text/javascript"></script>
   </body>
 
 </html>

@@ -13,7 +13,6 @@
     </form>
   </div>  
   
-
   @elseif (request()->is('clients'))
     <div class="search_form">
       <form action="../clients" method="GET">
