@@ -2,7 +2,7 @@
 
   <div class="user_home">
     <div class="user_title">
-      <h3>Bem vindo(a) - {{$AuthUser->name}}</h3>
+      <h1>Bem vindo(a) - {{$AuthUser->name}}</h1>
     </div>
   </div>
  

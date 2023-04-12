@@ -16,7 +16,9 @@
   <div class="container">
     <div class="sidebar">
       <div class="logo">
-        <img src="/assets/images/logo2.jpg" alt="" />
+        <a href="/">
+          <img src="/assets/images/logo2.jpg" alt="" />
+        </a>
       </div>
     </div>
     <div class="content">
@@ -62,6 +64,9 @@
       <section class="list">
         <div class="list-content">
           {{$slot}}          
+        </div>
+        <div class="car">
+          <img src="/assets/images/lotus.png" alt="" />
         </div>
         <footer>
           <div class="footer">
