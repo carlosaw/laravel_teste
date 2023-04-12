@@ -14,7 +14,7 @@
     <thead>     
         <x-tableTitle
         id='#'
-        plate='Placa'
+        plate='PLACA'
         brand='Marca'
         model='Modelo'
         color='Cor'
@@ -26,7 +26,7 @@
     </thead>
 
     @if ($search)
-      <p>Buscando por: <strong>'{{ $search }}'</strong></p> 
+      <p class="p_search">Buscando por: <strong>'{{ $search }}'</strong></p> 
     @endif
 
     <tbody>      

@@ -1,6 +1,6 @@
 <div class="list_header">
   <div class="date">
-    {{ date('d-m-Y') }}
+    {{ date('d/m/Y') }}
   </div>
 
   @if(request()->is('vehicles'))
@@ -36,7 +36,7 @@
   @elseif (request()->is('products'))
   <div class="search_form">
     <form action="../products" method="GET">
-      <input type="search" id="search" name="search" placeholder="Procure por PRODUTO" />
+      <input type="search" id="search" name="search" placeholder="Procure por NOME" />
       <button class="search_submit" type="submit" id="search-sub" name="search-sub">
         <img src="assets/images/search.png" alt=""/>
       </button>
@@ -49,7 +49,7 @@
   @elseif (request()->is('mechanics'))
   <div class="search_form">
     <form action="../mechanics" method="GET">
-      <input type="search" id="search" name="search" placeholder="Procure por MECÂNICO" />
+      <input type="search" id="search" name="search" placeholder="Procure por NOME" />
       <button class="search_submit" type="submit" id="search-sub" name="search-sub">
         <img src="assets/images/search.png" alt=""/>
       </button>

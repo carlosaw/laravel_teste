@@ -14,7 +14,7 @@
     <thead>            
       <x-tableTitle
         id='#'
-        name='Nome'
+        name='NOME'
         value='Preço R$'
         quantity='Qtde.'
         actions='Ações'
@@ -23,7 +23,7 @@
     </thead>
 
     @if ($search)
-      <p>Buscando por: <strong>'{{ $search }}'</strong></p> 
+      <p class="p_search">Buscando por: <strong>'{{ $search }}'</strong></p> 
     @endif
 
     <tbody>      

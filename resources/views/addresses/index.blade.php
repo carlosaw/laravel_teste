@@ -15,7 +15,7 @@
           <x-tableTitle
           id='#'
           client='Cliente'
-          street='Rua'
+          street='RUA'
           number='Nº'
           cep='Cep'
           district='Bairro'
@@ -27,7 +27,7 @@
       </thead>
 
       @if ($search)
-        <p>Buscando por: <strong>'{{ $search }}'</strong></p> 
+        <p class="p_search">Buscando por: <strong>'{{ $search }}'</strong></p> 
       @endif
 
       <tbody>      

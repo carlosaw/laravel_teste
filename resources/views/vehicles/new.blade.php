@@ -8,9 +8,10 @@
     </div>        
   @endif
 
-  <div class="form">
-      <h1>Cadastrar Veículo</h1>
-    <x-form.form_errors />
+  <x-form.form_errors />
+  
+  <div class="form">    
+    <h1>Cadastrar Veículo</h1>    
     <form method="POST" action="{{ route('vehicle.create_action') }}">
       @csrf
       <x-form.text_input name="plate" label="Placa do Veículo" placeholder="Digite a Placa do veículo" autofocus required/>
