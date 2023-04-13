@@ -581,7 +581,7 @@ button.btn_search img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 210px);
+  height: calc(100vh - 200px);
 }
 
 .car img {
