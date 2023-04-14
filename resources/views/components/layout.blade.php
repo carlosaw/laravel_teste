@@ -65,9 +65,7 @@
         <div class="list-content">
           {{$slot}}          
         </div>
-        <div class="car">
-          <img src="/assets/images/lotus.png" alt="" />
-        </div>
+        
         <footer>
           <div class="footer">
             Copyright@2023 | Aw2web
