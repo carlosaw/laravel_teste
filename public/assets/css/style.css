@@ -254,12 +254,10 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 .form {
   margin-top: 50px;
-  display: flex;
   /* display: flex; */
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   /* flex-direction: column; */
-  z-index: 999;
-  position: relative;
 }
 
 /* Título tabela Clients */
@@ -459,13 +457,10 @@ footer {
 input[type=text]:focus {
   border-color: #0000FF;
 }
-input[type=email]:focus {
+input[type=text]:focus {
   border-color: #0000FF;
 }
-input[type=password]:focus {
-  border-color: #0000FF;
-}
-input[type=password_confirmation]:focus {
+input[type=text]:focus {
   border-color: #0000FF;
 }
 select:focus {
@@ -596,12 +591,9 @@ button.btn_search img {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: calc(100vh - 100px); */
-  margin-top: -179px;
-  position: relative;
-  opacity: 0.9;
+  height: calc(100vh - 200px);
 }
 
 .car img {
-  /* width: 80%; */
+  width: 80%;
 }
