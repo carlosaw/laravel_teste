@@ -105,10 +105,14 @@ a.btn {
   flex-direction: column;
   align-items: center;
   display: flex;
-  background-color: #ffffff;
   height: calc(100vh - 100px);
+  background-color: var(--background-light);
+  /* width: 1340px; */
+  max-width: 1300px;
 }
-
+.list-content {
+  position: relative;
+}
 .list-content p {
   text-align: center;
   margin-top: 10px;
@@ -258,6 +262,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   /* display: flex; */
   /* justify-content: center; */
   /* flex-direction: column; */
+  z-index: 999;
 }
 
 /* Título tabela Clients */
@@ -452,7 +457,7 @@ footer {
   font-size: medium;
   border-radius: 5px;
   border: 1px solid #CCC;
-  background-color: rgba(255,255,255,0.5);
+  background-color: white;
 }
 input[type=text]:focus {
   border-color: #0000FF;
@@ -596,8 +601,19 @@ button.btn_search img {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 298px);
+  width: 100%;
 }
 
 .car img {
   width: 80%;
+}
+
+.car-login {
+  opacity: 0.5;
+  text-align: center;
+  width: 100%;
+}
+
+.car-login img {
+  width: auto;
 }

@@ -65,6 +65,10 @@
         <div class="list-content">
           {{$slot}}          
         </div>
+
+        @if ($page == 'Aw2web | Login')
+          <x-lotus />
+        @endif
         
         <footer>
           <div class="footer">
