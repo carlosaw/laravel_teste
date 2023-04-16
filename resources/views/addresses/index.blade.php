@@ -15,7 +15,7 @@
           <x-tableTitle
           id='#'
           client='Cliente'
-          street='RUA'
+          street='Rua'
           number='Nº'
           cep='Cep'
           district='Bairro'

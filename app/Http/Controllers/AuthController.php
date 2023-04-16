@@ -27,7 +27,7 @@ class AuthController extends Controller
 
     if(Auth::attempt($validator)) {
       return redirect()->route('home');
-    };
+    }
   }
 
   public function register(Request $request) {

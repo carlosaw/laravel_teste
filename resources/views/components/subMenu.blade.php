@@ -16,7 +16,7 @@
   @elseif (request()->is('clients'))
     <div class="search_form">
       <form action="../clients" method="GET">
-        <input type="search" id="search" name="search" placeholder="Procure por NOME" />
+        <input type="search" id="search" name="search" placeholder="Procure por Nome ou Cpf" />
         <button class="search_submit" type="submit" id="search-sub" name="search-sub">
           <img src="assets/images/search.png" alt=""/>
         </button>
@@ -26,7 +26,7 @@
   @elseif (request()->is('addresses'))
   <div class="search_form">
     <form action="../addresses" method="GET">
-      <input type="search" id="search" name="search" placeholder="Procure por RUA" />
+      <input type="search" id="search" name="search" placeholder="Procure por Rua ou Cep" />
       <button class="search_submit" type="submit" id="search-sub" name="search-sub">
         <img src="assets/images/search.png" alt=""/>
       </button>

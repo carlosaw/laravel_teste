@@ -17,6 +17,8 @@ class AddressController extends Controller
             $clients = Client::all();
             $addresses = Address::where([
                 ['street', 'like', '%'.$search. '%']
+            ])->orWhere([
+                ['cep', 'like', '%'.$search. '%']
             ])->get();
         } else { 
             $clients = Client::all();           

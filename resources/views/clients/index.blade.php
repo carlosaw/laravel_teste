@@ -14,7 +14,7 @@
       <thead>            
         <x-tableTitle
           id='#'
-          name='NOME'
+          name='Nome'
           cpf='Cpf'
           fone='Telefone'
           email='E-mail'

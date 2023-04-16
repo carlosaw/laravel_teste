@@ -15,6 +15,8 @@ class ClientController extends Controller
         $search = request('search');
         if($search) {
             $clients = Client::where([                
+                ['cpf', 'like', '%'.$search.'%']
+            ])->orWhere([                
                 ['name', 'like', '%'.$search.'%']
             ])->get();
         } else {
