@@ -1,7 +1,7 @@
 <x-layout page='Aw2web | Login'>
-
+<x-form.form_errors />
   <div class="form">    
-    <x-form.form_errors />
+    
     
     <form method="POST" action="{{ route('user.login_action') }}">
     <h1>Login</h1>
