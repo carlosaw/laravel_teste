@@ -12,8 +12,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Rubik, sans-serif;
-  /* color: var(--text-dark); */
-  /* color: var(--color-primary); */
+  color: var(--text-dark);
+  color: var(--color-primary);
 }
 
 body {
@@ -581,7 +581,6 @@ button.btn_search img {
   margin-left: 260px;
   z-index: 999;
   position: relative;
-  border: 0px 1px 1px 0px solid #CCC;
   border-top: 1px solid #CCC;
   border-right: 1px solid #CCC;
   border-bottom: 1px solid #CCC;
