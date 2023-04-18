@@ -14,6 +14,7 @@
   font-family: Rubik, sans-serif;
   color: var(--text-dark);
   /* color: var(--color-primary); */
+  /* width: 100%; */
 }
 
 body {
@@ -51,7 +52,7 @@ nav {
   display: flex;
   padding: 10px 0px;
   border-radius: 5px;
-  margin-left: 70px;
+  margin-left: 20px;
   transition: all .3s ease-in-out;
   width: 125px;
 }
@@ -112,6 +113,9 @@ a.btn {
 }
 .list-content {
   position: relative;
+  background-color: blue;
+  width: calc(100vw - 100px);
+  /* height: 65vh; */
 }
 .list-content p {
   text-align: center;
@@ -146,6 +150,13 @@ h1 {
   font-size: 18px;
 }
 
+.btnRegister {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+  align-items: center;
+}
 
 .btns_form {
   display: flex;
@@ -203,13 +214,24 @@ tbody {
   overflow: auto;
   height: 545px;
 }
+.user_title {
+  display: flex;
+  flex-direction: row;
+}
 
+h4 {
+  margin-right: 20px;
+  font-weight: normal;
+}
+.user_name {
+  color: #0d0af7;
+  font-size: 17px;
+}
 .title th {
   color: #0d0af7;
   font-weight: normal;
   height: 30px;
   border-bottom: 1px solid #CCC;
-  /* margin-bottom: 6px; */
 }
 
 .tr_body {
@@ -225,12 +247,6 @@ tbody>.tr_body:hover {
   transform: scale(1.01);
   overflow: hidden;
   background-color: #c4e9ff;
-}
-
-
-.title {
-  /* color: #2C2B33; */
-  /* margin-bottom: 21px; */
 }
 
 .actions {
@@ -258,11 +274,8 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 .form {
   margin-top: 22px;
-  /* display: flex; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* flex-direction: column; */
-  z-index: 999;
+  background-color: aqua;
+  width: 100%;
 }
 
 /* Título tabela Clients */
@@ -441,6 +454,8 @@ footer {
 .inputArea {
   display: block;
   margin: 15px;
+  width: 666px;
+  background-color: bisque;
 }
 
 .inputArea>label {
@@ -451,7 +466,7 @@ footer {
 
 .inputArea>input, .inputArea>select {
   height: 40px;
-  width: 400px;
+  width: 100%;
   padding-left: 10px;
   outline: none;
   font-size: medium;
@@ -611,11 +626,15 @@ button.btn_search img {
 }
 
 .car-login {
-  opacity: 0.5;
-  text-align: center;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 269px);
+  width: 80%;
 }
 
 .car-login img {
-  width: auto;
+  width: 80%;
+  opacity: 0.5;
+  height: fit-content;
 }

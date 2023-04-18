@@ -2,7 +2,10 @@
 
   <div class="user_home">
     <div class="user_title">
-      <h1>Bem vindo(a) - {{$AuthUser->name}}</h1>
+      <h4>Bem vindo(a)</h4>
+      <div class="user_name">
+        {{$AuthUser->name}}
+      </div>
     </div>
     <div class="car">
       <img src="/assets/images/lotus_resized_resized.png" alt="" />

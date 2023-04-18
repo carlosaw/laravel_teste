@@ -50,11 +50,16 @@
         @endif        
         
         @if ($page == 'Aw2web | Login')
+        <div class="btnRegister">
           <x-btn btnHref='register' btnText='Registre-se'></x-btn>
+        </div>
         @endif
+
         @if ($page == 'Aw2web | Registro')
+        <div class="btnRegister">
           <p class="frase">Já tem Cadastro?</p>
           <x-btn btnHref='login' btnText='Faça Login'></x-btn>
+        </div>
         @endif   
         
         <x-layoutLinks /> 
