@@ -38,14 +38,16 @@
           $page !== 'Aw2web | Editar Produto' &&
           $page !== 'Aw2web | Editar Mecânico'          
           )
-          <x-btn btnHref='vehicles' btnText='Veículos'></x-btn>                  
-          <x-btn btnHref='clients' btnText='Clientes'></x-btn>
-          <x-btn btnHref='addresses' btnText='Endereços'></x-btn>
-          <x-btn btnHref='products' btnText='Produtos'></x-btn>
-          <x-btn btnHref='orders' btnText='Serviços'></x-btn>
-          <x-btn btnHref='mechanics' btnText='Mecânicos'></x-btn>
-          <div class="user-logout">
-            <a href="{{route('logout')}}">Sair</a>  
+          <div class="btn-group">
+            <x-btn btnHref='vehicles' btnText='Veículos'></x-btn>                  
+            <x-btn btnHref='clients' btnText='Clientes'></x-btn>
+            <x-btn btnHref='addresses' btnText='Endereços'></x-btn>
+            <x-btn btnHref='products' btnText='Produtos'></x-btn>
+            <x-btn btnHref='orders' btnText='Serviços'></x-btn>
+            <x-btn btnHref='mechanics' btnText='Mecânicos'></x-btn>
+            <div class="user-logout">
+              <a href="{{route('logout')}}">Sair</a>  
+            </div>
           </div>
         @endif        
         
