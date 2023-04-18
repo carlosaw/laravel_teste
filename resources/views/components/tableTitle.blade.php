@@ -20,13 +20,13 @@
     <th class="title6">{{$actions ?? ''}}</th>      
   </tr>
 
-  @elseif (request()->is('addresses'))   
+  @elseif (request()->is('addresses'))
   <tr class="title">
     <th class="title1a">{{$id ?? ''}}</th>
     <th class="title2a">{{$client ?? ''}}</th>
     <th class="title3a">{{$street ?? ''}}</th>
     <th class="title4a">{{$number ?? ''}}</th>   
-    <th class="title5a">{{$cep ?? ''}}</th>5
+    <th class="title5a">{{$cep ?? ''}}</th>
     <th class="title6a">{{$district ?? ''}}</th>
     <th class="title7a">{{$city ?? ''}}</th>
     <th class="title8a">{{$state ?? ''}}</th>

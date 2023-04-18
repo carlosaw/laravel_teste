@@ -44,7 +44,16 @@
             </div>                                    
           </td>
         </tr>        
-      @endforeach          
+      @endforeach
+      @if(count($products) == 0 && $search)
+        <p>Não foi possível encontrar nenhum produto com o nome <strong style="color:red">"{{ $search }}".</strong>
+          <a href="/vehicles" style="color:blue">
+            Ver todos os Produtos
+          </a>
+        </p>
+      @elseif(count($products) == 0)
+      <p>Este Produto não existe!</p>
+      @endif          
     </tbody>
   
   </table>

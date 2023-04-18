@@ -17,7 +17,7 @@
     <div class="search_form">
       <form action="../clients" method="GET">
         <input type="search" id="search" name="search" placeholder="Procure por Nome ou Cpf" />
-        <button class="search_submit" type="submit" id="search-sub" name="search-sub">
+        <button class="search_submit" type="submit" id="search-sub" name="search-sub" title="search-sub">
           <img src="assets/images/search.png" alt=""/>
         </button>
       </form>
@@ -27,7 +27,7 @@
   <div class="search_form">
     <form action="../addresses" method="GET">
       <input type="search" id="search" name="search" placeholder="Procure por Rua ou Cep" />
-      <button class="search_submit" type="submit" id="search-sub" name="search-sub">
+      <button class="search_submit" type="submit" id="search-sub" name="search-sub" title="search-sub">
         <img src="assets/images/search.png" alt=""/>
       </button>
     </form>
@@ -37,7 +37,7 @@
   <div class="search_form">
     <form action="../products" method="GET">
       <input type="search" id="search" name="search" placeholder="Procure por NOME" />
-      <button class="search_submit" type="submit" id="search-sub" name="search-sub">
+      <button class="search_submit" type="submit" id="search-sub" name="search-sub" title="search-sub">
         <img src="assets/images/search.png" alt=""/>
       </button>
     </form>
@@ -50,7 +50,7 @@
   <div class="search_form">
     <form action="../mechanics" method="GET">
       <input type="search" id="search" name="search" placeholder="Procure por NOME" />
-      <button class="search_submit" type="submit" id="search-sub" name="search-sub">
+      <button class="search_submit" type="submit" id="search-sub" name="search-sub" title="search-sub">
         <img src="assets/images/search.png" alt=""/>
       </button>
     </form>

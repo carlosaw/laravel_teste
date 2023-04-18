@@ -52,9 +52,14 @@
         </tr>       
       @endforeach
       @if(count($vehicles) == 0 && $search)
-        <p>Não foi possível encontrar nenhum veículo com placa {{ $search }}! <a href="/vehicles">Ver todos os Veículos</a></p> 
+        <p>
+          Não foi possível encontrar nenhum veículo com placa <strong style="color:red">"{{ $search }}".</strong>
+          <a href="/vehicles" style="color:blue">
+            Ver todos os Veículos
+          </a>
+        </p> 
       @elseif(count($vehicles) == 0)
-      <p>Este existem Veículos!</p>
+        <p>Este existem Veículos!</p>
       @endif
     </tbody>
 

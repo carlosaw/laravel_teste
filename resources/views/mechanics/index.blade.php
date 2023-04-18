@@ -44,7 +44,16 @@
             </div>                                    
           </td>
         </tr>        
-      @endforeach          
+      @endforeach 
+      @if(count($mechanics) == 0 && $search)
+        <p>Não foi possível encontrar nenhum Mecânico com o nome <strong style="color:red">"{{ $search }}".</strong>
+          <a href="/vehicles" style="color:blue">
+            Ver todos os Mecânicos
+          </a>
+        </p> 
+      @elseif(count($mechanics) == 0)
+      <p>Este Mecânico não existe!</p> 
+      @endif        
     </tbody>
   
   </table>

@@ -49,9 +49,11 @@
         @endforeach          
       </tbody>
       @if(count($clients) == 0 && $search)
-        <p>Não foi possível encontrar nenhum cliente {{ $search }}! <a href="/clients">Ver todos os Clientes</a></p> 
-      @elseif(count($clients) == 0)
-        <p>Não existem Clientes!</p>
+        <p>Não foi possível encontrar nenhum cliente <strong style="color:red">"{{ $search }}".</strong>
+          <a href="/vehicles" style="color:blue">
+            Ver todos os Clientes
+          </a>
+        </p>
       @endif
     </table>
   
