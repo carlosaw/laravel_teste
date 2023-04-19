@@ -43,7 +43,14 @@
   </div>
 
   @elseif (request()->is('orders'))
-  <x-all allSelect='Todos os Serviços'></x-all>
+  <div class="search_form">
+    <form action="../orders" method="GET">
+      <input type="search" id="search" name="search" placeholder="Procure por O.S." />
+      <button class="search_submit" type="submit" id="search-sub" name="search-sub" title="search-sub">
+        <img src="assets/images/search.png" alt=""/>
+      </button>
+    </form>
+  </div>
   
   @elseif (request()->is('mechanics'))
   <div class="search_form">

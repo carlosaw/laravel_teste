@@ -456,6 +456,33 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   width: 128px;
 }
 
+/* Titulo tabela de Ordem de Serviço */
+.title1o, .title2o, .title3o, .title4o, .title5o, .title6o {border: 1px solid #FFF;}
+.title1o, .tdLine1o {
+  width: 34px;
+}
+.title2o, .tdLine2o {
+  width: 257px;
+}
+.title3o, .tdLine3o {
+  width: 151px;
+}
+.title4o, .tdLine4o {
+  width: 189px;
+}
+.title5o, .tdLine5o {
+  width: 342px;
+}
+.title6o {
+  width: 151px;
+}
+/* Linhas tabela ORDERS */
+.tdLine1o, .tdLine3o, .tdLine4o {text-align: center;}
+.tdLine2o, .tdLine5o {padding-left: 10px;}
+.tdLine6o {
+  width: 128px;
+}
+
 footer {
   height: 64px;
   display: flex;

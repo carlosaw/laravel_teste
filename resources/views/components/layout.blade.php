@@ -36,7 +36,7 @@
           $page !== 'Aw2web | Editar Cliente' &&
           $page !== 'Aw2web | Editar Endereço' &&
           $page !== 'Aw2web | Editar Produto' &&
-          $page !== 'Aw2web | Editar Mecânico'          
+          $page !== 'Aw2web | Editar Mecânico'     
           )
           <div class="btn-group">                              
             <x-btn btnHref='clients' btnText='Clientes'></x-btn>

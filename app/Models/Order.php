@@ -33,4 +33,8 @@ class Order extends Model
     public function vehicle() {
         return $this->belongsTo(Vehicle::class);
     }
+    // Um Mecânico pode estar em várias OS
+    public function mechanic() {
+        return $this->hasMany(Mechanic::class);
+    }
 }

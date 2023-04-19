@@ -25,11 +25,6 @@ class AddressController extends Controller
             $addresses = Address::all();
         }                
         return view('addresses/index', ['addresses' => $addresses, 'search' => $search, 'clients' => $clients]);
-
-
-        // $addresses = Address::all();
-        // $clients = Client::all();
-        // return view('addresses/index', ['addresses' => $addresses], ['clients' => $clients]);
     }
 
     public function create(Request $request) {
