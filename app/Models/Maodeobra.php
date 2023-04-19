@@ -2,13 +2,10 @@
 
 namespace App\Models;
 
-use App\Models\Client;
-use App\Models\Vehicle;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Mechanic extends Model
+class Maodeobra extends Model
 {
     use HasFactory;
 
@@ -16,7 +13,12 @@ class Mechanic extends Model
 
     protected $fillable = [
         'name',
-        'phone',
         'percentage',
+        'mechanic_id'
     ];
+
+    // Um Veículo sempre vai pertencer a um Cliente
+    public function mechanic() {
+        return $this->hasMany(Mechanic::class);
+    }
 }

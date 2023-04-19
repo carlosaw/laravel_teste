@@ -53,6 +53,13 @@ Route::middleware(['auth'])->group(function(){
   Route::post('/mechanics/edit_action', [MechanicController::class, 'edit_action'])->name('mechanic.edit_action');
   Route::get('/mechanics/delete', [MechanicController::class, 'delete'])->name('mechanic.delete');
 
+  Route::get('/maodeobras', [MechanicController::class, 'index'])->name('maodeobras');
+  Route::get('/maodeobras/new', [MechanicController::class, 'create'])->name('maodeobras.create');
+  Route::post('/maodeobras/new_action', [MechanicController::class, 'create_action'])->name('mechanic.create_action');
+  Route::get('/maodeobras/edit', [MechanicController::class, 'edit'])->name('mechanic.edit');
+  Route::post('/maodeobras/edit_action', [MechanicController::class, 'edit_action'])->name('mechanic.edit_action');
+  Route::get('/maodeobras/delete', [MechanicController::class, 'delete'])->name('maodeobras.delete');
+
   Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 

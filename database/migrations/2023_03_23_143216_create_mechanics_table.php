@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('percentage')->default(0);
             // $table->foreignIdFor(Client::class)->references('id')->on('clients')->onDelete('CASCADE');
             // $table->foreignIdFor(Vehicle::class)->references('id')->on('vehicles')->onDelete('CASCADE');
-            //$table->timestamps();
         });
     }
 
