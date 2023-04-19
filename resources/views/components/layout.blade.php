@@ -38,9 +38,9 @@
           $page !== 'Aw2web | Editar Produto' &&
           $page !== 'Aw2web | Editar Mecânico'          
           )
-          <div class="btn-group">
-            <x-btn btnHref='vehicles' btnText='Veículos'></x-btn>                  
+          <div class="btn-group">                              
             <x-btn btnHref='clients' btnText='Clientes'></x-btn>
+            <x-btn btnHref='vehicles' btnText='Veículos'></x-btn>
             <x-btn btnHref='addresses' btnText='Endereços'></x-btn>
             <x-btn btnHref='products' btnText='Produtos'></x-btn>
             <x-btn btnHref='orders' btnText='Serviços'></x-btn>
