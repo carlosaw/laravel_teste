@@ -37,7 +37,6 @@ class DatabaseSeeder extends Seeder
         Vehicle::factory(25)->create();
         Mechanic::factory(3)->create();
         Order::factory(10)->create();
-        Maodeobra::factory(5)->create();
         \App\Models\User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
