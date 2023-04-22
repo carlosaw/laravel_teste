@@ -46,16 +46,15 @@
     <th class="title2m">{{$name ?? ''}}</th>
     <th class="title3m">{{$phone ?? ''}}</th>      
     <th class="title4m">{{$percentage ?? ''}}</th>
-    <th class="title7m">{{$actions ?? ''}}</th>
+    <th class="title5m">{{$actions ?? ''}}</th>
   </tr>
   @elseif (request()->is('orders'))   
   <tr class="title">
     <th class="title1o">{{$id ?? ''}}</th>       
-    <th class="title2o">{{$client_id ?? ''}}</th>
-    <th class="title3o">{{$product_id ?? ''}}</th>      
-    <th class="title4o">{{$vehicle_id ?? ''}}</th>
-    <th class="title5o">{{$mechanic_id ?? ''}}</th>
-    <th class="title6o">{{$actions ?? ''}}</th>
+    <th class="title2o">{{$client ?? ''}}</th>      
+    <th class="title3o">{{$vehicle ?? ''}}</th>
+    <th class="title4o">{{$mechanic ?? ''}}</th>
+    <th class="title5o">{{$actions ?? ''}}</th>
   </tr>
 
 @endif

@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Client;
+use App\Models\Mechanic;
 use App\Models\Product;
 use App\Models\Vehicle;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -24,16 +25,13 @@ class OrderFactory extends Factory
         //     $client = Client::all()->random();
         // }
         
-        $product = Product::all()->random();
-        
         $vehicle = Vehicle::all()->random();
-
+        $mechanic = Mechanic::all()->random();
         return [
             //
             'client_id' => $client,
-            'product_id' => $product,
             'vehicle_id' => $vehicle,
-            'mechanic_id' => 1
+            'mechanic_id' => $mechanic
         ];
     }
 

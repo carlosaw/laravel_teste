@@ -14,7 +14,7 @@
   font-family: Rubik, sans-serif;
   color: var(--text-dark);
   /* color: var(--color-primary); */
-  /* width: 100%; */
+  /* width: 500PX; */
 }
 
 body {
@@ -138,7 +138,7 @@ h1 {
   align-items: baseline;
   margin: 20px 0px;
   justify-content: space-between;
-  width: 95%;
+  width: 100%;
 }
 
 .list_header-select {
@@ -457,7 +457,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 }
 
 /* Titulo tabela de Ordem de Serviço */
-.title1o, .title2o, .title3o, .title4o, .title5o, .title6o {border: 1px solid #FFF;}
+.title1o, .title2o, .title3o, .title4o, .title5o {border: 1px solid #FFF;}
 .title1o, .tdLine1o {
   width: 34px;
 }
@@ -467,19 +467,19 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 .title3o, .tdLine3o {
   width: 151px;
 }
-.title4o, .tdLine4o {
+.title3o, .tdLine3o {
   width: 189px;
 }
-.title5o, .tdLine5o {
+.title4o, .tdLine4o {
   width: 342px;
 }
-.title6o {
+.title5o {
   width: 151px;
 }
 /* Linhas tabela ORDERS */
 .tdLine1o, .tdLine3o, .tdLine4o {text-align: center;}
-.tdLine2o, .tdLine5o {padding-left: 10px;}
-.tdLine6o {
+.tdLine2o {padding-left: 10px;}
+.tdLine5o {
   width: 128px;
 }
 
@@ -543,11 +543,16 @@ select:focus {
   justify-content: center;
   border-radius: 5px;
   align-items: center;
-  margin-left: 221px;
+  margin-left: 214px;
   border: 1px solid #4eb94e;
+  margin-top: -20px;
 }
 .alert-success img {
   width: 90%;
+}
+
+.alert-error {
+  width: 435px;
 }
 
 .alert-error li {

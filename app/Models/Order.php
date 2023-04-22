@@ -13,7 +13,6 @@ class Order extends Model
 
     protected $fillable = [
         'client_id',
-        'product_id',
         'vehicle_id',
         'mechanic_id',
         'due_date'
@@ -25,9 +24,9 @@ class Order extends Model
     }
 
     // Uma OS pode ter vários Produtos
-    public function product() {
-        return $this->hasMany(Product::class);
-    }
+    // public function product() {
+    //     return $this->hasMany(Product::class);
+    // }
 
     // Uma OS só pode ter um veículo
     public function vehicle() {
@@ -35,6 +34,6 @@ class Order extends Model
     }
     // Um Mecânico pode estar em várias OS
     public function mechanic() {
-        return $this->hasMany(Mechanic::class);
+        return $this->belongsTo(Mechanic::class);
     }
 }

@@ -1,5 +1,7 @@
 <x-layout page='Aw2web | Ordem Serv.'>
+
   <x-subMenu />
+
   @if (session('alert'))
     <div id="alert">
       <div id="alert-success" class="alert-success">
@@ -13,7 +15,6 @@
         <x-tableTitle
         id='#'
         client='Cliente'
-        product='Produto'
         vehicle='Veículo'
         mechanic='Mecânico'
         actions='Ações'
@@ -29,11 +30,10 @@
       @foreach ($orders as $order)          
         <tr class="tr_body">
           <td class="tdLine1o">{{$order->id ?? ''}}</td>          
-          <td class="tdLine2o">{{$order->client->name ?? ''}}</td>
-          <td class="tdLine3o">{{$order->product_id ?? ''}}</td>
-          <td class="tdLine4o">{{$order->vehicle_id ?? ''}}</td>
-          <td class="tdLine5o">{{$order->mechanic_id ?? ''}}</td>  
-          <td class="tdLine6o">
+          <td class="tdLine2o">{{$order->client['name'] ?? ''}}</td>
+          <td class="tdLine3o">{{$order->vehicle['plate'] ?? ''}}</td>
+          <td class="tdLine4o">{{$order->mechanic['name'] ?? ''}}</td>  
+          <td class="tdLine5o">
             <div class="actions">
               <a title="Editar" href="{{route('order.edit', ['id' => $order->id])}}">
                 <img src="/assets/images/icon-edit.png" title="Editar"/>
