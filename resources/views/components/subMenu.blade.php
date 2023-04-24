@@ -45,7 +45,7 @@
   @elseif (request()->is('orders'))
   <div class="search_form">
     <form action="../orders" method="GET">
-      <input type="search" id="search" name="search" placeholder="Procure por O.S." />
+      <input type="search" id="search" name="search" placeholder="Procure por O.S. ou Cliente" />
       <button class="search_submit" type="submit" id="search-sub" name="search-sub" title="search-sub">
         <img src="assets/images/search.png" alt=""/>
       </button>

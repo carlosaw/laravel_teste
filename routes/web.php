@@ -44,6 +44,7 @@ Route::middleware(['auth'])->group(function(){
   Route::get('/orders', [OrderController::class, 'index'])->name('orders');
   Route::get('/orders/new', [OrderController::class, 'create'])->name('order.create');
   Route::get('/orders/edit', [OrderController::class, 'edit'])->name('order.edit');
+  Route::post('/orders/edit_action', [OrderController::class, 'edit_action'])->name('order.edit_action');
   Route::get('/orders/delete', [OrderController::class, 'delete'])->name('order.delete');
 
   Route::get('/mechanics', [MechanicController::class, 'index'])->name('mechanics');
@@ -52,13 +53,6 @@ Route::middleware(['auth'])->group(function(){
   Route::get('/mechanics/edit', [MechanicController::class, 'edit'])->name('mechanic.edit');
   Route::post('/mechanics/edit_action', [MechanicController::class, 'edit_action'])->name('mechanic.edit_action');
   Route::get('/mechanics/delete', [MechanicController::class, 'delete'])->name('mechanic.delete');
-
-  Route::get('/maodeobras', [MechanicController::class, 'index'])->name('maodeobras');
-  Route::get('/maodeobras/new', [MechanicController::class, 'create'])->name('maodeobras.create');
-  Route::post('/maodeobras/new_action', [MechanicController::class, 'create_action'])->name('mechanic.create_action');
-  Route::get('/maodeobras/edit', [MechanicController::class, 'edit'])->name('mechanic.edit');
-  Route::post('/maodeobras/edit_action', [MechanicController::class, 'edit_action'])->name('mechanic.edit_action');
-  Route::get('/maodeobras/delete', [MechanicController::class, 'delete'])->name('maodeobras.delete');
 
   Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });

@@ -26,7 +26,6 @@ class OrderController extends Controller
         ])->orWhere([
           ['orders.client_id', 'like', '%' . $search . '%']
         ])->get();
-
     } else {
       $orders = Order::all();
       $clients = Client::all();
@@ -40,5 +39,22 @@ class OrderController extends Controller
   public function create(Request $request)
   {
     return view('orders/new');
+  }
+
+  public function edit(Request $request)
+  {
+    $id = $request->id;
+    //dd($id);
+    $orders = Order::find($id);
+    if (!$orders) {
+      return redirect(route('orders'));
+    }
+    
+    $data1['orders'] = $orders;
+
+    $clients = Client::all();
+    $dataClient['clients'] = $clients;
+
+    return view('orders/edit', $data1, $dataClient);
   }
 }

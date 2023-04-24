@@ -16,9 +16,9 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Client::class)->references('id')->on('clients')->onDelete('CASCADE');
-            $table->foreignIdFor(Vehicle::class)->references('id')->on('vehicles')->onDelete('CASCADE');
-            $table->foreignIdFor(Mechanic::class)->references('id')->on('mechanics')->onDelete('CASCADE');
+            $table->foreignIdFor(Client::class)->references('id')->on('clients')->onDelete('CASCADE')->unique();
+            $table->foreignIdFor(Vehicle::class)->references('id')->on('vehicles')->onDelete('CASCADE')->unique();
+            $table->foreignIdFor(Mechanic::class)->references('id')->on('mechanics')->onDelete('CASCADE')->unique();
             $table->dateTime('due_date')->default('2023-03-03');
         });
     }
