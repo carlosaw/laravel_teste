@@ -12,6 +12,7 @@ class Order extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'id',
         'client_id',
         'vehicle_id',
         'mechanic_id',
