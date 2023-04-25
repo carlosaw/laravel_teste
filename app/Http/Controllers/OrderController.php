@@ -11,50 +11,41 @@ use App\Models\Vehicle;
 
 class OrderController extends Controller
 {
-  //
-  public function index(Request $request)
-  {
-    $search = request('search');
-    if ($search) {
-      $vehicles = Vehicle::all();
-      $mechanics = Mechanic::all();
-      $clients = Client::all();
-
-      $orders = Order::join('clients', 'clients.id', '=', 'orders.client_id')
-        ->where([
-          ['clients.name', 'like', '%' . $search . '%'],
-        ])->orWhere([
-          ['orders.client_id', 'like', '%' . $search . '%']
-        ])->get();
-    } else {
-      $orders = Order::all();
-      $clients = Client::all();
-      $vehicles = Vehicle::all();
-      $mechanics = Mechanic::all();
+    //
+    public function index(Request $request) {
+        $search = request('search');
+        if($search) {
+            $vehicles = Vehicle::all();
+            $mechanics = Mechanic::all();
+            $clients = Client::all();
+            $orders = Order::join('clients', 'clients.id','=','orders.client_id')
+            ->orWhere([
+                ['clients.name', 'like', '%'.$search.'%']
+            ])->get();
+            // $orders = Order::join('clients', 'clients.id','=','orders.client_id')
+            // ->where([
+            //     ['clients.name', 'like', '%'.$search.'%']
+            // ])->get();            
+        } else {
+            $orders = Order::all();
+            $clients = Client::all();
+            $vehicles = Vehicle::all();
+            $mechanics = Mechanic::all();
+        }
+        //dd($clients);
+        return view('orders/index', ['orders' => $orders, 'search' => $search, 'clients' => $clients, 'vehicles' => $vehicles, 'mechanics' => $mechanics]);
     }
 
-    return view('orders/index', ['orders' => $orders, 'search' => $search, 'clients' => $clients, 'vehicles' => $vehicles, 'mechanics' => $mechanics]);
-  }
-
-  public function create(Request $request)
-  {
-    return view('orders/new');
-  }
-
-  public function edit(Request $request)
-  {
-    $id = $request->id;
-    //dd($id);
-    $orders = Order::find($id);
-    if (!$orders) {
-      return redirect(route('orders'));
-    }
-    
-    $data1['orders'] = $orders;
-
-    $clients = Client::all();
-    $dataClient['clients'] = $clients;
-
-    return view('orders/edit', $data1, $dataClient);
-  }
+    public function create(Request $request) {
+        $orders = Order::all();
+        $vehicles = Vehicle::all();        
+        $clients = Client::all();
+        $mechanics = Mechanic::all();
+        $data['orders'] = $orders;
+        $data['clients'] = $clients;
+        $data['vehicles'] = $vehicles;
+        $data['mechanics'] = $mechanics;
+        
+        return view('orders/new', $data);        
+    }    
 }
