@@ -8,10 +8,14 @@
   </div>
   @endif
 
+  {{-- @if ($search)
+    <p class="p_search">Buscando por: <strong>'{{ $search }}'</strong></p> 
+  @endif --}}
+
   <div class="form">
     <h1>Nova Ordem de Serviços</h1>
 
-    <form method="POST" action="{{ route('address.create_action') }}">
+    <form method="POST" action="{{ route('order.create_action') }}">
       {{-- <form method="POST"> --}}
       @csrf
       <x-form.select_input name="client_id" label="Cliente" selectItem='Selecione um Cliente'>
