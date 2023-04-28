@@ -45,17 +45,21 @@ class OrderController extends Controller
         return view('orders/new', $data);        
     }
     
-    public function create_action(Request $request) {
-        dd($request->all());
-        $validator = $request->validate([
-
-            'client_id' => $request->clients->id,
-            'vehicle_id' => '',
-            'mechanic_id' => ''
-          ]);
-        //dd($request->all());
-        $order = $request->only(['client_id', 'vehicle_id', 'mechanic_id', 'due_date']);
-        Order::create($order);
-        return redirect(route('orders'))->with('alert', '✔');
-    }
+    public function create_action(Request $request)
+  {
+    $orders = Order::all();
+        $vehicles = Vehicle::all();        
+        $clients = Client::all();
+        $mechanics = Mechanic::all();
+        $data['orders'] = $orders;
+        $data['clients'] = $clients;
+        $data['vehicles'] = $vehicles;
+        $data['mechanics'] = $mechanics;
+    //dd($request->all());
+    $order = $request->only(['client_id', 'vehicle_id', 'mechanic_id']);
+    //$address['client_id'] = 1;
+    // $dbaddress = Address::create($address);
+    Order::create($order);
+    return redirect(route('orders'))->with('alert', '✔');
+  }
 }
