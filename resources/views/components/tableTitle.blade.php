@@ -51,9 +51,9 @@
   @elseif (request()->is('orders'))   
   <tr class="title">
     <th class="title1o">{{$id ?? ''}}</th>       
-    <th class="title2o">{{$client ?? ''}}</th>      
-    <th class="title3o">{{$vehicle ?? ''}}</th>
-    <th class="title4o">{{$mechanic ?? ''}}</th>
+    <th class="title2o">{{$client_id ?? ''}}</th>      
+    <th class="title3o">{{$vehicle_id ?? ''}}</th>
+    <th class="title4o">{{$mechanic_id ?? ''}}</th>
     <th class="title5o">{{$actions ?? ''}}</th>
   </tr>
 

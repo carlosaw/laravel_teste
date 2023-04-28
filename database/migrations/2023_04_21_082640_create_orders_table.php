@@ -19,7 +19,6 @@ return new class extends Migration
             $table->foreignIdFor(Client::class)->references('id')->on('clients')->onDelete('CASCADE')->unique();
             $table->foreignIdFor(Vehicle::class)->references('id')->on('vehicles')->onDelete('CASCADE')->unique();
             $table->foreignIdFor(Mechanic::class)->references('id')->on('mechanics')->onDelete('CASCADE')->unique();
-            $table->dateTime('due_date')->default('2023-03-03');
         });
     }
 

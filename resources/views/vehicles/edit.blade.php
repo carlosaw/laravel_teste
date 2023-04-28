@@ -35,7 +35,7 @@
         @endforeach
       </x-form.select_input>
 
-      <x-form.form_button resetTxt='Limpar' submitTxt='Atualizar' onclick="return confirm('Tem certeza que deseja editar?')"></x-form.form_button>
+      <x-form.form_button resetTxt='Limpar' submitTxt='Atualizar'></x-form.form_button>
 
     </form>
     

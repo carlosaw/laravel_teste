@@ -15,8 +15,7 @@ class Order extends Model
         'id',
         'client_id',
         'vehicle_id',
-        'mechanic_id',
-        'due_date'
+        'mechanic_id'
     ];
 
     // Uma OS sempre vai pertencer a um Cliente

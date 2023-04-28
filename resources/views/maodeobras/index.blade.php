@@ -1,1 +1,0 @@
-<h1>Mão de obra</h1>

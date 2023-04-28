@@ -19,13 +19,10 @@ class OrderController extends Controller
             $vehicles = Vehicle::all();
             $mechanics = Mechanic::all();
             $clients = Client::all();            
-            $orders = Order::join('clients', 'clients.id','=','orders.client_id')
-            ->where([
-                ['orders.client_id', 'like', '%'.$search.'%']
-            ])->orWhere('clients.name', 'like', '%'.$search.'%')
-            ->get();            
-        } else {
-            
+            $orders = Order::where([
+                ['id', 'like', '%'.$search.'%']
+            ])->get();            
+        } else {           
             $orders = Order::all();
             $clients = Client::all();
             $vehicles = Vehicle::all();
@@ -49,13 +46,15 @@ class OrderController extends Controller
     }
     
     public function create_action(Request $request) {
+        dd($request->all());
         $validator = $request->validate([
-            'client_id' => 'required',
-            'vehicle_id' => 'required',
-            'mechanic_id' => 'required'
+
+            'client_id' => $request->clients->id,
+            'vehicle_id' => '',
+            'mechanic_id' => ''
           ]);
         //dd($request->all());
-        $order = $request->only(['client_id', 'vehicle_id', 'mechanic_id']);
+        $order = $request->only(['client_id', 'vehicle_id', 'mechanic_id', 'due_date']);
         Order::create($order);
         return redirect(route('orders'))->with('alert', '✔');
     }
