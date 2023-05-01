@@ -73,6 +73,7 @@ a.btn {
   color: white;
   opacity: .9;
 }
+
 .btn-primary-form {
   background-color: var(--color-primary);
   color: white;
@@ -83,6 +84,7 @@ a.btn {
   border: 0;
   cursor: pointer;
 }
+
 .btn-selected {
   background-color: var(--color-selected);
   color: #F0F2FA;
@@ -111,13 +113,15 @@ a.btn {
   background-color: var(--background-light);
 }
 
+.list-content {
+  height: 87%;
+}
+
 .list-content-login {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: calc(100vw - 100px);
-  /* height: 100%; */
-  /* position: relative; */
 }
 
 .list-content p {
@@ -153,12 +157,14 @@ h1 {
   font-weight: medium;
   font-size: 18px;
 }
+
 .btn-group {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 80%;
 }
+
 .btnRegister {
   display: flex;
   padding: 10px 0px;
@@ -169,6 +175,7 @@ h1 {
   justify-content: flex-end;
   align-items: center;
 }
+
 .btnRegister a {
   width: 145px;
 }
@@ -178,7 +185,9 @@ h1 {
   justify-content: space-between;
   margin: 0px 15px 0 15px;
 }
-button.btnNew, button[type=submit] {
+
+button.btnNew,
+button[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,6 +201,7 @@ button.btnNew, button[type=submit] {
   font-size: 16px;
   border: 0;
 }
+
 .btnNew {
   display: flex;
   align-items: center;
@@ -206,11 +216,13 @@ button.btnNew, button[type=submit] {
   font-size: 16px;
   border: 0;
 }
+
 .btnNew a {
   font-size: 16px;
   text-decoration: none;
   color: #F0F2FA;
 }
+
 .btnNew:hover {
   opacity: .8;
   transform: scale(1.05);
@@ -224,11 +236,13 @@ table {
   display: block;
   overflow-x: auto;
 }
+
 tbody {
   display: block;
   overflow: auto;
   height: 545px;
 }
+
 .user_title {
   display: flex;
   flex-direction: row;
@@ -238,10 +252,12 @@ h4 {
   margin-right: 20px;
   font-weight: normal;
 }
+
 .user_name {
   color: #0d0af7;
   font-size: 17px;
 }
+
 .title th {
   color: #0d0af7;
   font-weight: normal;
@@ -254,9 +270,11 @@ h4 {
   border-bottom: 1px solid #CCC;
   overflow-x: auto;
 }
+
 tbody>.tr_body td {
   height: 35px;
 }
+
 tbody>.tr_body:hover {
   border-radius: 7px;
   transform: scale(1.01);
@@ -270,10 +288,12 @@ tbody>.tr_body:hover {
   justify-content: space-evenly;
   align-items: baseline;
 }
+
 .actions a {
   justify-content: center;
   transition: all .3s ease-in-out;
 }
+
 .actions>a:hover {
   cursor: pointer;
   transform: scale(1.20);
@@ -285,7 +305,9 @@ tbody>.tr_body:hover {
   margin-left: 17px;
 }
 
-tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
 .form {
   margin-top: 22px;
@@ -295,190 +317,373 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 }
 
 /* Título tabela Clients */
-.title1, .title2, .title3, .title4, .title5, .title6 {border: 1px solid #FFF;}
-.title1, .tdLine1 {
+.title1,
+.title2,
+.title3,
+.title4,
+.title5,
+.title6 {
+  border: 1px solid #FFF;
+}
+
+.title1,
+.tdLine1 {
   width: 34px;
 }
-.title2, .tdLine2 {
+
+.title2,
+.tdLine2 {
   width: 257px;
 }
-.title3, .tdLine3 {
+
+.title3,
+.tdLine3 {
   width: 151px;
 }
-.title4, .tdLine4 {
+
+.title4,
+.tdLine4 {
   width: 189px;
 }
-.title5, .tdLine5 {
+
+.title5,
+.tdLine5 {
   width: 342px;
 }
+
 .title6 {
   width: 151px;
 }
+
 /* Linhas tabela CLIENTS */
-.tdLine1, .tdLine3, .tdLine4 {text-align: center;}
-.tdLine2, .tdLine5 {padding-left: 10px;}
+.tdLine1,
+.tdLine3,
+.tdLine4 {
+  text-align: center;
+}
+
+.tdLine2,
+.tdLine5 {
+  padding-left: 10px;
+}
+
 .tdLine6 {
   width: 128px;
 }
 
 
 /* Titulo tabela VEHICLES */
-.title1v, .title2v, .title3v,
-.title4v, .title5v,
-.title6v, .title7v, .title8v {
+.title1v,
+.title2v,
+.title3v,
+.title4v,
+.title5v,
+.title6v,
+.title7v,
+.title8v {
   border: 1px solid #FFF;
 }
-.title1v, .tdLine1v {
+
+.title1v,
+.tdLine1v {
   width: 34px;
 }
-.title2v, .tdLine2v {
+
+.title2v,
+.tdLine2v {
   width: 184px;
 }
-.title3v, .tdLine3v {
+
+.title3v,
+.tdLine3v {
   width: 203px;
 }
-.title4v, .tdLine4v{
+
+.title4v,
+.tdLine4v {
   width: 181px;
 }
-.title5v,.tdLine5v {
+
+.title5v,
+.tdLine5v {
   width: 137px;
 }
-.title6v, .tdLine6v {
+
+.title6v,
+.tdLine6v {
   width: 110px;
 }
-.title7v, .tdLine7v {
+
+.title7v,
+.tdLine7v {
   width: 100px;
 }
+
 .title8v {
   width: 151px;
 }
+
 /* Linhas tabela VEHICLES */
-.tdLine1v, .tdLine2v, .tdLine3v, .tdLine4v, .tdLine5v, .tdLine6v, .tdLine7v {text-align: center;}
+.tdLine1v,
+.tdLine2v,
+.tdLine3v,
+.tdLine4v,
+.tdLine5v,
+.tdLine6v,
+.tdLine7v {
+  text-align: center;
+}
+
 .tdLine8v {
   width: 128px;
 }
 
 
 /* Titulo tabela ADDRESSES */
-.title1a, .title2a, .title3a, .title4a, .title5a, .title6a, .title7a, .title8a, .title9a {border: 1px solid #FFF;}
-.title1a, .tdLine1a {
+.title1a,
+.title2a,
+.title3a,
+.title4a,
+.title5a,
+.title6a,
+.title7a,
+.title8a,
+.title9a {
+  border: 1px solid #FFF;
+}
+
+.title1a,
+.tdLine1a {
   width: 34px;
 }
-.title2a, .tdLine2a {
+
+.title2a,
+.tdLine2a {
   width: 206px;
 }
-.title3a, .tdLine3a {
+
+.title3a,
+.tdLine3a {
   width: 246px;
 }
-.title4a, .tdLine4a {
+
+.title4a,
+.tdLine4a {
   width: 72px;
 }
-.title5a, .tdLine5a {
+
+.title5a,
+.tdLine5a {
   width: 117px;
 }
-.title6a, .tdLine6a {
+
+.title6a,
+.tdLine6a {
   width: 176px;
 }
-.title7a, .tdLine7a {
+
+.title7a,
+.tdLine7a {
   width: 163px;
 }
-.title8a, .tdLine8a {
+
+.title8a,
+.tdLine8a {
   width: 44px;
 }
+
 .title9a {
   width: 155px;
 }
 
 /* Linhas tabela ADDRESSES */
-.tdLine1a, .tdLine4a, .tdLine5a, .tdLine8a {text-align: center;}
-.tdLine2a, .tdLine3a, .tdLine6a, .tdLine7a {padding-left: 10px;}
+.tdLine1a,
+.tdLine4a,
+.tdLine5a,
+.tdLine8a {
+  text-align: center;
+}
+
+.tdLine2a,
+.tdLine3a,
+.tdLine6a,
+.tdLine7a {
+  padding-left: 10px;
+}
+
 .tdLine9a {
   width: 128px;
 }
+
 #text {
   display: none;
 }
 
 
 /* Título tabela Products */
-.title1p, .title2p, .title3p, .title4p, .title5p {border: 1px solid #FFF;}
-.tdLine3p, .tdLine4p {text-align: center;}
-.title1p, .tdLine1p {
+.title1p,
+.title2p,
+.title3p,
+.title4p,
+.title5p {
+  border: 1px solid #FFF;
+}
+
+.tdLine3p,
+.tdLine4p {
+  text-align: center;
+}
+
+.title1p,
+.tdLine1p {
   width: 34px;
 }
-.title2p, .tdLine2p {
+
+.title2p,
+.tdLine2p {
   width: 598px;
 }
-.title3p, .tdLine3p {
+
+.title3p,
+.tdLine3p {
   width: 169px;
 }
-.title4p, .tdLine4p {
+
+.title4p,
+.tdLine4p {
   width: 189px;
 }
+
 .title5p {
   width: 151px;
 }
+
 /* Linhas tabela Products */
-.tdLine1p {text-align: center;}
-.tdLine2p {padding-left: 10px;}
+.tdLine1p {
+  text-align: center;
+}
+
+.tdLine2p {
+  padding-left: 10px;
+}
+
 .tdLine5p {
   width: 128px;
 }
 
 
 /* Título tabela Mecânicos */
-.title1m, .title2m, .title3m, .title4m, .title5m, .title6m, .title7m, .title8m {border: 1px solid #FFF;}
-.title1m, .tdLine1m {
+.title1m,
+.title2m,
+.title3m,
+.title4m,
+.title5m,
+.title6m,
+.title7m,
+.title8m {
+  border: 1px solid #FFF;
+}
+
+.title1m,
+.tdLine1m {
   width: 34px;
 }
-.title2m, .tdLine2m {
+
+.title2m,
+.tdLine2m {
   width: 347px;
 }
-.title3m, .tdLine3m {
+
+.title3m,
+.tdLine3m {
   width: 288px;
 }
-.title4m, .tdLine4m {
+
+.title4m,
+.tdLine4m {
   width: 255px;
 }
-.title5m, .tdLine5m {
+
+.title5m,
+.tdLine5m {
   width: 147px;
 }
-.title6m, .tdLine6m {
+
+.title6m,
+.tdLine6m {
   width: 270px;
 }
+
 .title7m {
   width: 151px;
 }
+
 /* Linhas tabela Mecânicos */
-.tdLine1m, .tdLine3m, .tdLine4m, .tdLine5m {text-align: center;}
-.tdLine2m, .tdLine6m {padding-left: 10px;}
+.tdLine1m,
+.tdLine3m,
+.tdLine4m,
+.tdLine5m {
+  text-align: center;
+}
+
+.tdLine2m,
+.tdLine6m {
+  padding-left: 10px;
+}
+
 .tdLine7m {
   width: 128px;
 }
 
 /* Titulo tabela de Ordem de Serviço */
-.title1o, .title2o, .title3o, .title4o, .title5o {border: 1px solid #FFF;}
-.title1o, .tdLine1o {
+.title1o,
+.title2o,
+.title3o,
+.title4o,
+.title5o {
+  border: 1px solid #FFF;
+}
+
+.title1o,
+.tdLine1o {
   width: 34px;
 }
-.title2o, .tdLine2o {
+
+.title2o,
+.tdLine2o {
   width: 257px;
 }
-.title3o, .tdLine3o {
+
+.title3o,
+.tdLine3o {
   width: 151px;
 }
-.title3o, .tdLine3o {
+
+.title3o,
+.tdLine3o {
   width: 189px;
 }
-.title4o, .tdLine4o {
+
+.title4o,
+.tdLine4o {
   width: 342px;
 }
+
 .title5o {
   width: 151px;
 }
+
 /* Linhas tabela ORDERS */
-.tdLine1o, .tdLine3o, .tdLine4o {text-align: center;}
-.tdLine2o {padding-left: 10px;}
+.tdLine1o,
+.tdLine3o,
+.tdLine4o {
+  text-align: center;
+}
+
+.tdLine2o {
+  padding-left: 10px;
+}
+
 .tdLine5o {
   width: 128px;
 }
@@ -490,6 +695,7 @@ footer {
   justify-content: center;
   margin-top: 30px;
 }
+
 .footer {
   color: var(--color-primary);
 }
@@ -505,7 +711,8 @@ footer {
   color: #605f5f;
 }
 
-.inputArea>input, .inputArea>select {
+.inputArea>input,
+.inputArea>select {
   height: 40px;
   width: 100%;
   padding-left: 10px;
@@ -515,6 +722,7 @@ footer {
   border: 1px solid #CCC;
   background-color: white;
 }
+
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=password]:focus,
@@ -535,6 +743,7 @@ select:focus {
   border-radius: 18px;
   display: block;
 }
+
 #alert_os {
   justify-content: space-evenly;
   position: absolute;
@@ -543,6 +752,7 @@ select:focus {
   border-radius: 18px;
   display: block;
 }
+
 .alert-success {
   color: #4eb94e;
   width: 40px;
@@ -555,6 +765,7 @@ select:focus {
   border: 1px solid #4eb94e;
   margin-top: -20px;
 }
+
 .alert-success img {
   width: 90%;
 }
@@ -572,6 +783,7 @@ select:focus {
   color: #FF0000;
   margin: 10px;
 }
+
 a.close {
   color: var(--background-light);
   cursor: pointer;
@@ -601,28 +813,34 @@ a.close {
   width: -webkit-fill-available;
   flex-direction: column;
 }
+
 .user-logout {
   transition: all .3s ease-in-out;
   margin-left: 15px;
   margin-top: 2px;
 }
+
 .user-logout a {
   font-size: 20px;
   text-decoration: none;
   color: hsl(238.15deg 100% 50%);
 }
+
 .user-logout:hover {
   transform: scale(1.05);
   border-bottom: 1px solid #0000FF;
 }
+
 .search_form {
   display: flex;
   outline: none;
   border: 0;
 }
+
 .search_form input {
   outline: 1px solid #CCC;
 }
+
 .search_submit {
   width: 40px;
   height: 40px;
@@ -639,6 +857,7 @@ button.btn_search {
   height: 40px;
   background-color: transparent;
 }
+
 button.btn_search img {
   width: 235%;
 }
@@ -655,18 +874,22 @@ button.btn_search img {
   border-bottom: 1px solid #CCC;
   border-radius: 0px 5px 5px 0px;
 }
+
 #search-sub img {
   width: 230%;
   transition: all .5s ease-in-out;
 }
+
 #search-sub img:hover {
   width: 260%;
   transform: scale(1.05);
 }
-.search_form  {
+
+.search_form {
   outline: 1px solid #CCC;
   border-radius: 5px;
 }
+
 .car {
   display: flex;
   justify-content: center;
