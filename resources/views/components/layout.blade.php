@@ -32,7 +32,7 @@
           $page !== 'Aw2web | Novo Produto' && 
           $page !== 'Aw2web | Novo Mecânico' &&
           $page !== 'Aw2web | Nova OS' &&
-          $page !== 'Aw2web | Editar OS' &&
+          $page !== 'Aw2web | Editar O.S.' &&
           $page !== 'Aw2web | Editar Veiculo' &&
           $page !== 'Aw2web | Editar Cliente' &&
           $page !== 'Aw2web | Editar Endereço' &&

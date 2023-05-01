@@ -50,7 +50,7 @@
   </div>          
 </div>
 
-@elseif (request()->is('orders/new'))
+@elseif (request()->is('orders/new') || request()->is('orders/edit'))
 <div class="btn-group">  
   <x-btn btnHref='/clients' btnText='Clientes'></x-btn>
   <x-btn btnHref='/vehicles' btnText='Veiculos'></x-btn>
