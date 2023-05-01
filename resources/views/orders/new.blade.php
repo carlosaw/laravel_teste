@@ -8,10 +8,6 @@
   </div>
   @endif
 
-  {{-- @if ($search)
-    <p class="p_search">Buscando por: <strong>'{{ $search }}'</strong></p> 
-  @endif --}}
-
   <div class="form">
     <h1>Nova Ordem de Serviços</h1>
 
@@ -20,19 +16,19 @@
       @csrf
       <x-form.select_input name="client_id" label="Cliente" selectItem='Selecione um Cliente'>
         @foreach ($clients as $client)
-          <option value="">{{$client->name}}, {{$client->fone}}, {{$client->email}}, {{$client->email}}</option>
+          <option value="{{ $client->id }}">{{$client->name}}</option>
         @endforeach       
       </x-form.select_input>
 
       <x-form.select_input name="vehicle_id" label="Veículo" selectItem='Selecione um Veículo'>
         @foreach ($vehicles as $vehicle)
-          <option value="">{{$vehicle->plate}} - {{$vehicle->brand}} - {{$vehicle->model}} - {{$vehicle->color}} - {{$vehicle->year}} - {{$vehicle->km}}</option>
+          <option value="{{ $vehicle->id }}">{{$vehicle->plate}}</option>
         @endforeach
       </x-form.select_input>
 
       <x-form.select_input name="mechanic_id" label="Mecânico" selectItem='Selecione um Mecânico'>
         @foreach ($mechanics as $mechanic)
-          <option value="">{{ $mechanic->name }}</option>
+          <option value="{{ $mechanic->id }}">{{ $mechanic->name }}</option>
         @endforeach
       </x-form.select_input>
 

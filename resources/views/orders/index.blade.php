@@ -3,7 +3,7 @@
   <x-subMenu />
 
   @if (session('alert'))
-    <div id="alert">
+    <div id="alert_os">
       <div id="alert-success" class="alert-success">
         {{ session('alert') }}
       </div>

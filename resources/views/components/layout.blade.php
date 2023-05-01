@@ -30,8 +30,9 @@
           $page !== 'Aw2web | Novo Cliente' && 
           $page !== 'Aw2web | Novo Endereço' && 
           $page !== 'Aw2web | Novo Produto' && 
-          $page !== 'Aw2web | Nova OS' && 
-          $page !== 'Aw2web | Novo Mecânico' && 
+          $page !== 'Aw2web | Novo Mecânico' &&
+          $page !== 'Aw2web | Nova OS' &&
+          $page !== 'Aw2web | Editar OS' &&
           $page !== 'Aw2web | Editar Veiculo' &&
           $page !== 'Aw2web | Editar Cliente' &&
           $page !== 'Aw2web | Editar Endereço' &&

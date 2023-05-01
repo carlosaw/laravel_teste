@@ -21,9 +21,9 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         $client = Client::all()->random();
-        while(count($client->vehicles) == 0) {
-            $client = Client::all()->random();
-        }
+        // while(count($client->vehicles) == 0) {
+        //     $client = Client::all()->random();
+        // }
         
         $vehicle = Vehicle::all()->random();
         $mechanic = Mechanic::all()->random();

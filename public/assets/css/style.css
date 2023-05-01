@@ -535,6 +535,14 @@ select:focus {
   border-radius: 18px;
   display: block;
 }
+#alert_os {
+  justify-content: space-evenly;
+  position: absolute;
+  margin-top: -39px;
+  margin-left: 550px;
+  border-radius: 18px;
+  display: block;
+}
 .alert-success {
   color: #4eb94e;
   width: 40px;
