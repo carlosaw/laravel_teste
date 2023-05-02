@@ -906,7 +906,8 @@ button.btn_search img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
+  margin-top: 0px;
 }
 
 .car-login img {
