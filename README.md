@@ -1,16 +1,16 @@
-# Install 
+### Install 
 ## composer install
 
-# Key generate
+#### Key generate
 ## php artisan key:generate
 
-# DB-MySQL
+#### DB-MySQL
 ## php artisan migrate:fresh
 
-# DB-Seeders
+#### DB-Seeders
 ## php artisan db:seed
 
-# run project
+### run project
 ## php artisan serve
 
 
